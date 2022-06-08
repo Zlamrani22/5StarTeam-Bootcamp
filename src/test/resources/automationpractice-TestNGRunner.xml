@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="automationpractice smoke">
+<!--    <parameter name="useCloudEnv" value="false"></parameter>-->
+<!--    <parameter name="envName" value="browserstack"></parameter>-->
+    <parameter name="os" value="mac"></parameter>
+<!--    <parameter name="osVersion" value="11"></parameter>-->
+    <parameter name="browserName" value="chrome"></parameter>
+<!--    <parameter name="browserVersion" value="99"></parameter>-->
+    <parameter name="url" value="http://automationpractice.com/index.php"></parameter>
+    <test name="testHomepage">
+            <classes>
+                <class name="testapp.automationpractice.TestHomePage"></class>
+            </classes>
+    </test>
+<!--    <test name="testAuthentoction">-->
+    <!--        <classes>-->
+    <!--            <class name="app.automationpractice.TestAuthentication"></class>-->
+    <!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="">-->
+<!--        <classes>-->
+<!--            <class name="automation"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="">-->
+        <!--        <classes>-->
+        <!--            <class name="app.automationpractice.testHomepage"></class>-->
+        <!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="">-->
+<!--        <classes>-->
+<!--            <class name="testapp.TestContactUs"></class>-->
+<!--        </classes>-->
+
+<!--    </test>-->
+</suite>
