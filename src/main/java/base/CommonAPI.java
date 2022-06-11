@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 public class CommonAPI {
     static String currentDir = System.getProperty("user.dir");
 
-    private WebDriver driver;
+    protected WebDriver driver;
 
     public static com.relevantcodes.extentreports.ExtentReports extent;
 
