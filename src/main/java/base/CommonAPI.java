@@ -137,7 +137,7 @@ public class CommonAPI {
                       @Optional("https://www.google.com") String url) throws MalformedURLException {
         if (useCloudEnv){
             if (envName.equalsIgnoreCase("browserstack")){
-                getCloudDriver(envName, "nacerhadjsaid1", "pK4miZ8sp15afqsvGckE", os, osVersion, browserName, browserVersion);
+                getCloudDriver(envName, "mustaphalarbi_ItRuly", "jzu94RXLvPso92FNaYsn", os, osVersion, browserName, browserVersion);
             }else if (envName.equalsIgnoreCase( "saucelabs")){
                 getCloudDriver(envName, "", "", os, osVersion, browserName, browserVersion);
             }
@@ -167,7 +167,7 @@ public class CommonAPI {
         return element.getText();
     }
 
-    public void click(WebElement element){
+    public static void click(WebElement element){
         element.click();
     }
 
@@ -175,7 +175,7 @@ public class CommonAPI {
         element.clear();
     }
 
-    public void type(WebElement element, String text){
+    public static void type(WebElement element, String text){
         element.sendKeys(text);
     }
 
@@ -183,7 +183,7 @@ public class CommonAPI {
         element.sendKeys(text, Keys.ENTER);
     }
 
-    public void selectFromDropdown(WebElement dropdown, String option){
+    public static void selectFromDropdown(WebElement dropdown, String option){
         Select select = new Select(dropdown);
         try {
             select.selectByVisibleText(option);
