@@ -20,7 +20,5 @@ public class AddToCartTests extends CommonAPI {
         waitFor(1);
         String pageTitle= "Information - NBC Store - Checkout";
         Assert.assertEquals(pageTitle,getPageTitle());
-
-        //ask nacer about the wait times and why the page title shows different if no wait time. what can be done?
     }
 }

@@ -10,7 +10,7 @@ import pages.msnbc.PeacockPage;
 
 public class VideoTest extends CommonAPI {
 
-    @Test(enabled = true)
+    @Test
     public void PeacockHassanMehdiShow(){
         HomePage homePage= new HomePage(getDriver());
         homePage.clickPeackockTab();
@@ -20,7 +20,7 @@ public class VideoTest extends CommonAPI {
         //need to finish
     }
 
-    @Test(enabled = false)
+    @Test
     public void liveTvTest1(){
         HomePage homePage= new HomePage(getDriver());
         LiveTvPage liveTvPage= new LiveTvPage(getDriver());
@@ -31,7 +31,7 @@ public class VideoTest extends CommonAPI {
         Assert.assertEquals("Optimum.",title);
     }
 
-    @Test(enabled = false)
+    @Test
     public void videoTests(){
         HomePage homePage= new HomePage(getDriver());
         MaddowPage maddowPage= new MaddowPage(getDriver());

@@ -41,27 +41,28 @@ public class MorningJoePage extends CommonAPI {
         return header;
     }
 
-//    public void scrollToBottomOfPage(){
-//        scrollToView(careersButton);
-//
-//    }
+    public void scrollToBottomOfPage(){
+        scrollToView(careersButton);
 
-//    public void clickCareersButton(){
-//        click(careersButton);
-//    }
-//
-    public WebElement scrollToFullBio(){
-        morningJoeBioButton.click();
-        return morningJoeBioButton;
     }
 
-    public void clickFullMorningJoeBio(){
-        click(morningJoeBioButton);
-    }
-    public WebElement clickCareers() {
+    public WebElement clickCareersButton(){
         click(careersButton);
         return careersButton;
     }
+
+    public void scrollToFullBio(){
+        click(morningJoeBioButton);
+    }
+
+    public WebElement clickFullMorningJoeBio(){
+        click(morningJoeBioButton);
+        return morningJoeBioButton;
+    }
+//    public WebElement clickCareers() {
+//        click(careersButton);
+//        return careersButton;
+//    }
 
     public WebElement clickFollowJoeOnInsta(){
         followJoeText.click();
