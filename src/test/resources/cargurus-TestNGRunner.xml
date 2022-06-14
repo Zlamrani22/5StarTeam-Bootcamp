@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="CarGurus">
+    <parameter name="useCloudEnv" value="false"></parameter>
+    <parameter name="envName" value="browserstack"></parameter>
+    <parameter name="os" value="windows"></parameter>
+    <parameter name="osVersion" value="11"></parameter>
+    <parameter name="browserName" value="chrome"></parameter>
+    <parameter name="browserVersion" value="99"></parameter>
+    <parameter name="url" value="https://www.cargurus.com/"></parameter>
+        <test name="loginTest1()">
+            <classes>
+                <class name="testapp.cargurus.SearchPageTest"></class>
+            </classes>
+        </test>
+
+            <test name="loginTest()">
+               <classes>
+                   <class name="testapp.cargurus.AccountLoginTest"></class>
+               </classes>
+            </test>
+
+</suite>

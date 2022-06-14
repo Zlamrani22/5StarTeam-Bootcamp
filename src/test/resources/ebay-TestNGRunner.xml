@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="amazon smoke amazon">
+    <parameter name="url" value="https://www.ebay.com/"></parameter>
+    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="os" value="windows"></parameter>
+<!--    <test name="test1">-->
+<!--            <classes>-->
+<!--                <class name="testapp.ebay.TravelTest"></class>-->
+<!--                </classes>-->
+<!--        </test>-->
+<!--            <test name="test2">-->
+<!--                <classes>-->
+
+<!--                    <class name="testapp.ebay.AdvancedSearchTest"></class>-->
+<!--                </classes>-->
+<!--            </test>-->
+<!--   <test name="test3">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.BookTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test4">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.AddToCartTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test5">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.CollectiblesAndArtTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test6">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.CraftTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test7">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.DailyDealsTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test8">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.ElecteronicTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test9">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.ForgotPasswordTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test10">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.ForgotUserIdTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test11">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.HelpAndAccountTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test12">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.HomeTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test13">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.InboxMessageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test14">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.InvalidSigninTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test15">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.MyEbayTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test16">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.PaymentTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test17">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.PolicyTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test18">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.RealEstateTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--   <test name="test19">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.RegisterTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test20">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.SearchProductTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test21">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.SellingTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test22">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.ShopByCategoryTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test23">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.SigninTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="test24">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.SignoutTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test25">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.ToysTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test26">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.ValidEmailTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test27">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.WatchesAndJewellyTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test28">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.BrandNameTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--      <test name="test29">-->
+<!--     <classes>-->
+<!--           <class name="testapp.ebay.CloseAccountTest"></class>-->
+<!--     </classes>-->
+<!--     </test>-->
+<!--     <test name="test30">-->
+<!--     <classes>-->
+<!--            <class name="testapp.ebay.CameraAndPhotoTest"></class>-->
+<!--     </classes>-->
+<!--     </test>-->
+<!--     <test name="test31">-->
+<!--     <classes>-->
+<!--            <class name="testapp.ebay.MotorTest"></class>-->
+<!--    </classes>-->
+<!--     </test>-->
+<!--      <test name="test32">-->
+<!--          <classes>-->
+<!--             <class name="testapp.ebay.MusicTest"></class>-->
+<!--      </classes>-->
+<!--      </test>-->
+<!--    <test name="test33">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.AntiquesTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test34">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.ArtTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test35">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.StampsTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test36">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.DollsAndBearsTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test37">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.SportingGoodTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test38">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.PetSupplyTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test39">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.BussinessAndIndusterailTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test40">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.HomeAndGardenTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--&lt;!&ndash;    <test name="test41">&ndash;&gt;-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.BookTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test42">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.BookTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="test43">-->
+<!--        <classes>-->
+<!--            <class name="testapp.ebay.BookTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+            </suite>
