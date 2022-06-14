@@ -21,8 +21,8 @@ test-output/
 .DS_Store
 .AppleDouble
 .LSOverride
-
-
+target\
+test-output\
 
 # Icon must end with two \r
 Icon
