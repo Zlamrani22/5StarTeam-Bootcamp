@@ -25,10 +25,10 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-<!--            <test name="loginTest()">-->
-<!--               <classes>-->
-<!--                   <class name="testapp.cargurus.AccountLoginTest"></class>-->
-<!--               </classes>-->
-<!--            </test>-->
+            <test name="loginTest()">
+               <classes>
+                   <class name="testapp.cargurus.AccountLoginTest"></class>
+               </classes>
+            </test>
 
 </suite>
