@@ -15,7 +15,7 @@ public class BeatPage extends CommonAPI {
         PageFactory.initElements(driver,this);
     }
 
-    public String theBeatHeader() {
+    public String getTheBeatPageHeader() {
 
         String header = getElementText(pageHeader);
         return header;
