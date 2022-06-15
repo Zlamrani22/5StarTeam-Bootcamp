@@ -137,7 +137,7 @@ public class CommonAPI {
                       @Optional("https://www.google.com") String url) throws MalformedURLException {
         if (useCloudEnv){
             if (envName.equalsIgnoreCase("browserstack")){
-                getCloudDriver(envName, "mustaphalarbi_ItRuly", "jzu94RXLvPso92FNaYsn", os, osVersion, browserName, browserVersion);
+                getCloudDriver(envName, "mustaphalarbi_ItRuly", "jzu94RXLvPso92FNaY", os, osVersion, browserName, browserVersion);
             }else if (envName.equalsIgnoreCase( "saucelabs")){
                 getCloudDriver(envName, "", "", os, osVersion, browserName, browserVersion);
             }

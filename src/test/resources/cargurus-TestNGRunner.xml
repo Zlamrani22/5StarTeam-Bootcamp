@@ -9,11 +9,21 @@
     <parameter name="browserName" value="chrome"></parameter>
     <parameter name="browserVersion" value="99"></parameter>
     <parameter name="url" value="https://www.cargurus.com/"></parameter>
-        <test name="loginTest1()">
-            <classes>
-                <class name="testapp.cargurus.SearchPageTest"></class>
-            </classes>
-        </test>
+    <test name="SearchUsedCar">
+        <classes>
+            <class name="testapp.cargurus.SearchUsedCarPageTest"></class>
+        </classes>
+    </test>
+<!--    <test name="HoverOverFinance()">-->
+<!--        <classes>-->
+<!--            <class name="testapp.cargurus.HoverOverFinancePageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="HoverOverBuy()">-->
+<!--        <classes>-->
+<!--            <class name="testapp.cargurus.HoverOverBuyPageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--            <test name="loginTest()">-->
 <!--               <classes>-->
