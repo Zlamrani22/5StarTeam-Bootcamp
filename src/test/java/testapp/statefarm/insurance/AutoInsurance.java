@@ -29,7 +29,7 @@ public class AutoInsurance extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 
-    @Test
+    //@Test
     public void getTrailerInsurance(){
         AutoInsurancePage autoInsurancePage = new AutoInsurancePage(getDriver());
         autoInsurancePage.clickOnInsurance();
@@ -41,4 +41,46 @@ public class AutoInsurance extends CommonAPI {
         String expectedPageTitle = "Find State Farm® Agents Near You - State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
+
+    //@Test
+    public void getCarInsurance(){
+        AutoInsurancePage autoInsurancePage = new AutoInsurancePage(getDriver());
+        autoInsurancePage.clickOnInsurance();
+        autoInsurancePage.clickOnCarInsurance();
+        waitFor(3);
+        autoInsurancePage.clickOnXbox();
+        autoInsurancePage.typeZip("10020");
+        autoInsurancePage.clickOnStartQuote();
+        String expectedPageTitle = "Free Car Insurance Quote - Save on Auto Insurance | State Farm®";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
+
+    }
+
+   // @Test
+    public void getMotorHomeInsurance(){
+        AutoInsurancePage autoInsurancePage = new AutoInsurancePage(getDriver());
+        autoInsurancePage.clickOnInsurance();
+        autoInsurancePage.clickOnMotorHome();
+        waitFor(3);
+        autoInsurancePage.clickOnXbox();
+        autoInsurancePage.type("11377");
+        autoInsurancePage.clickOnFindAgent();
+        String expectedPageTitle = "Find State Farm® Agents Near You - State Farm®";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
+
+    }
+
+    @Test
+    public void getOffRoadVehicle(){
+        AutoInsurancePage autoInsurancePage = new AutoInsurancePage(getDriver());
+        autoInsurancePage.clickOnInsurance();
+        autoInsurancePage.clickOnOffRoad();
+        waitFor(3);
+        autoInsurancePage.clickOnXbox();
+        autoInsurancePage.type("25089");
+        autoInsurancePage.clickOnFindAgent();
+        String expectedPageTitle = "Find State Farm® Agents Near You - State Farm®";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
+    }
+
 }

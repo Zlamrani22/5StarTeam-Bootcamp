@@ -36,16 +36,16 @@
 <!--                <class name="testapp.statefarm.DocumentsAndMessages.Access"></class>-->
 <!--            </classes>-->
 <!--        </test>-->
-<!--        <test name="Help">-->
-<!--            <classes>-->
-<!--                <class name="testapp.statefarm.help.HelpAndFix"></class>-->
-<!--            </classes>-->
-<!--        </test>-->
-        <test name="AutoInsurance">
+        <test name="Help">
             <classes>
-                <class name="testapp.statefarm.insurance.AutoInsurance"></class>
+                <class name="testapp.statefarm.help.HelpAndFix"></class>
             </classes>
         </test>
+<!--        <test name="AutoInsurance">-->
+<!--            <classes>-->
+<!--                <class name="testapp.statefarm.insurance.AutoInsurance"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
 <!--        <test name="SmallBusinessInsurance">-->
 <!--            <classes>-->
 <!--               <class name="testapp.statefarm.insurance.LifeInsurance"></class>-->
@@ -66,11 +66,11 @@
 <!--            <class name="testapp.statefarm.investment.MutualFund"></class>-->
 <!--        </classes>-->
 <!--    </test>-->
-    <!--    <test name="RetirementInvestment">-->
-    <!--        <classes>-->
-    <!--            <class name="testapp.statefarm.investment.Retirement"></class>-->
-    <!--        </classes>-->
-    <!--    </test>-->
+<!--        <test name="RetirementInvestment">-->
+<!--            <classes>-->
+<!--                <class name="testapp.statefarm.investment.Retirement"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
 <!--    <test name="Payment">-->
 <!--        <classes>-->
 <!--            <class name="testapp.statefarm.payement.Billing"></class>-->
