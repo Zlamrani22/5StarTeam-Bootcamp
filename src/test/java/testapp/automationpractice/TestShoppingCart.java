@@ -1,6 +1,7 @@
 package testapp.automationpractice;
 
 import base.CommonAPI;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.automationpractice.HomePage;
@@ -31,9 +32,9 @@ public class TestShoppingCart extends CommonAPI {
         womensCoatsAndJacketsPage.clickPrintedDressButton();
         womensCoatsAndJacketsPage.clickWishlistButton();
 
-//        String actualErrorMessage = driver.findElement(By.xpath("//p[@class='fancybox-error']")).getText();
-//        String expectedErrorMessage = "You must be logged in to manage your wishlist.";
-//        Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
+        String actualErrorMessage = driver.findElement(By.xpath("//p[@class='fancybox-error']")).getText();
+        String expectedErrorMessage = "You must be logged in to manage your wishlist.";
+        Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
     }
     @Test(enabled = false)//check
     public void testProcessShoppingCart() {

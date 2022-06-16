@@ -54,17 +54,17 @@ public class SearchPage extends CommonAPI {
 
    public void clickSedan(){click(sedan);}
 
-    public static void selectOptionFromAllMakes(String option){
-        selectFromDropdown(allMakes, option);
-    }
-    public static void selectOptionFromAllModels(String option){
-        selectFromDropdown(allModels, option);
-    }
-    public static void typeZipMakeModelCode(String zip){type(zipMakeModelCode, zip);}
-
-    public void typeZipBodyCode(String zip){type(zipCodeBody, zip);}
-
-    public void clickOnSearchByMakeAndModel(){click(searchByMakeAndModel);}
-
-    public void clickOnSearchByBodyStyle(){click(searchByBodyStyle);}
+//    public static void selectOptionFromAllMakes(String option){
+//        selectFromDropdown(allMakes, option);
+//    }
+//    public static void selectOptionFromAllModels(String option){
+//        selectFromDropdown(allModels, option);
+//    }
+//    public static void typeZipMakeModelCode(String zip){type(zipMakeModelCode, zip);}
+//
+//    public void typeZipBodyCode(String zip){type(zipCodeBody, zip);}
+//
+//    public void clickOnSearchByMakeAndModel(){click(searchByMakeAndModel);}
+//
+//    public void clickOnSearchByBodyStyle(){click(searchByBodyStyle);}
 }

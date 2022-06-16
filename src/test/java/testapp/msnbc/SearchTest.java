@@ -10,7 +10,7 @@ import pages.msnbc.MorningJoePage;
 
 public class SearchTest extends CommonAPI {
 
-    @Test(enabled = false)
+    @Test
     public void columnistZeeshanTest10(){
         HomePage homePage= new HomePage(getDriver());
         ColumnistPage columnistPage= new ColumnistPage(getDriver());
@@ -21,13 +21,17 @@ public class SearchTest extends CommonAPI {
         Assert.assertEquals(expectedPageTitle,getPageTitle());
     }
 
-    @Test(enabled = false)
+    @Test
     public void careerSearchTestIT(){
         HomePage homePage= new HomePage(getDriver());
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
+
         //scrollToView(morningJoePage.clickCareers());
+
+        scrollToView(morningJoePage.clickCareersButton());
+
         waitFor(1);
         careerSearchPage.searchButtonAndEnter("IT");
         String pageTitle= morningJoePage.viewResultsHeader();
@@ -35,13 +39,17 @@ public class SearchTest extends CommonAPI {
                         "IT",pageTitle);
     }
 
-    @Test(enabled = true)
+    @Test
     public void careerSearchAndErase(){
         HomePage homePage= new HomePage(getDriver());
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
+
         //scrollToView(morningJoePage.clickCareers());
+
+        scrollToView(morningJoePage.clickCareersButton());
+
         waitFor(1);
         careerSearchPage.searchButtonCareers("IT");
         careerSearchPage.clearSearchButton();
