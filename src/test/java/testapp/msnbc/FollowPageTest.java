@@ -10,7 +10,7 @@ import pages.msnbc.TwitterDeadlinePage;
 
 public class FollowPageTest extends CommonAPI {
 
-    @Test
+    @Test(enabled = false)
     public void deadlineTwitterPageTest(){
         HomePage homePage= new HomePage(getDriver());
         DeadlinePage deadlinePage= new DeadlinePage(getDriver());
@@ -23,7 +23,7 @@ public class FollowPageTest extends CommonAPI {
 
     }
 
-    @Test
+    @Test(enabled = true)
     public void morningJoeInstagramPageTest(){
         HomePage homePage= new HomePage(getDriver());
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
