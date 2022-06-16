@@ -5,8 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HomePage extends CommonAPI {
+
+    private final Logger LOG = LoggerFactory.getLogger(HomePage.class);
 
     @FindBy(css = "li[class='shortcuts-list-item']")
     private WebElement mainpagePeacockTab;
@@ -88,6 +92,7 @@ public class HomePage extends CommonAPI {
 
     public void clickDropdownTab() {
         click(dropDownTab);
+        LOG.info("Dropdown menu opened success");
     }
 
     public void selectTvSchedule() {
@@ -96,12 +101,14 @@ public class HomePage extends CommonAPI {
 
     public void viewHomePageDropdownOptions() {
         String elements = getElementText(menuDropdownOptionsText);
+        LOG.info("");
         // System.out.println(elements);
     }
 
 
     public void selectStoreOptionFromMenu(){
         click(storeMenuOption);
+        LOG.info("Select Store option from Menu dropdown success");
     }
 
     public void selectPodcastOption(){
