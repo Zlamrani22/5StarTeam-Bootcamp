@@ -12,9 +12,12 @@ public class NBCPage extends CommonAPI {
     private WebElement nbcLogoDropdownMenu;
 
     @FindBy(css = "ul[class='shortcuts-list h-lh'] li:nth-child(5)")
-    private WebElement covidMainTabNBCPage;
+    public WebElement covidMainTabNBCPage;
 
-    @FindBy(css = "//p[@class='two-week big-number']")
+    @FindBy(css = "div[class='totalcolumn confirm-totalcolumn']")
+    private WebElement covidCasesTwoWeekColumn;
+
+    @FindBy(css = "p[class='two-week big-number']")
     public WebElement covidTwoWeekPercentageText;
 
     public NBCPage(WebDriver driver){
@@ -31,6 +34,11 @@ public class NBCPage extends CommonAPI {
 
     public void viewCovidTwoWeekPercentage(){
         getElementText(covidTwoWeekPercentageText);
+    }
+
+    public WebElement viewCovidCasesColumn(){
+        isPresent(covidTwoWeekPercentageText);
+        return covidTwoWeekPercentageText;
     }
 
 }
