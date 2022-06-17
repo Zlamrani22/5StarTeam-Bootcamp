@@ -3,7 +3,6 @@ package testapp.msnbc;
 import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.msnbc.*;
 
 public class MainTabsTests extends CommonAPI {
 
@@ -37,6 +36,8 @@ public class MainTabsTests extends CommonAPI {
 
 
         }
+
+
 
 
 

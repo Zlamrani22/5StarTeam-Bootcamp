@@ -1,4 +1,4 @@
-package pages.msnbc;
+package testapp.msnbc;
 
 import base.CommonAPI;
 import org.openqa.selenium.WebDriver;
