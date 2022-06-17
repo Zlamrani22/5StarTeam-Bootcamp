@@ -3,18 +3,25 @@ package testapp.msnbc;
 import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.msnbc.BeatPage;
+import pages.msnbc.ColumnistPage;
+import pages.msnbc.DeadlinePage;
+import pages.msnbc.HomePage;
+import pages.msnbc.MaddowPage;
+import pages.msnbc.MorningJoePage;
+import pages.msnbc.ReidOutPage;
 
 public class MainTabsTests extends CommonAPI {
 
         @Test
         public void homepageTabTest(){
-            HomePage homepage= new HomePage(getDriver());
-            ColumnistPage columnistPage= new ColumnistPage(getDriver());
-            MaddowPage maddowPage= new MaddowPage(getDriver());
-            MorningJoePage morningJoePage= new MorningJoePage(getDriver());
-            DeadlinePage deadlinePage= new DeadlinePage(getDriver());
-            BeatPage beatPage= new BeatPage(getDriver());
-            ReidOutPage reidOutPage= new ReidOutPage(getDriver());
+            pages.msnbc.HomePage homepage= new pages.msnbc.HomePage(getDriver());
+            pages.msnbc.ColumnistPage columnistPage= new pages.msnbc.ColumnistPage(getDriver());
+            pages.msnbc.MaddowPage maddowPage= new MaddowPage(getDriver());
+            pages.msnbc.MorningJoePage morningJoePage= new MorningJoePage(getDriver());
+            pages.msnbc.DeadlinePage deadlinePage= new DeadlinePage(getDriver());
+            pages.msnbc.BeatPage beatPage= new BeatPage(getDriver());
+            pages.msnbc.ReidOutPage reidOutPage= new ReidOutPage(getDriver());
             homepage.clickColumnist();
             String text=columnistPage.columnistPageHeader();
             Assert.assertEquals("MSNBC Daily Columnists",text);
@@ -37,7 +44,16 @@ public class MainTabsTests extends CommonAPI {
 
         }
 
-
+    //@Test
+    public void columnistZeeshanTest10(){
+        pages.msnbc.HomePage homePage= new HomePage(getDriver());
+        pages.msnbc.ColumnistPage columnistPage= new ColumnistPage(getDriver());
+        homePage.selectMSNBSDailyNews();
+        columnistPage.showAllColumnistButton();
+        columnistPage.clickZeeshanAleem();
+        String expectedPageTitle= "MSNBC Author Zeeshan Aleem";
+        Assert.assertEquals(expectedPageTitle,getPageTitle());
+    }
 
 
 

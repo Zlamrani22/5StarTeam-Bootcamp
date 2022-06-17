@@ -37,7 +37,7 @@ public class HomePage extends CommonAPI {
     private WebElement mainPageLiveTVTab;
 
     @FindBy(css = "button[class='hamburger js-menu-toggle']")
-    private WebElement dropDownTab;
+    public WebElement dropDownTab;
 
     @FindBy(xpath = "//span[text()='TV Schedule']")
     private WebElement tvSchedule;
@@ -56,6 +56,9 @@ public class HomePage extends CommonAPI {
 
     @FindBy(css = "h2[class='styles_title__RQZ4f'] a")
     private WebElement msnbcDaily;
+
+    @FindBy(css = "div[class='search-inner'] input[class='search-input js-search-input']")
+    public WebElement dropDownSearchField;
 
 
     public HomePage(WebDriver driver) {
@@ -123,7 +126,11 @@ public class HomePage extends CommonAPI {
         click(msnbcDaily);
     }
 
+    public void typeAndEnterInDropdownSearchField(String input){
+        typeAndEnter(dropDownSearchField,input);
+    }
 
+    public void typeInDropdownSearchField(String input){type(dropDownSearchField,input);}
 
 }
 
