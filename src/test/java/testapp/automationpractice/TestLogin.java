@@ -21,10 +21,9 @@ public class TestLogin extends CommonAPI {
         loginPage.typeMyWishlistName("Zebra2");
         loginPage.clickSaveButton();
 
-        String expectedAccountPageTitle = "My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-
     @Test(enabled = false)//check2
     public void testOrderHistory() {
         LoginPage loginPage = new LoginPage(getDriver());
@@ -35,10 +34,9 @@ public class TestLogin extends CommonAPI {
         authenticationPage.clickLoginSubmitButton();
         loginPage.clickOrderHistoryDetails();
 
-        String expectedAccountPageTitle = "Order history - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Order history - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-
     @Test(enabled = false)//check3
     public void testWriteAReview() {
         LoginPage loginPage = new LoginPage(getDriver());
@@ -51,10 +49,9 @@ public class TestLogin extends CommonAPI {
         loginPage.clickPrintedSummerDressMore();
         //loginPage.clickWriteAReview();
 
-        String expectedAccountPageTitle = "Women - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Women - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-
     @Test(enabled = false)//check4
     public void testRegisterForNewsletter() {
         LoginPage loginPage = new LoginPage(getDriver());
@@ -66,12 +63,8 @@ public class TestLogin extends CommonAPI {
         loginPage.typeNewsletterEmailInputField("tadefi_01@yahoo.fr");
         loginPage.clickNewsletterButton();
 
-        String expectedAccountPageTitle = "My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
-
-//        String actualText = driver.findElement(By.xpath("//*[@id='columns']/p")).getText();
-//        String expectedText = "Newsletter : You have successfully subscribed to this newsletter.";
-//        Assert.assertEquals(actualText, expectedText);
+        String expectedPageTitle = "My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check5
     public void testCheckSignOutFunctionality() {
@@ -83,8 +76,8 @@ public class TestLogin extends CommonAPI {
         authenticationPage.clickLoginSubmitButton();
         loginPage.clickSignOut();
 
-        String expectedAccountPageTitle = "Login - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Login - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check6
     public void testVerifyAboutUsPage(){
@@ -96,8 +89,8 @@ public class TestLogin extends CommonAPI {
         authenticationPage.clickLoginSubmitButton();
         loginPage.clickAboutUsButton();
 
-        String expectedAccountPageTitle = "About us - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "About us - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check7
     public void testOUrStores(){
@@ -109,8 +102,8 @@ public class TestLogin extends CommonAPI {
         authenticationPage.clickLoginSubmitButton();
         loginPage.clickOurStores();
 
-        String expectedAccountPageTitle = "Stores - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Stores - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check8
     public void testCheckTermsAndConditions(){
@@ -122,8 +115,8 @@ public class TestLogin extends CommonAPI {
         authenticationPage.clickLoginSubmitButton();
         loginPage.clickTermsAndConditions();
 
-        String expectedAccountPageTitle = "Terms and conditions of use - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Terms and conditions of use - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check9
     public void testCheckSitemap(){
@@ -135,8 +128,8 @@ public class TestLogin extends CommonAPI {
         authenticationPage.clickLoginSubmitButton();
         loginPage.clickSitemap();
 
-        String expectedAccountPageTitle = "Sitemap - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Sitemap - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check10
     public void testCheckSuppliers(){
@@ -150,7 +143,7 @@ public class TestLogin extends CommonAPI {
         loginPage.clickSitemap();
         sitemapPage.clickSuppliers();
 
-        String expectedAccountPageTitle = "Suppliers - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Suppliers - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 }

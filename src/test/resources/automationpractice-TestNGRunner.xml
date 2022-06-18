@@ -9,9 +9,9 @@
     <parameter name="browserName" value="chrome"></parameter>
     <parameter name="browserVersion" value="99"></parameter>
     <parameter name="url" value="http://automationpractice.com/index.php"></parameter>
-    <test name="testHomePage">
+    <test name="testAutomationHomePage">
             <classes>
-                <class name="testapp.automationpractice.TestHomePage"/>
+                <class name="testapp.automationpractice.TestAutomationHomePage"/>
             </classes>
     </test>
     <test name="testAuthentication">
@@ -47,6 +47,26 @@
     <test name="testShoppingCart">
         <classes>
             <class name="testapp.automationpractice.TestShoppingCart"></class>
+        </classes>
+    </test>
+    <test name="testWomen">
+        <classes>
+            <class name="testapp.automationpractice.TestWomen"></class>
+        </classes>
+    </test>
+    <test name="testPrintedDress">
+        <classes>
+            <class name="testapp.automationpractice.TestPrintedDress"></class>
+        </classes>
+    </test>
+    <test name="testMyStore">
+        <classes>
+            <class name="testapp.automationpractice.TestMyStore"></class>
+        </classes>
+    </test>
+    <test name="testMyWishlist">
+        <classes>
+            <class name="testapp.automationpractice.TestMyWishlist"></class>
         </classes>
     </test>
 </suite>

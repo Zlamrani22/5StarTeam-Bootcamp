@@ -21,8 +21,8 @@ public class TestSitemap extends CommonAPI {
         loginPage.clickSitemap();
         sitemapPage.clickManufacturers();
 
-        String expectedAccountPageTitle = "Manufacturers - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Manufacturers - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check2
     public void testCheckPriceDrop(){
@@ -36,8 +36,8 @@ public class TestSitemap extends CommonAPI {
         loginPage.clickSitemap();
         sitemapPage.clickPriceDrop();
 
-        String expectedAccountPageTitle = "Prices drop - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Prices drop - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check3
     public void testCheckMyAddresses(){
@@ -51,8 +51,8 @@ public class TestSitemap extends CommonAPI {
         loginPage.clickSitemap();
         sitemapPage.clickMyAddressesLink();
 
-        String expectedAccountPageTitle = "Addresses - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Addresses - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check4
     public void testCheckNewProducts(){
@@ -66,8 +66,8 @@ public class TestSitemap extends CommonAPI {
         loginPage.clickSitemap();
         sitemapPage.clickNewProducts();
 
-        String expectedAccountPageTitle = "New products - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "New products - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check5
     public void testCheckAllSpecials(){
@@ -81,8 +81,8 @@ public class TestSitemap extends CommonAPI {
         loginPage.clickSitemap();
         sitemapPage.clickAllSpecials();
 
-        String expectedAccountPageTitle = "Prices drop - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Prices drop - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check6
     public void testCheckLegalNotice(){
@@ -96,8 +96,8 @@ public class TestSitemap extends CommonAPI {
         loginPage.clickSitemap();
         sitemapPage.clickLegalNotice();
 
-        String expectedAccountPageTitle = "Legal Notice - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Legal Notice - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check7
     public void testManagePersonalInformation(){
@@ -111,8 +111,8 @@ public class TestSitemap extends CommonAPI {
         loginPage.clickSitemap();
         sitemapPage.clickPersonalInformation();
 
-        String expectedAccountPageTitle = "Identity - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Identity - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check8
     public void testAddSocialTitle(){
@@ -129,8 +129,8 @@ public class TestSitemap extends CommonAPI {
         sitemapPage.typeCurrentPassword("tadefi2022");
         sitemapPage.clickSaveSubmitIdentity();
 
-        String expectedAccountPageTitle = "Identity - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Identity - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check9
     public void testSecurePayment(){
@@ -144,8 +144,8 @@ public class TestSitemap extends CommonAPI {
         loginPage.clickSitemap();
         sitemapPage.clickSecurePaymentLink();
 
-        String expectedAccountPageTitle = "Secure payment - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Secure payment - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check10
     public void testFaceBook(){
@@ -159,7 +159,7 @@ public class TestSitemap extends CommonAPI {
         loginPage.clickSitemap();
         sitemapPage.clickFacebookButton();
 
-        String expectedAccountPageTitle = "Sitemap - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Sitemap - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 }
