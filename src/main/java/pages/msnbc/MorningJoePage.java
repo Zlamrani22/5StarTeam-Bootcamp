@@ -41,10 +41,10 @@ public class MorningJoePage extends CommonAPI {
         return header;
     }
 
-    public void scrollToBottomOfPage(){
-        scrollToView(careersButton);
-
-    }
+//    public void scrollToBottomOfPage(){
+//        scrollToView(careersButton);
+//
+//    }
 
     public WebElement clickCareersButton(){
         click(careersButton);

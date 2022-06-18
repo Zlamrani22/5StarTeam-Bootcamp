@@ -1,7 +1,6 @@
 package pages.statefarm;
 
 import base.CommonAPI;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +21,9 @@ public class HelpAndFixPage extends CommonAPI {
     @FindBy(xpath = "//div[@class='-oneX']")
     WebElement checkBox1;
 
+    @FindBy(xpath = "//*[@id='optclosebtn']")
+    WebElement xMark;
+
     //fix user password
     @FindBy(xpath = "//a[text()='Forgot Password']")
     WebElement forgetPassword;
@@ -32,8 +34,21 @@ public class HelpAndFixPage extends CommonAPI {
     @FindBy(xpath = "//a[text()='How to protect yourself']")
     WebElement protectYourself;
 
+    //download state farm app
+    @FindBy(css = "#cc-link4")
+    WebElement mobilApp;
+    @FindBy(xpath ="//body/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/p[4]/a[2]/img[1]")
+    WebElement playStore;
+
+    //general question
+    @FindBy(xpath = "//*[@name='cc-link9']")
+    WebElement viewInsurance;
+    @FindBy(xpath = "//*[text()='Billing & Payments FAQs']")
+    WebElement generalQuestions;
 
     public HelpAndFixPage(WebDriver driver){PageFactory.initElements(driver, this);}
+
+
     //fix user Id
     public void clickOnHelp(){click(help);}
     public void clickOnForgetUserId(){click(forgetUserId);}
@@ -41,6 +56,7 @@ public class HelpAndFixPage extends CommonAPI {
     public void typeDateOfBirth(String dob){type(dateOfBirth,dob);}
     public void typeEmail(String email){type(Email,email);}
     public void checkBox(){checkBox1.click();}
+    public void clickOnXbox(){click(xMark);}
 
     //fix user password
     public void clickOnForgetPassword(){click(forgetPassword);}
@@ -49,7 +65,15 @@ public class HelpAndFixPage extends CommonAPI {
     public void clickOnSecurityAndFraud(){click(securityAndFraud);}
     public void clickOnProtectYourself(){click(protectYourself);}
 
+    //download state farm app
+    public void  clickOnMobileApp(){click(mobilApp);}
+    public void clickOnPlayStore(){click(playStore);}
+
+    //general question
+    public void clickOnViewInsurance(){click(viewInsurance);}
+    public void clickOnGeneralQuestions(){click(generalQuestions);}
 
 
 
-}
+
+  }

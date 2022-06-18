@@ -7,7 +7,7 @@ import pages.statefarm.LifeInsurancePage;
 
 public class LifeInsurance extends CommonAPI {
 
-    //@Test
+    @Test
     public void getLifeInsurance(){
         LifeInsurancePage lifeInsurancePage = new LifeInsurancePage(getDriver());
         lifeInsurancePage.clickOnInsurance();
@@ -20,7 +20,19 @@ public class LifeInsurance extends CommonAPI {
 
     }
 
+    @Test
+    public void getUniversalInsurance(){
+        LifeInsurancePage lifeInsurancePage = new LifeInsurancePage(getDriver());
+        lifeInsurancePage.clickOnInsurance();
+        lifeInsurancePage.clickOnUniversalInsurance();
+        waitFor(5);
+        lifeInsurancePage.typeZipCode("11229");
+        lifeInsurancePage.clickOnGoBtn();
+        waitFor(3);
+        String expectedPageTitle = "Find State Farm® Agents Near You - State Farm®";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
 
+    }
 
 
 }

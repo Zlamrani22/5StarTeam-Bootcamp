@@ -8,7 +8,7 @@ import pages.statefarm.LifeInsurancePage;
 
 public class AutoInsurance extends CommonAPI {
 
-    //@Test
+    @Test
     public void getMotorcycleInsurance(){
         AutoInsurancePage autoInsurancePage = new AutoInsurancePage(getDriver());
         autoInsurancePage.clickOnInsurance();
@@ -18,7 +18,7 @@ public class AutoInsurance extends CommonAPI {
         String expectedPageTitle = "Find State Farm® Agents Near You - State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    //@Test
+    @Test
     public void getBoatInsurance(){
         AutoInsurancePage autoInsurancePage = new AutoInsurancePage(getDriver());
         autoInsurancePage.clickOnInsurance();
@@ -29,7 +29,7 @@ public class AutoInsurance extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 
-    //@Test
+    @Test
     public void getTrailerInsurance(){
         AutoInsurancePage autoInsurancePage = new AutoInsurancePage(getDriver());
         autoInsurancePage.clickOnInsurance();
@@ -42,7 +42,7 @@ public class AutoInsurance extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 
-    //@Test
+    @Test
     public void getCarInsurance(){
         AutoInsurancePage autoInsurancePage = new AutoInsurancePage(getDriver());
         autoInsurancePage.clickOnInsurance();
@@ -56,7 +56,7 @@ public class AutoInsurance extends CommonAPI {
 
     }
 
-   // @Test
+    @Test
     public void getMotorHomeInsurance(){
         AutoInsurancePage autoInsurancePage = new AutoInsurancePage(getDriver());
         autoInsurancePage.clickOnInsurance();

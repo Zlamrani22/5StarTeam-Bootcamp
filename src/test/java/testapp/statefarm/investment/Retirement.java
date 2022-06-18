@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class Retirement extends CommonAPI {
-    //@Test
+    @Test
     public void retirementPlan() {
         RetirementPage retirementPage = new RetirementPage(getDriver());
         retirementPage.clickOnInvestment();
@@ -27,13 +27,13 @@ public class Retirement extends CommonAPI {
           retirementPage.clickOnCalculate();
           String expectedPageTitle = "Traditional IRA | State Farm®";
           Assert.assertEquals(expectedPageTitle, getPageTitle());
-          Set<String> windows = driver.getWindowHandles();
+          Set<String> windows = getDriver().getWindowHandles();
           Iterator<String> iterator = windows.iterator();
           String childWindow = null;
           while(iterator.hasNext()){
               childWindow = iterator.next();
           }
-          driver.switchTo().window(childWindow);
+          getDriver().switchTo().window(childWindow);
           retirementPage.clickClose();
           Assert.assertEquals("Traditional vs Roth IRA Calculator",getPageTitle());
       }

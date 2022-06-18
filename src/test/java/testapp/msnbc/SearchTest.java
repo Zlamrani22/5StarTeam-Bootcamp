@@ -30,7 +30,7 @@ public class SearchTest extends CommonAPI {
 
         //scrollToView(morningJoePage.clickCareers());
 
-        scrollToView(morningJoePage.clickCareersButton());
+        //scrollToView(morningJoePage.clickCareersButton());
 
         waitFor(1);
         careerSearchPage.searchButtonAndEnter("IT");
@@ -46,9 +46,9 @@ public class SearchTest extends CommonAPI {
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
 
-        //scrollToView(morningJoePage.clickCareers());
-
-        scrollToView(morningJoePage.clickCareersButton());
+//        scrollToView(morningJoePage.clickCareers());
+//
+//        scrollToView(morningJoePage.clickCareersButton());
 
         waitFor(1);
         careerSearchPage.searchButtonCareers("IT");
