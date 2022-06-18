@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class PolicyPage extends CommonAPI {
+
     @FindBy(xpath = "//a[@class='thrd'][normalize-space()='Policies']")
     public WebElement policyButton;
 
@@ -20,8 +21,12 @@ public class PolicyPage extends CommonAPI {
 
     {
     }
+
     {
     }{
+    }
+
+    public void clickpolicybutton() {
     }
 }
 

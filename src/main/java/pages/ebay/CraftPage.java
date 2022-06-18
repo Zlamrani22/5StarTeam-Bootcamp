@@ -1,33 +1,42 @@
 package pages.ebay;
 
 import base.CommonAPI;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
 
-public class CraftPage {
+public class CraftPage extends CommonAPI {
 
-    public class TestHomePage extends CommonAPI {
-        @FindBy(css = " li[class='hl-cat-nav__active'] span")
-        public WebElement testHomeButton;
-        @FindBy(css = "select [id='gh-cat']")
-        private List<WebElement> menuDropdownOptions;
+        @FindBy(css = "input[id='gh-btn'] ")
+        public WebElement craftButton;
 
-        public void selectOptionFromMenuDropdownWithGivenText(String option) {
+        public CraftPage(WebDriver driver) {
+            PageFactory.initElements(driver, this);
+        }
 
-            List<WebElement> elements = menuDropdownOptions;
 
-            for (WebElement element : elements) {
-
-                if (element.getText().equalsIgnoreCase(option)) {
-
-                    element.click();
-
-                }
-
-            }
-
+        public void clickcraftbutton() {
+            click(craftButton);
         }
     }
-}
+
+
+//        public void selectOptionFromMenuDropdownWithGivenText(String option) {
+//
+//            List<WebElement> elements = menuDropdownOptions;
+//
+//            for (WebElement element : elements) {
+//
+//                if (element.getText().equalsIgnoreCase(option)) {
+//
+//                    element.click();
+//
+//                }
+//
+//            }
+//
+//        }
+//    }
+//}

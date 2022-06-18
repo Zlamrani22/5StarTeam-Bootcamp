@@ -5,8 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HomePage extends CommonAPI {
+
+    private final Logger LOG = LoggerFactory.getLogger(HomePage.class);
 
     @FindBy(css = "li[class='shortcuts-list-item']")
     private WebElement mainpagePeacockTab;
@@ -33,7 +37,7 @@ public class HomePage extends CommonAPI {
     private WebElement mainPageLiveTVTab;
 
     @FindBy(css = "button[class='hamburger js-menu-toggle']")
-    private WebElement dropDownTab;
+    public WebElement dropDownTab;
 
     @FindBy(xpath = "//span[text()='TV Schedule']")
     private WebElement tvSchedule;
@@ -52,6 +56,9 @@ public class HomePage extends CommonAPI {
 
     @FindBy(css = "h2[class='styles_title__RQZ4f'] a")
     private WebElement msnbcDaily;
+
+    @FindBy(css = "div[class='search-inner'] input[class='search-input js-search-input']")
+    public WebElement dropDownSearchField;
 
 
     public HomePage(WebDriver driver) {
@@ -88,6 +95,7 @@ public class HomePage extends CommonAPI {
 
     public void clickDropdownTab() {
         click(dropDownTab);
+        LOG.info("Dropdown menu opened success");
     }
 
     public void selectTvSchedule() {
@@ -96,12 +104,14 @@ public class HomePage extends CommonAPI {
 
     public void viewHomePageDropdownOptions() {
         String elements = getElementText(menuDropdownOptionsText);
+        LOG.info("");
         // System.out.println(elements);
     }
 
 
     public void selectStoreOptionFromMenu(){
         click(storeMenuOption);
+        LOG.info("Select Store option from Menu dropdown success");
     }
 
     public void selectPodcastOption(){
@@ -116,7 +126,11 @@ public class HomePage extends CommonAPI {
         click(msnbcDaily);
     }
 
+    public void typeAndEnterInDropdownSearchField(String input){
+        typeAndEnter(dropDownSearchField,input);
+    }
 
+    public void typeInDropdownSearchField(String input){type(dropDownSearchField,input);}
 
 }
 

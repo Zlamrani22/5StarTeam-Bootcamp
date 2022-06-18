@@ -6,37 +6,61 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
-
 public class ElectronicPage {
     public ElectronicPage() {
     }
 
-    public class electronicpage extends CommonAPI {
-        public class TestHomePage extends CommonAPI {
-            @FindBy(css = " li[class='hl-cat-nav__active'] span")
-            public WebElement testHomeButton;
-            @FindBy(css = "select [id='gh-cat']")
-            private List<WebElement> menuDropdownOptions;
+    public ElectronicPage(WebDriver driver) {
+    }
 
-            public void selectOptionFromMenuDropdownWithGivenText(String option) {
+    public void clickelectronicbutton() {
+    }
 
-                List<WebElement> elements = menuDropdownOptions;
+    public class Electronicpage extends CommonAPI {
 
-                for (WebElement element : elements) {
+        @FindBy(css = " input[id='gh-btn']")
+        public WebElement electronicButton;
 
-                    if (element.getText().equalsIgnoreCase(option)) {
+        public void ElectronicPage(WebDriver driver) {
+            PageFactory.initElements(driver, this);
+        }
 
-                        element.click();
 
-                    }
-
-                }
-
-            }
+        public void clickelectronicbutton() {
+            click(electronicButton);
         }
     }
+
 }
+
+
+
+
+
+
+
+
+//            @FindBy(css = "select [id='gh-cat']")
+//            private List<WebElement> menuDropdownOptions;
+
+//            public void selectOptionFromMenuDropdownWithGivenText(String option) {
+//
+//                List<WebElement> elements = menuDropdownOptions;
+//
+//                for (WebElement element : elements) {
+//
+//                    if (element.getText().equalsIgnoreCase(option)) {
+//
+//                        element.click();
+//
+//                    }
+//
+//                }
+//
+//            }
+//        }
+//    }
+//}
 
 
 //            public class electronicPage {

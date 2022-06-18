@@ -21,11 +21,11 @@
 <!--            <class name="testapp.ebay.BookTest"></class>-->
 <!--        </classes>-->
 <!--    </test>-->
-<!--    <test name="test4">-->
-<!--        <classes>-->
-<!--            <class name="testapp.ebay.AddToCartTest"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="test4">
+        <classes>
+            <class name="testapp.ebay.AddToCartTest"></class>
+        </classes>
+    </test>
 <!--    <test name="test5">-->
 <!--        <classes>-->
 <!--            <class name="testapp.ebay.CollectiblesAndArtTest"></class>-->

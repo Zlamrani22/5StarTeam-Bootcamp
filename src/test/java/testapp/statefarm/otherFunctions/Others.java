@@ -7,7 +7,7 @@ import pages.statefarm.OthersPage;
 
 public class Others extends CommonAPI {
 
-    //@Test
+    @Test
     public void testPaperLess() {
         OthersPage othersPage = new OthersPage(getDriver());
         othersPage.clickOnXbox();
@@ -20,7 +20,7 @@ public class Others extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 
-   // @Test
+    @Test
     public void testAutoPay() {
         OthersPage othersPage = new OthersPage(getDriver());
         othersPage.clickOnXbox();
@@ -33,7 +33,7 @@ public class Others extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 
-    //@Test
+    @Test
     public void changeLanguage(){
         OthersPage othersPage = new OthersPage(getDriver());
         othersPage.clickOnLanguage();
@@ -43,7 +43,7 @@ public class Others extends CommonAPI {
 
     }
 
-    //@Test
+    @Test
     public void getBillDropdownList(){
         OthersPage othersPage = new OthersPage(getDriver());
         othersPage.clickOnPayBill();
@@ -61,6 +61,13 @@ public class Others extends CommonAPI {
         for (String str:othersPage.getOthersPageQuoteDropdownOptions()) {
             System.out.println(str);
         }
+    }
+
+    @Test
+    public void validateLoginPage() {
+        OthersPage othersPage = new OthersPage(getDriver());
+        othersPage.clickOnLogo();
+        Assert.assertTrue(othersPage.checkLogoIsPresent());
     }
 
 }

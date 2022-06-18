@@ -23,7 +23,6 @@ public class ContactUsPage extends CommonAPI {
     @FindBy(css = "button[id='submitMessage']")
     public WebElement sendButton;
 
-
     public ContactUsPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
@@ -31,16 +30,21 @@ public class ContactUsPage extends CommonAPI {
     public void selectFromSubjectHeadingDropdown(){
         click(subjectHeadingDropdown);
     }
+
     public void typeEmailAddress(String emailAddress){
         type(emailAddressInputField, emailAddress);
     }
+
     public void typeOrderRefNumber(String orderRefNumber){
         type(orderRefNumberInputField, orderRefNumber);
     }
+
     public void typeInTextArea(String text){
         type(textArea, text);
     }
+
     public void clickSendButton(){
         click(sendButton);
     }
+
 }
