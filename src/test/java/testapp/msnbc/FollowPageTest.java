@@ -34,9 +34,9 @@ public class FollowPageTest extends CommonAPI {
 //        scrollToView(morningJoePage.clickFullMorningJoeBio());
 //        scrollToView(morningJoePage.clickFollowJoeOnInsta());
 
-        scrollToView(morningJoePage.fullMorningJoeBioButton());
+        //scrollToView(morningJoePage.fullMorningJoeBioButton());
         morningJoePage.clickMorningJoeBioButton();
-        scrollToView(morningJoePage.viewFollowJoeOnInsta());
+        //scrollToView(morningJoePage.viewFollowJoeOnInsta());
         morningJoePage.clickFollowJoeOnInsta();
 
         waitFor(1);

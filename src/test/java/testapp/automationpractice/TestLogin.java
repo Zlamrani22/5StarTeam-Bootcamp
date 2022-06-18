@@ -9,7 +9,7 @@ import pages.automationpractice.SitemapPage;
 
 public class TestLogin extends CommonAPI {
 
-    @Test(enabled = false)//check1
+    @Test(enabled = true)//check1
     public void testCreateWishList() {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -24,7 +24,7 @@ public class TestLogin extends CommonAPI {
         String expectedPageTitle = "My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check2
+    @Test(enabled = true)//check2
     public void testOrderHistory() {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -37,7 +37,7 @@ public class TestLogin extends CommonAPI {
         String expectedPageTitle = "Order history - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check3
+    @Test(enabled = true)//check3
     public void testWriteAReview() {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -52,7 +52,7 @@ public class TestLogin extends CommonAPI {
         String expectedPageTitle = "Women - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check4
+    @Test(enabled = true)//check4
     public void testRegisterForNewsletter() {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -66,7 +66,7 @@ public class TestLogin extends CommonAPI {
         String expectedPageTitle = "My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check5
+    @Test(enabled = true)//check5
     public void testCheckSignOutFunctionality() {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -79,7 +79,7 @@ public class TestLogin extends CommonAPI {
         String expectedPageTitle = "Login - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check6
+    @Test(enabled = true)//check6
     public void testVerifyAboutUsPage(){
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -92,8 +92,8 @@ public class TestLogin extends CommonAPI {
         String expectedPageTitle = "About us - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check7
-    public void testOUrStores(){
+    @Test(enabled = true)//check7
+    public void testCheckOurStores(){
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
@@ -105,7 +105,7 @@ public class TestLogin extends CommonAPI {
         String expectedPageTitle = "Stores - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check8
+    @Test(enabled = true)//check8
     public void testCheckTermsAndConditions(){
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -118,7 +118,7 @@ public class TestLogin extends CommonAPI {
         String expectedPageTitle = "Terms and conditions of use - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check9
+    @Test(enabled = true)//check9
     public void testCheckSitemap(){
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -131,7 +131,7 @@ public class TestLogin extends CommonAPI {
         String expectedPageTitle = "Sitemap - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check10
+    @Test(enabled = true)//check10
     public void testCheckSuppliers(){
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());

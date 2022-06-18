@@ -15,7 +15,7 @@ public class NBCNewsPageTest extends CommonAPI {
         TvSchedulePage tvSchedulePage= new TvSchedulePage(getDriver());
         homepage.clickDropdownTab();
         nbcPage.clickNBCNewsLogo();
-        switchTabs();
+        //switchTabs();
         waitFor(2);
         nbcPage.clickCovidTab();
 
@@ -28,11 +28,11 @@ public class NBCNewsPageTest extends CommonAPI {
         TvSchedulePage tvSchedulePage= new TvSchedulePage(getDriver());
         homepage.clickDropdownTab();
         nbcPage.clickNBCNewsLogo();
-        switchTabs();
+        //switchTabs();
         waitFor(2);
         nbcPage.clickCovidTab();
         waitFor(2);
-        scrollToView(nbcPage.viewCovidCasesColumn());
+        //scrollToView(nbcPage.viewCovidCasesColumn());
         nbcPage.viewCovidTwoWeekPercentage();
         Assert.assertTrue(isPresent(nbcPage.covidTwoWeekPercentageText));
     }
@@ -44,15 +44,15 @@ public class NBCNewsPageTest extends CommonAPI {
         TvSchedulePage tvSchedulePage= new TvSchedulePage(getDriver());
         homepage.clickDropdownTab();
         nbcPage.clickNBCNewsLogo();
-        switchTabs();
+        //switchTabs();
         waitFor(2);
         nbcPage.clickCovidTab();
         waitFor(2);
-        scrollToView(nbcPage.viewCovidCasesColumn());
+        //scrollToView(nbcPage.viewCovidCasesColumn());
         nbcPage.viewCovidTwoWeekPercentage();
         Assert.assertTrue(isPresent(nbcPage.covidTwoWeekPercentageText));
-        navigateBack();
-        navigateBack();
+//        navigateBack();
+//        navigateBack();
     }
 
 }

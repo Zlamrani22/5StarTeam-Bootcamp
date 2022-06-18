@@ -16,9 +16,9 @@ import org.openqa.selenium.support.PageFactory;
         }
 
 
-        public static void clickadvancedSearchbutton() {
-            click(advancedSearchbutton());
-        }
+//        public static void clickadvancedSearchbutton() {
+//            click(advancedSearchbutton());
+//        }
 
 
         private static WebElement advancedSearchbutton() {

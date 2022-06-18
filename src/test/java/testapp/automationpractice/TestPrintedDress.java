@@ -13,7 +13,7 @@ import java.util.Set;
 
 public class TestPrintedDress extends CommonAPI {
 
-    @Test(enabled = false)//check1
+    @Test(enabled = true)//check1
     public void testAddToCartBackToContinueShopping() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
@@ -37,7 +37,7 @@ public class TestPrintedDress extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
         printedDressPage.clickContinueShopping();
     }
-    @Test(enabled = false)//check2
+    @Test(enabled = true)//check2
     public void testAddThenDeleteAnItemFromShoppingCart() {
         AutomationHomePage homepage = new AutomationHomePage(getDriver());
         PrintedDressPage printedDressPage = new PrintedDressPage(getDriver());
