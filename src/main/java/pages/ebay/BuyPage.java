@@ -6,19 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ValidEmailPage extends CommonAPI {
-    @FindBy(xpath = "//span[normalize-space()='account']")
-    public WebElement validemailtButton;
+public class BuyPage extends CommonAPI {
 
-    public void clickValidEmailt() {
-        click(validemailtButton);
-    }
+    @FindBy(xpath = "//a[normalize-space()='Buy']")
+    private WebElement buyButton;
 
-    public ValidEmailPage(WebDriver driver) {
+    public BuyPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
-    {
+
+    public void clickbuybutton() {
+        click(buyButton);
     }
 }
 

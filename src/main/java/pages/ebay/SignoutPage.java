@@ -18,5 +18,7 @@ public class SignoutPage extends CommonAPI {
         PageFactory.initElements(driver, this);
     }
 
+    public void clickSignOutButton() {
+    }
 }
 
