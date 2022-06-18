@@ -12,7 +12,7 @@ import java.util.Set;
 
 public class TestWomen extends CommonAPI {
 
-    @Test(enabled = false)//check1
+    @Test(enabled = true)//check1
     public void testCloseWindowPopup() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickWomenLink();
@@ -35,7 +35,7 @@ public class TestWomen extends CommonAPI {
         womenPage.clickClose();
         Assert.assertEquals("Faded Short Sleeve T-shirts - My Store", getPageTitle());
     }
-    @Test(enabled = false)//check2
+    @Test(enabled = true)//check2
     public void testVerifyPrintedChiffonDress() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickWomenLink();
@@ -46,7 +46,7 @@ public class TestWomen extends CommonAPI {
         womenPage.clickGreenColorprintedChiffonDress();
         Assert.assertEquals("Printed Chiffon Dress - My Store", getPageTitle());
     }
-    @Test(enabled = false)//check3
+    @Test(enabled = true)//check3
     public void testModifyCompositionToCotton() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickWomenLink();
@@ -60,7 +60,7 @@ public class TestWomen extends CommonAPI {
         String expectedPageTitle = "Blouse - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check4
+    @Test(enabled = true)//check4
     public void testSummerDresses() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
@@ -73,7 +73,7 @@ public class TestWomen extends CommonAPI {
         String expectedPageTitle = "Summer Dresses - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check5
+    @Test(enabled = true)//check5
     public void testColorfulDress() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
@@ -84,7 +84,7 @@ public class TestWomen extends CommonAPI {
         String expectedPageTitle = "Women - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check6
+    @Test(enabled = true)//check6
     public void testAvailabilityInStock() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
@@ -94,7 +94,7 @@ public class TestWomen extends CommonAPI {
         String expectedPageTitle = "Women - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check7
+    @Test(enabled = true)//check7
     public void testConditionNew() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
@@ -104,7 +104,7 @@ public class TestWomen extends CommonAPI {
         String expectedPageTitle = "Women - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check8
+    @Test(enabled = true)//check8
     public void testPinterest(){
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());

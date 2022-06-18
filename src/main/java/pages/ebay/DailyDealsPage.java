@@ -15,9 +15,9 @@ public class DailyDealsPage extends CommonAPI {
         PageFactory.initElements(driver, this);
     }
 
-    public static void clickDailyDeals() {
-        click(dailyDealsButton);
-    }
+//    public static void clickDailyDeals() {
+//        click(dailyDealsButton);
+//    }
 
 
 }

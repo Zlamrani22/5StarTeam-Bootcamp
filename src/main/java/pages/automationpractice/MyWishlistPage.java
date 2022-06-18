@@ -26,6 +26,10 @@ public class MyWishlistPage extends CommonAPI {
     @FindBy(css = "a[class='addToWishlist wishlistProd_7 checked']")
     public WebElement addToWishlist;
 
+    @FindBy(xpath = "//*[@id='mywishlist']//li[2]/a")
+    public WebElement homeButton;
+
+
     public MyWishlistPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
@@ -41,6 +45,7 @@ public class MyWishlistPage extends CommonAPI {
     public void clickSave(){
         click(saveButton);
     }
+
     public void clickBackToYouAccount(){
         click(backToYourAccountButton);
     }
@@ -51,6 +56,10 @@ public class MyWishlistPage extends CommonAPI {
 
     public void clickAddToWishlist(){
         click(addToWishlist);
+    }
+
+    public void clickHome(){
+        click(homeButton);
     }
 
 }

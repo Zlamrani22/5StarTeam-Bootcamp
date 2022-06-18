@@ -12,7 +12,7 @@ import java.util.List;
 
 public class TestMyAccount extends CommonAPI {
 
-    @Test(enabled = false)//check1
+    @Test(enabled = true)//check1
     public void testDeleteMyAddress() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -28,7 +28,7 @@ public class TestMyAccount extends CommonAPI {
         Assert.assertEquals("Addresses - My Store", getPageTitle());
     }
 
-    @Test(enabled = false)//check2
+    @Test(enabled = true)//check2
     public void testSearchMultipleItems() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -46,7 +46,7 @@ public class TestMyAccount extends CommonAPI {
         }
         Assert.assertEquals("My account - My Store", getPageTitle());
     }
-    @Test(enabled = false)//check3
+    @Test(enabled = true)//check3
     public void testWriteAReview() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -63,7 +63,7 @@ public class TestMyAccount extends CommonAPI {
         myAccountPage.clickWriteAReview();
         Assert.assertEquals("Printed Summer Dress - My Store", getPageTitle());
     }
-    @Test(enabled = false)//check4
+    @Test(enabled = true)//check4
     public void testPrintASelectedItem() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -80,7 +80,7 @@ public class TestMyAccount extends CommonAPI {
         myAccountPage.clickPrintButton();
         Assert.assertEquals("Printed Summer Dress - My Store", getPageTitle());
     }
-    @Test(enabled = false)//check5
+    @Test(enabled = true)//check5
     public void testDisplayAllPictures() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -97,7 +97,7 @@ public class TestMyAccount extends CommonAPI {
         myAccountPage.clickDisplayAllPicturesLink();
         Assert.assertEquals("Blouse - My Store", getPageTitle());
     }
-    @Test(enabled = false)//check6
+    @Test(enabled = true)//check6
     public void testDeleteAWishlist() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());

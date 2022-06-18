@@ -15,7 +15,7 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonAndEnter("IT");
@@ -30,7 +30,7 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonCareers("IT");
@@ -47,7 +47,7 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonAndEnter("IT");
@@ -66,19 +66,19 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonAndEnter("IT");
         String pageTitle= careerSearchPage.viewCareerResultsHeader();
         Assert.assertEquals("Showing results for:\n" +
                 "IT",pageTitle);
-        scrollToView(careerSearchPage.searchFieldViewForScroll);
+        //scrollToView(careerSearchPage.searchFieldViewForScroll);
         careerSearchPage.clickCareerLevelDropdown();
         careerSearchPage.clickEntryLevelCheckbox();
         waitFor(3);
         Assert.assertTrue(checkBoxIsChecked(careerSearchPage.entryLevelCheckBox));
-        scrollToView(careerSearchPage.applyFiltersCareerLevel);
+        //scrollToView(careerSearchPage.applyFiltersCareerLevel);
         careerSearchPage.clickApplyFiltersCareerLevel();
     }
 
@@ -88,7 +88,7 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonAndEnter("IT");
@@ -103,7 +103,7 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonAndEnter("IT");
@@ -120,7 +120,7 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonAndEnter("IT");
         careerSearchPage.typeInJobSearchField("Automation Engineer");
@@ -139,7 +139,7 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonAndEnter("IT");
@@ -158,7 +158,7 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.clickFindJobArrow();
@@ -177,7 +177,7 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonAndEnter("IT");
@@ -194,7 +194,7 @@ public class JobSearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
-        scrollToView(morningJoePage.viewCareersButton());
+        //scrollToView(morningJoePage.viewCareersButton());
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.clickFindJobArrow();

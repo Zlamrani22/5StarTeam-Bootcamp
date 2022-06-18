@@ -62,7 +62,7 @@ import java.util.Set;
 
 public class TestShoppingCart extends CommonAPI {
 
-    @Test(enabled = false) //check1
+    @Test(enabled = true) //check1
     public void testAddItemsToCartProceedToCheckOut() {
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
@@ -82,7 +82,7 @@ public class TestShoppingCart extends CommonAPI {
         shoppingCartPage.clickProceedToCheckout();
         Assert.assertEquals("Order - My Store", getPageTitle());
     }
-    @Test(enabled = false)//check2
+    @Test(enabled = true)//check2
     public void testContactPrestaShopSupport() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         PrestaShopPage prestaShopPage = new PrestaShopPage(getDriver());
@@ -91,7 +91,7 @@ public class TestShoppingCart extends CommonAPI {
         prestaShopPage.clickSupportLink();
         Assert.assertEquals("PrestaShop Support", getPageTitle());
     }
-    @Test(enabled = false)//check3
+    @Test(enabled = true)//check3
     public void testProcessShoppingCart() {
         AutomationHomePage homepage = new AutomationHomePage(getDriver());
         homepage.clickCartButton();

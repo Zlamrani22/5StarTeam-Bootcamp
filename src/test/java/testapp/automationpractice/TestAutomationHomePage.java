@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class TestAutomationHomePage extends CommonAPI {
 
-    @Test(enabled = false)//check1
+    @Test(enabled = true)//check1
     public void testWebsiteLogo() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.typeSearchInputField("gloves");
@@ -19,7 +19,7 @@ public class TestAutomationHomePage extends CommonAPI {
         String expectedPageTitle = "My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check2
+    @Test(enabled = true)//check2
     public void testVerifySignInFunctionality(){
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         LoginPage loginPage = new LoginPage(getDriver());
@@ -28,7 +28,7 @@ public class TestAutomationHomePage extends CommonAPI {
         String expectedPageTitle = "Login - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check3
+    @Test(enabled = true)//check3
     public void testSearchFunctionality(){
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         SearchResultPage searchResultPage = new SearchResultPage(getDriver());
@@ -38,7 +38,7 @@ public class TestAutomationHomePage extends CommonAPI {
         String expectedPageTitle = "Search - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check4
+    @Test(enabled = true)//check4
     public void testSearchInvalidClothingItem() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         SearchResultPage searchResultPage = new SearchResultPage(getDriver());
@@ -49,7 +49,7 @@ public class TestAutomationHomePage extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
 
     }
-    @Test(enabled = false)//check5
+    @Test(enabled = true)//check5
     public void testBestSellers() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
@@ -59,7 +59,7 @@ public class TestAutomationHomePage extends CommonAPI {
         String expectedPageTitle = "Create and build your online business with PrestaShop";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check6
+    @Test(enabled = true)//check6
     public void testSummerCollection() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickSummerCollection();
@@ -69,7 +69,7 @@ public class TestAutomationHomePage extends CommonAPI {
         String expectedPageTitle = "Download PrestaShop and develop your online business";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check7
+    @Test(enabled = true)//check7
     public void testSendToAFriend() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickTShirts();
@@ -80,7 +80,7 @@ public class TestAutomationHomePage extends CommonAPI {
         String expectedPageTitle = "Faded Short Sleeve T-shirts - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//check8
+    @Test(enabled = true)//check8
     public void testSendToARealFriendRoman() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickTShirts();
@@ -103,7 +103,7 @@ public class TestAutomationHomePage extends CommonAPI {
         String expectedPageTitle = "Faded Short Sleeve T-shirts - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = false)//failed9
+    @Test(enabled = true)//failed9
     public void testArrangePriceSlider() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickTShirts();
@@ -111,14 +111,14 @@ public class TestAutomationHomePage extends CommonAPI {
         automationHomePage.setPriceSlider(16.50);//wasn't able to set price slider
         Assert.assertEquals("Faded Short Sleeve T-shirts - My Store", getPageTitle());
     }
-    @Test(enabled = false)//check10
+    @Test(enabled = true)//check10
     public void testDelivery() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickTShirts();
         automationHomePage.clickDeliveryLink();
         Assert.assertEquals("Delivery - My Store", getPageTitle());
     }
-    @Test(enabled = false)//check11
+    @Test(enabled = true)//check11
     public void testSendAnEmailToSupport() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickTShirts();

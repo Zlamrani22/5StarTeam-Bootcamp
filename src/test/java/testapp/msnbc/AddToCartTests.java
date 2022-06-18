@@ -40,8 +40,8 @@ public class AddToCartTests extends CommonAPI {
         Assert.assertEquals(text,getPageTitle());
         addToCartStorePage.addToCartBtn();
         Assert.assertTrue(addToCartStorePage.checkoutPageLogoDisplayed());
-        navigateBack();
+        //navigateBack();
         addToCartStorePage.clickRachelMaddowLogoTee();
-        navigateBack();
+        //navigateBack();
     }
 }
