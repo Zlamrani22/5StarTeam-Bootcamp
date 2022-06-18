@@ -10,6 +10,17 @@ public class SearchUsedCarPage extends CommonAPI {
 
     @FindBy(xpath="//label[@class='ft-homepage-search__tabs__used-car active']")
     WebElement usedCar;
+
+    @FindBy(xpath="//body[1]/main[1]/div[2]/div[2]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/label[3]/span[1]")
+    WebElement byPrice;
+    @FindBy(xpath="/html/body/main/div[2]/div[2]/div[1]/section/div/div/div[1]/div/div/div[3]/div/form/fieldset/div/div[1]/select")
+    WebElement minimumPrice;
+    @FindBy(xpath="/html/body/main/div[2]/div[2]/div[1]/section/div/div/div[1]/div/div/div[3]/div/form/fieldset/div/div[2]/select")
+    WebElement maximumPrice;
+    @FindBy(xpath="//input[@id='dealFinderZipUsedId_dealFinderFormPrice']")
+    WebElement zipCodeByPrice;
+    @FindBy(xpath="//input[@class='cgBtn isolated ft-homepage-search__used-car-form__price__submit']")
+    WebElement searchByPrice;
     @FindBy(xpath="//body[1]/main[1]/div[2]/div[2]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/label[2]/span[1]")
     WebElement byBodyStyle;
     @FindBy(xpath="//body/main[@id='main']/div[2]/div[2]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/fieldset[1]/div[1]/div[1]/div[1]")
@@ -46,6 +57,11 @@ public class SearchUsedCarPage extends CommonAPI {
     public SearchUsedCarPage(WebDriver driver) {PageFactory.initElements(driver, this);}
 
     public void clickUsedCar(){click(usedCar);}
+    public void clickByPrice(){click(byPrice);}
+    public void selectOptionFromMinimumPrice(String option){selectFromDropdown(minimumPrice, option);}
+    public void selectOptionFromMaximumPrice(String option){selectFromDropdown(maximumPrice, option);}
+    public void typeZipCodeByPrice(String zip){type(zipCodeByPrice, zip);}
+    public void clickSearchByPrice(){click(searchByPrice);}
     public void clickByMakeModel(){click(byMakeModel);}
     public void clickByBodyStyle(){click(byBodyStyle);}
     public void clickSUV(){click(SUV);}

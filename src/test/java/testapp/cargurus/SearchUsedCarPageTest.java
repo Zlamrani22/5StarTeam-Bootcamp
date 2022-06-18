@@ -7,11 +7,9 @@ import pages.cargurus.SearchUsedCarPage;
 
 public class SearchUsedCarPageTest extends CommonAPI {
 
-    //@Test
+    @Test
     public void searchHondaAccord() {
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
-
-
         searchUsedCarPage.clickUsedCar();
         waitFor(2);
         searchUsedCarPage.clickByMakeModel();
@@ -23,7 +21,7 @@ public class SearchUsedCarPageTest extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 
-    //@Test
+    @Test
     public void searchHondaCivic() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -40,7 +38,7 @@ public class SearchUsedCarPageTest extends CommonAPI {
 
     }
 
-    //@Test
+    @Test
     public void searchHondaPilot() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -57,7 +55,7 @@ public class SearchUsedCarPageTest extends CommonAPI {
 
     }
 
-    //@Test
+    @Test
     public void searchToyotaCamry() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -73,7 +71,7 @@ public class SearchUsedCarPageTest extends CommonAPI {
 
 
     }
-    //@Test
+    @Test
     public void searchMercedesBenzGClass() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -89,7 +87,7 @@ public class SearchUsedCarPageTest extends CommonAPI {
 
 
     }
-    //@Test
+    @Test
     public void searchUsedSUV() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -103,7 +101,7 @@ public class SearchUsedCarPageTest extends CommonAPI {
 
     }
 
-    //@Test
+    @Test
     public void searchUsedSedan() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -116,7 +114,7 @@ public class SearchUsedCarPageTest extends CommonAPI {
 
     }
 
-    //@Test
+    @Test
     public void searchUsedPickUpTruck() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -129,7 +127,22 @@ public class SearchUsedCarPageTest extends CommonAPI {
 
 
     }
-    //@Test
+    @Test
+    public void searchUsedCarByPrice2() {
+
+        SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
+        searchUsedCarPage.clickUsedCar();
+        waitFor(2);
+        searchUsedCarPage.clickByPrice();
+        searchUsedCarPage.selectOptionFromMinimumPrice("2000");
+        searchUsedCarPage.selectOptionFromMaximumPrice("6000");
+        searchUsedCarPage.typeZipCodeByPrice("66162");
+        searchUsedCarPage.clickSearchByPrice();
+        String expectedPageTitle = "Used Cars for Sale Near Me - CarGurus";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
+    }
+
+    @Test
     public void searchUsedCoupe() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -139,10 +152,8 @@ public class SearchUsedCarPageTest extends CommonAPI {
         searchUsedCarPage.clickCoupe();
         searchUsedCarPage.typeZipCodeBodyStyle("66223");
         searchUsedCarPage.clickSearchByBodyStyle();
-
-
     }
-    //@Test
+    @Test
     public void searchUsedHatchback() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -152,10 +163,8 @@ public class SearchUsedCarPageTest extends CommonAPI {
         searchUsedCarPage.clickHatchback();
         searchUsedCarPage.typeZipCodeBodyStyle("66223");
         searchUsedCarPage.clickSearchByBodyStyle();
-
-
     }
-    //@Test
+    @Test
     public void searchUsedConvertible() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -165,10 +174,8 @@ public class SearchUsedCarPageTest extends CommonAPI {
         searchUsedCarPage.clickConvertible();
         searchUsedCarPage.typeZipCodeBodyStyle("66223");
         searchUsedCarPage.clickSearchByBodyStyle();
-
-
     }
-    //@Test
+    @Test
     public void searchUsedWagon() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -178,10 +185,8 @@ public class SearchUsedCarPageTest extends CommonAPI {
         searchUsedCarPage.clickWagon();
         searchUsedCarPage.typeZipCodeBodyStyle("66223");
         searchUsedCarPage.clickSearchByBodyStyle();
-
-
     }
-    //@Test
+    @Test
     public void searchUsedMinivan() {
 
         SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
@@ -191,8 +196,32 @@ public class SearchUsedCarPageTest extends CommonAPI {
         searchUsedCarPage.clickMinivan();
         searchUsedCarPage.typeZipCodeBodyStyle("66223");
         searchUsedCarPage.clickSearchByBodyStyle();
-
-
+    }
+    @Test
+    public void searchUsedCarByPrice() {
+        SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
+        searchUsedCarPage.clickUsedCar();
+        waitFor(2);
+        searchUsedCarPage.clickByPrice();
+        searchUsedCarPage.selectOptionFromMinimumPrice("4000");
+        searchUsedCarPage.selectOptionFromMaximumPrice("16000");
+        searchUsedCarPage.typeZipCodeByPrice("66223");
+        searchUsedCarPage.clickSearchByPrice();
+        String expectedPageTitle = "Used Cars for Sale Near Me - CarGurus";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
+    }
+    @Test
+    public void searchUsedCarByPrice1() {
+        SearchUsedCarPage searchUsedCarPage = new SearchUsedCarPage(getDriver());
+        searchUsedCarPage.clickUsedCar();
+        waitFor(2);
+        searchUsedCarPage.clickByPrice();
+        searchUsedCarPage.selectOptionFromMinimumPrice("8000");
+        searchUsedCarPage.selectOptionFromMaximumPrice("26000");
+        searchUsedCarPage.typeZipCodeByPrice("66062");
+        searchUsedCarPage.clickSearchByPrice();
+        String expectedPageTitle = "Used Cars for Sale Near Me - CarGurus";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 
 
