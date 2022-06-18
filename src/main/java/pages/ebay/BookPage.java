@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
     public class BookPage extends CommonAPI {
 
-        @FindBy(css = "#gh-cat")
+        @FindBy(css = "input[id='gh-btn']")
         private WebElement bookButton;
 
         public  BookPage(WebDriver driver) {
@@ -22,5 +22,7 @@ import org.openqa.selenium.support.PageFactory;
         }
 
 
+        public void clickbookbutton() {
+        }
     }
 

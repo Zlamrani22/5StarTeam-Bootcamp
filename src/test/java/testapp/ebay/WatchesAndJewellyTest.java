@@ -3,19 +3,26 @@ package testapp.ebay;
 import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.ebay.TestHomePage;
+import pages.ebay.HomePage;
 import pages.ebay.WatchesAndJewellyPage;
 
-public class WatchesAndJewellyTest {
-    public class watchesAndJewellyTest extends CommonAPI {
+
+public class WatchesAndJewellyTest extends CommonAPI {
         @Test
         public void WatchAndJewellyTest() {
-            TestHomePage testHomePage = new TestHomePage(getDriver());
-            testHomePage.selectOptionFromMenuDropdownWithGivenText("WatchesAndJewelly");
+            HomePage homePage = new HomePage(getDriver());
+            homePage.selectOptionFromDropDown("WatchesAndJewelly");
+            WatchesAndJewellyPage watchesAndJewellyPage = new WatchesAndJewellyPage(getDriver());
+            watchesAndJewellyPage.clickwatchesAndJewellybutton();
             waitFor(3);
+            homePage.clickSearch();
+            String expectWatchesAndJewelly = "ebay.com :WatchesAndJewelly";
+            Assert.assertEquals(expectWatchesAndJewelly, (getPageTitle()));
         }
     }
-}
+
+
+
 
 
 
