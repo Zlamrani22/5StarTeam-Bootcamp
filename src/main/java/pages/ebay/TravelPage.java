@@ -6,35 +6,45 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
 
-public class TravelPage {
-    public class travelPage extends CommonAPI {
+public class TravelPage extends CommonAPI {
 
-        public class TestHomePage extends CommonAPI {
-            @FindBy(css = " li[class='hl-cat-nav__active'] span")
-            public WebElement testHomeButton;
-            @FindBy(css = "select [id='gh-cat']")
-            private List<WebElement> menuDropdownOptions;
+            @FindBy(css="input[id='gh-btn']")
+            public WebElement travelButton;
 
-            public void selectOptionFromMenuDropdownWithGivenText(String option) {
+            public TravelPage(WebDriver driver) {
+                PageFactory.initElements(driver, this);
+            }
 
-                List<WebElement> elements = menuDropdownOptions;
 
-                for (WebElement element : elements) {
-
-                    if (element.getText().equalsIgnoreCase(option)) {
-
-                        element.click();
-
-                    }
-
-                }
-
+            public void clicktravelbutton() {
+                click(travelButton);
             }
         }
-    }
-}
+
+
+
+//            @FindBy(css = "select [id='gh-cat']")
+//            private List<WebElement> menuDropdownOptions;
+//
+//            public void selectOptionFromMenuDropdownWithGivenText(String option) {
+//
+//                List<WebElement> elements = menuDropdownOptions;
+//
+//                for (WebElement element : elements) {
+//
+//                    if (element.getText().equalsIgnoreCase(option)) {
+//
+//                        element.click();
+//
+//                    }
+//
+//                }
+//
+//            }
+//        }
+//    }
+
 
 
 

@@ -1,20 +1,27 @@
 package testapp.ebay;
 
 import base.CommonAPI;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.ebay.HomePage;
 import pages.ebay.StampsPage;
-import pages.ebay.TestHomePage;
 
-public class StampsTest {
-    public class StampTest extends CommonAPI {
+
+public class StampsTest extends CommonAPI {
 
         @Test
         public void StampsTest() {
-            TestHomePage testHomePage = new TestHomePage(getDriver());
-            testHomePage.selectOptionFromMenuDropdownWithGivenText("Stamps");
+            HomePage homePage = new HomePage(getDriver());
+            homePage.selectOptionFromDropDown("Stamps");
+           StampsPage stampsPage = new StampsPage(getDriver());
+            stampsPage.clickstampsbutton();
             waitFor(1);
+            homePage.clickSearch();
+            String expectStamps= "ebay.com : Stamps";
+            Assert.assertEquals(expectStamps, (getPageTitle()));
         }
     }
 
-}
+
+
 

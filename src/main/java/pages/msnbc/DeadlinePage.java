@@ -18,6 +18,7 @@ public class DeadlinePage extends CommonAPI {
         PageFactory.initElements(driver,this);
     }
 
+
     public void selectTwitter() {
         click(twitterOption);
     }
