@@ -27,14 +27,18 @@ public class AuthenticationPage extends CommonAPI {
     public void clickLoginButton(){
         click(loginButton);
     }
+
     public void typeEmailInputField(String emailAddress){
         type(emailInputField, emailAddress);
     }
+
     public void typePasswordInputField(String password){
         type(passwordInputField, password);
     }
+
     public MyAccountPage clickLoginSubmitButton(){
         click(loginSubmitButton);
         return new MyAccountPage(getDriver());
     }
+
 }

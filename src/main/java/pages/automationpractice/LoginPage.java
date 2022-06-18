@@ -98,9 +98,9 @@ public class LoginPage extends CommonAPI {
         click(writeAReviewLink);
     }
 
-    public HomePage clickSignOut(){
+    public AutomationHomePage clickSignOut(){
         click(signOutButton);
-        return new HomePage(getDriver());
+        return new AutomationHomePage(getDriver());
     }
 
     public void clickAboutUsButton(){
