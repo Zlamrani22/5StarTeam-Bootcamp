@@ -23,8 +23,8 @@ public class MorningJoePage extends CommonAPI {
 
     @FindBy(css = "input[class='input-search']")
     private WebElement careerSearchButton;
-//    @FindBy(css = "form[action='/find-a-job#']")
-//    private WebElement searchCareers;
+    @FindBy(css = "form[action='/find-a-job#']")
+   private WebElement searchCareers;
 
     @FindBy(xpath = "//a[@class=\"animated-ghost-button animated-ghost-button--small styles_promo3PanelButton__X0MV7\"][text()='FULL BIO'][1]")
     private WebElement morningJoeBioButton;
@@ -49,8 +49,15 @@ public class MorningJoePage extends CommonAPI {
     }
 
 
+//    public void scrollToBottomOfPage(){
+//        scrollToView(careersButton);
+//
+//    }
+
+
     public WebElement viewCareersButton(){
         isPresent(careersButton);
+
 
         return careersButton;
     }

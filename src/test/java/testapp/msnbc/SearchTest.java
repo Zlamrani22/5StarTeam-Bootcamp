@@ -26,7 +26,15 @@ public class SearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
+
+
+        //scrollToView(morningJoePage.clickCareers());
+
+        //scrollToView(morningJoePage.clickCareersButton());
+
+
         scrollToView(morningJoePage.viewCareersButton());
+
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonAndEnter("IT");
@@ -41,7 +49,15 @@ public class SearchTest extends CommonAPI {
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         CareerSearchPage careerSearchPage= new CareerSearchPage(getDriver());
         homePage.clickMorningJoe();
+
+
+//        scrollToView(morningJoePage.clickCareers());
+//
+//        scrollToView(morningJoePage.clickCareersButton());
+
+
         scrollToView(morningJoePage.viewCareersButton());
+
         waitFor(1);
         morningJoePage.clickCareersButton();
         careerSearchPage.searchButtonCareers("IT");

@@ -30,10 +30,15 @@ public class FollowPageTest extends CommonAPI {
         HomePage homePage= new HomePage(getDriver());
         MorningJoePage morningJoePage= new MorningJoePage(getDriver());
         homePage.clickMorningJoe();
+
+//        scrollToView(morningJoePage.clickFullMorningJoeBio());
+//        scrollToView(morningJoePage.clickFollowJoeOnInsta());
+
         scrollToView(morningJoePage.fullMorningJoeBioButton());
         morningJoePage.clickMorningJoeBioButton();
         scrollToView(morningJoePage.viewFollowJoeOnInsta());
         morningJoePage.clickFollowJoeOnInsta();
+
         waitFor(1);
         Assert.assertTrue(morningJoePage.followJoeIsClicked());
         String pageTitle="Joe Scarborough (@joescarborough) • Instagram photos and videos";

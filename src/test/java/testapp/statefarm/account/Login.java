@@ -12,7 +12,7 @@ public class Login extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.clickOnLogInButton();
         loginPage.typeUserName("Aksel1506");
-        loginPage.typePassword("TestCase@java$");
+        loginPage.typePassword("TestCase@java0");
         loginPage.clickLoginButtonSecond();
         waitFor(3);
         String expectedPageTitle = "Log In";

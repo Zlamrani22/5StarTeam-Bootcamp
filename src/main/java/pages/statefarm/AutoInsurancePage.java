@@ -25,15 +25,30 @@ public class AutoInsurancePage extends CommonAPI {
     //get travel trailer insurance
     @FindBy(xpath = "//*[text()='Travel Trailers']")
     WebElement trailer;
-    @FindBy(xpath = "//body/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]/span[1]")
+    @FindBy(xpath = "//*[@id='optclosebtn']/span")
     WebElement xBox;
+
+    //get car insurance
+    @FindBy(xpath = "//a[text()='Car Insurance']")
+    WebElement carInsurance;
+    @FindBy(xpath = " //input[@id='quote-main-zip-code-input']")
+    WebElement zip;
+    @FindBy(css  = "#quote-main-zip-code-button-1")
+    WebElement startQuote;
+
+    //get motor home insurance
+    @FindBy(xpath = "//a[text()='Motorhome']")
+    WebElement motorHome;
+
+    //get off-road vehicles
+    @FindBy(xpath = "//a[text()='Off-road Vehicles']")
+    WebElement offRoadVehicle;
 
     public AutoInsurancePage(WebDriver driver){PageFactory.initElements(driver, this);}
 
     //get motorcycle insurance
     public void clickOnInsurance(){click(insurance);}
     public void clickOnMotorcycle(){click(motorcycle);}
-
     public void type(String zip){type(zipCode, zip);}
     public void clickOnFindAgent(){click(findAgent);}
 
@@ -44,6 +59,16 @@ public class AutoInsurancePage extends CommonAPI {
     public void clickOnTrailer(){click(trailer);}
     public void clickOnXbox(){click(xBox);}
 
+    //get a car insurance
+    public void clickOnCarInsurance(){click(carInsurance);}
+    public void typeZip(String zipcode){type(zip, zipcode);}
+    public void clickOnStartQuote(){click(startQuote);}
+
+    //get motor home insurance
+    public void clickOnMotorHome(){click(motorHome);}
+
+    //get off-road vehicles
+    public void clickOnOffRoad(){click(offRoadVehicle);}
 
 
 }
