@@ -6,17 +6,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AdvancedSearchPage extends CommonAPI {
 
-    @FindBy(xpath = "//a[@id='gh-as-a']")
-    public WebElement AdvancedSearch;
+    public class AdvancedSearchPage extends CommonAPI {
+        @FindBy(css = "input[id='gh-btn'] ")
+        private WebElement advancedSearchButton;
+
+        public AdvancedSearchPage(WebDriver driver) {
+            PageFactory.initElements(driver, this);
+        }
 
 
-    public AdvancedSearchPage(WebDriver driver){
-        PageFactory.initElements(driver, this);
+        public static void clickadvancedSearchbutton() {
+            click(advancedSearchbutton());
+        }
+
+
+        private static WebElement advancedSearchbutton() {
+            return null;
+        }
     }
-    public void clickAddvancedSearch(){
-        click(AdvancedSearch);
-    }
-}
 

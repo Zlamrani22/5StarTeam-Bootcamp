@@ -7,18 +7,24 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AddToCartPage extends CommonAPI {
-    @FindBy(xpath = "//a[@aria-label='Your shopping cart']//*[name()='svg']")
+    @FindBy(css = "gh-cart-icon")
     private WebElement addToCartButton;
 
     public AddToCartPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);}
+        PageFactory.initElements(driver, this);
+    }
 
 
-       public void clickaddtocartbutton(){
-
-            click(addToCartButton);
-        }
-
+    public void clickaddtocartbutton() {
+        click(addToCartButton);
+    }
 }
 
+//}
 
+//public class AddToCartPage extends CommonAPI {
+//
+//    private final Logger LOG = LoggerFactory.getLogger(AddToCartPage.class);
+//
+//    @FindBy(css = " #gh-btn")
+//    private WebElement searchField;

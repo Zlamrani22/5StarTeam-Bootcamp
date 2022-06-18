@@ -14,10 +14,15 @@ public class VideoTest extends CommonAPI {
     public void PeacockHassanMehdiShow(){
         HomePage homePage= new HomePage(getDriver());
         homePage.clickPeackockTab();
-        waitFor(1);
+        switchTabs();
+        String pageTitle= "Watch MSNBC Streaming on Peacock | Peacock";
+        Assert.assertEquals(pageTitle,getPageTitle());
         PeacockPage peacockPage= new PeacockPage(getDriver());
-//        scrollToView(peacockPage.clickHassanMehdiPeacock());
-        //need to finish
+        scrollToView(peacockPage.scrollToOnlyOnPeacockHeader());
+        peacockPage.clickHassanMehdiPeacock();
+        String title= "Watch The Mehdi Hasan Show Streaming Online | Peacock";
+        Assert.assertEquals(title,getPageTitle());
+
     }
 
     @Test(enabled = false)

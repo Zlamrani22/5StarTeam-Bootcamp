@@ -1,13 +1,10 @@
 package testapp.ebay;
 
 import base.CommonAPI;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.ebay.HomePage;
 import pages.ebay.PolicyPage;
-import pages.ebay.TestHomePage;
-
-import java.security.Policy;
 
 //import base.CommonAPI;
 //import org.testng.Assert;
@@ -19,13 +16,18 @@ public class PolicyTest {
 
         @Test
         public void PolicyTest() {
-            TestHomePage testHomePage = new TestHomePage(getDriver());
-            testHomePage.selectOptionFromMenuDropdownWithGivenText("Policy");
+            HomePage homePage = new HomePage(getDriver());
+            homePage.selectOptionFromDropDown("Policy");
+            PolicyPage policyPage = new PolicyPage(getDriver());
+            policyPage.clickpolicybutton();
             waitFor(2);
+            homePage.clickSearch();
+            String expectPolicy = "ebay.com : Policy";
+            Assert.assertEquals(expectPolicy, (getPageTitle()));
         }
     }
-}
 
+}
 
 
 

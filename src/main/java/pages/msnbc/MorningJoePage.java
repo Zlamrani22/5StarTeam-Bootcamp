@@ -11,16 +11,20 @@ public class MorningJoePage extends CommonAPI {
     @FindBy(css = "img[class='titleLogo']")
     private WebElement pageHeader;
 
+    @FindBy(css = "h2[class='styles_promo3CardHeadline__aknwc']")
+    private WebElement joePageTextAboveFullBio;
+
     @FindBy(css = "div[id='hfs-footer']")
     private WebElement joePageFooter;
+
 
     @FindBy(xpath = "//a[text()='Careers']")
     private WebElement careersButton;
 
     @FindBy(css = "input[class='input-search']")
     private WebElement careerSearchButton;
-//    @FindBy(css = "form[action='/find-a-job#']")
-//    private WebElement searchCareers;
+    @FindBy(css = "form[action='/find-a-job#']")
+   private WebElement searchCareers;
 
     @FindBy(xpath = "//a[@class=\"animated-ghost-button animated-ghost-button--small styles_promo3PanelButton__X0MV7\"][text()='FULL BIO'][1]")
     private WebElement morningJoeBioButton;
@@ -29,6 +33,9 @@ public class MorningJoePage extends CommonAPI {
     private WebElement careerListHeader;
 
     @FindBy(xpath = "//a[text()='@JoeScarborough']")
+    private WebElement followJoeInstaButton ;
+
+    @FindBy(xpath = "//p[text()='Like Joe on Facebook: ']")
     private WebElement followJoeText;
 
     public MorningJoePage(WebDriver driver){
@@ -41,41 +48,48 @@ public class MorningJoePage extends CommonAPI {
         return header;
     }
 
+
 //    public void scrollToBottomOfPage(){
 //        scrollToView(careersButton);
 //
 //    }
 
-//    public void clickCareersButton(){
-//        click(careersButton);
-//    }
-//
-    public WebElement scrollToFullBio(){
-        morningJoeBioButton.click();
-        return morningJoeBioButton;
-    }
 
-    public void clickFullMorningJoeBio(){
-        click(morningJoeBioButton);
-    }
-    public WebElement clickCareers() {
-        click(careersButton);
+    public WebElement viewCareersButton(){
+        isPresent(careersButton);
+
+
         return careersButton;
     }
 
-    public WebElement clickFollowJoeOnInsta(){
-        followJoeText.click();
-        return clickFollowJoeOnInsta();
+
+    public WebElement fullMorningJoeBioButton(){
+        isPresent(joePageTextAboveFullBio);
+        return joePageTextAboveFullBio;
+    }
+
+    public void clickMorningJoeBioButton(){
+        click(morningJoeBioButton);
+    }
+
+    public void clickCareersButton() {
+        click(careersButton);
+    }
+
+    public WebElement viewFollowJoeOnInsta(){
+        isPresent(followJoeText);
+        return followJoeText;
+    }
+
+    public void clickFollowJoeOnInsta(){
+        click(followJoeInstaButton);
     }
 
     public boolean followJoeIsClicked(){
-        isInteractable(followJoeText);
+        isInteractable(followJoeInstaButton);
         return true;
     }
 
 
-    public String viewResultsHeader(){
-        String text=getElementText(careerListHeader);
-        return text;
-    }
+
 }

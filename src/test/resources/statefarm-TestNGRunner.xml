@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="start smoke testing">
+
+    <parameter name="useCloudEnv" value="false"></parameter>
+    <parameter name="envName" value="browserstack"></parameter>
+    <parameter name="os" value="windows"></parameter>
+    <parameter name="osVersion" value="11"></parameter>
+    <parameter name="browserName" value="chrome"></parameter>
+    <parameter name="browserVersion" value="99"></parameter>
+    <parameter name="url" value="https://www.statefarm.com/"></parameter>
+
+        <test name="logInTest">
+            <classes>
+                <class name="testapp.statefarm.account.Login"></class>
+            </classes>
+        </test>
+        <test name="PersonalBankingTest">
+            <classes>
+                <class name="testapp.statefarm.banking.PersonalBanking"></class>
+            </classes>
+        </test>
+        <test name="BusinessBankingTest">
+            <classes>
+               <class name="testapp.statefarm.banking.BusinessBanking"></class>
+            </classes>
+        </test>
+        <test name="ClaimsTest">
+            <classes>
+                <class name="testapp.statefarm.claims.TypesOfClaims"></class>
+            </classes>
+        </test>
+        <test name="AccessTest">
+            <classes>
+                <class name="testapp.statefarm.DocumentsAndMessages.Access"></class>
+            </classes>
+        </test>
+        <test name="HelpTest">
+            <classes>
+                <class name="testapp.statefarm.help.HelpAndFix"></class>
+            </classes>
+        </test>
+        <test name="AutoInsuranceTest">
+            <classes>
+               <class name="testapp.statefarm.insurance.AutoInsurance"></class>
+            </classes>
+        </test>
+        <test name="SmallBusinessInsuranceTest">
+            <classes>
+               <class name="testapp.statefarm.insurance.SmallBusinessInsurance"></class>
+            </classes>
+        </test>
+        <test name="HomeInsuranceTest">
+            <classes>
+                <class name="testapp.statefarm.insurance.HomeInsurance"></class>
+            </classes>
+        </test>
+        <test name="LifeInsuranceTest">
+            <classes>
+                <class name="testapp.statefarm.insurance.LifeInsurance"></class>
+            </classes>
+        </test>
+        <test name="RetirementInvestmentTest">
+            <classes>
+                <class name="testapp.statefarm.investment.Retirement"></class>
+            </classes>
+        </test>
+        <test name="SavingForCollegeTest">
+            <classes>
+                  <class name="testapp.statefarm.investment.EducationSaving"></class>
+            </classes>
+        </test>
+        <test name="MutualFunds">
+            <classes>
+                 <class name="testapp.statefarm.investment.MutualFund"></class>
+            </classes>
+        </test>
+        <test name="LearnMoreTest">
+            <classes>
+                  <class name="testapp.statefarm.investment.RealEstatePlaning"></class>
+            </classes>
+        </test>
+        <test name="BillingTest">
+            <classes>
+                  <class name="testapp.statefarm.payement.Billing"></class>
+            </classes>
+        </test>
+        <test name="QuoteTest">
+            <classes>
+                 <class name="testapp.statefarm.quotes.DifferentQuotes"></class>
+            </classes>
+        </test>
+        <test name="SearchTest">
+            <classes>
+                 <class name="testapp.statefarm.search.DifferentSearch"></class>
+           </classes>
+        </test>
+        <test name="OtherFunctions">
+            <classes>
+                 <class name="testapp.statefarm.otherFunctions.Others"></class>
+            </classes>
+        </test>
+    </suite>
