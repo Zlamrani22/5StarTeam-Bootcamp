@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class InvalidSigninPage extends CommonAPI {
 
-    @FindBy(xpath = "//input[@id='pass']")
+    @FindBy(xpath = "//span[@id='gh-ug']//a[contains(text(),'Sign in')]")
     public WebElement invalidsigninButton;
 
     public void clickInvalidSignint(){

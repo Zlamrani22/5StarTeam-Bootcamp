@@ -6,27 +6,28 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class WatchesAndJewellyPage {
-    public WatchesAndJewellyPage(WebDriver driver) {
-    }
+//public class WatchesAndJewellyPage {
+//    public WatchesAndJewellyPage(WebDriver driver) {
+//    }
 
-    public class watchesAndJewellyPage extends CommonAPI {
+    public class WatchesAndJewellyPage extends CommonAPI {
 
-        @FindBy(xpath = "//li[@class='hl-cat-nav__js-tab']//a[contains(text(),'Jewelly")
+        @FindBy(css = "input[id='gh-btn']")
         public WebElement watchesandjewellyButton;
 
-        public watchesAndJewellyPage(WebDriver driver) {
+        public WatchesAndJewellyPage(WebDriver driver) {
             PageFactory.initElements(driver, this);
         }
 
         public void clickWatchesAndJewelly() {
-            WebElement WatchesAndJewellyButton;
             click(watchesandjewellyButton);
         }
 
 
+        public void clickwatchesAndJewellybutton() {
+        }
     }
-}
+
 
 
 

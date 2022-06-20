@@ -26,9 +26,11 @@ public class OthersPage extends CommonAPI {
     @FindBy(xpath = "")
     WebElement autoPay;
 
+
     //Change language
     @FindBy(xpath = "//span[text()='Español']")
     WebElement language;
+
 
     //get list of option from bill pay
     @FindBy(xpath = "//span[text()='Pay a Bill']")
@@ -36,14 +38,20 @@ public class OthersPage extends CommonAPI {
     @FindBy(css = "#pay-a-bill-paymentSelect")
     WebElement billDropdown;
 
-    // get list of option from quote
 
+    // get list of option from quote
     @FindBy(xpath = "//*[text()='Get a Quote']")
     WebElement getQuote;
     @FindBy(css = "#getaquote-select-product")
     WebElement quoteDrop;
 
+    //check if logo is present.
+    @FindBy(css = "#oneX-sf-logo")
+    WebElement stateFarmLogo;
+
+
     public OthersPage(WebDriver driver){PageFactory.initElements(driver, this);}
+
 
     //goPaperLess
     public void clickOnPaperLess(){click(goPaperLessBtn);}
@@ -84,6 +92,13 @@ public class OthersPage extends CommonAPI {
             options.add(element.getText());
         }
         return options;
+    }
+
+    //check if logo is present
+
+    public void clickOnLogo(){click(stateFarmLogo);}
+    public boolean checkLogoIsPresent(){
+        return isPresent(stateFarmLogo);
     }
 
    }

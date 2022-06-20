@@ -7,7 +7,7 @@ import pages.automationpractice.AuthenticationPage;
 
 public class TestAuthentication extends CommonAPI {
 
-    @Test(enabled = false)//check
+    @Test(enabled = true)//check
     public void testAuthenticateWithValidCredentials() {
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();

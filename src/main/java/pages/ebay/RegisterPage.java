@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class RegisterPage extends CommonAPI {
+
     @FindBy(xpath = "//span[normalize-space()='register page']")
     public WebElement RegisterButton;
 
@@ -16,6 +17,12 @@ public class RegisterPage extends CommonAPI {
 
     public RegisterPage(WebDriver driver){
         PageFactory.initElements(driver, this);
+
+
+        }
+
+    public void clickregisterbutton() {
     }
 }
+
 

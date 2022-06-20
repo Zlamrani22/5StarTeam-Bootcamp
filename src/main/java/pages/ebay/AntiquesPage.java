@@ -1,32 +1,27 @@
 package pages.ebay;
 
 import base.CommonAPI;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
 
-public class AntiquesPage {
-    public class AntiquePage extends CommonAPI {
-        @FindBy(css = " li[class='hl-cat-nav__active'] span")
-        public WebElement antiquesButton;
-        @FindBy(css = "select [id='gh-cat']")
-        private List<WebElement> menuDropdownOptions;
+    public class AntiquesPage extends CommonAPI {
+        @FindBy(css = "input[id='gh-btn']")
+        private WebElement antiquesButton;
 
-        public void selectOptionFromMenuDropdownWithGivenText(String option) {
+        public AntiquesPage(WebDriver driver) {
+            PageFactory.initElements(driver, this);
+        }
 
-            List<WebElement> elements = menuDropdownOptions;
 
-            for (WebElement element : elements) {
-
-                if (element.getText().equalsIgnoreCase(option)) {
-
-                    element.click();
-
-                }
-
-            }
-
+        public void clickantiquesbutton() {
+            click(antiquesButton);
         }
     }
-}
+
+
+
+
+

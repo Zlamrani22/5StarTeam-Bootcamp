@@ -3,24 +3,27 @@ package testapp.ebay;
 import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.ebay.HomePage;
 import pages.ebay.RealEstatePage;
-import pages.ebay.TestHomePage;
 
-public class RealEstateTest {
-    public class realEstateTest extends CommonAPI {
-        public class RealEstatTest extends CommonAPI {
+
+public class RealEstateTest extends CommonAPI {
 
             @Test
             public void RealEstateTest() {
-                TestHomePage testHomePage = new TestHomePage(getDriver());
-                testHomePage.selectOptionFromMenuDropdownWithGivenText("RealEstate");
+                HomePage homePage = new HomePage(getDriver());
+                homePage.selectOptionFromDropDown("RealEstate");
+               RealEstatePage realEstatePage = new RealEstatePage(getDriver());
+                realEstatePage.clickrealEstatebutton();
                 waitFor(2);
+                homePage.clickSearch();
+                String expectRealEstate = "ebay.com : RealEstate";
+                Assert.assertEquals(expectRealEstate, (getPageTitle()));
             }
         }
 
 
-    }
-}
+
 
 //        public void testRealestate() {
 //           RealEstatePage realEstatePage = new RealEstatePage(getDriver());

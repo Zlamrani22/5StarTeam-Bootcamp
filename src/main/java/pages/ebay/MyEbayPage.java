@@ -18,5 +18,8 @@ public class MyEbayPage extends CommonAPI {
     public MyEbayPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
+
+    public void clickmyEbaybutton() {
+    }
 }
 
