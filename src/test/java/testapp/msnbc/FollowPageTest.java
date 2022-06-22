@@ -44,25 +44,25 @@ import pages.msnbc.TwitterDeadlinePage;
 
 public class FollowPageTest extends CommonAPI {
 
-   // @Test
-    public void deadlineTwitterPageTest(){
-        HomePage homePage= new HomePage(getDriver());
-        DeadlinePage deadlinePage= new DeadlinePage(getDriver());
-        TwitterDeadlinePage twitterDeadlinePage= new TwitterDeadlinePage(getDriver());
+    // @Test
+    public void deadlineTwitterPageTest() {
+        HomePage homePage = new HomePage(getDriver());
+        DeadlinePage deadlinePage = new DeadlinePage(getDriver());
+        TwitterDeadlinePage twitterDeadlinePage = new TwitterDeadlinePage(getDriver());
         homePage.clickDeadLine();
-        String title= "Deadline: White House on MSNBC with Nicolle Wallace";
-        Assert.assertEquals(title,getPageTitle());
+        String title = "Deadline: White House on MSNBC with Nicolle Wallace";
+        Assert.assertEquals(title, getPageTitle());
         deadlinePage.selectTwitter();
         twitterDeadlinePage.twitterFollowBtn();
-        String text= twitterDeadlinePage.popupPageText();
-        Assert.assertEquals("Follow Deadline White House to see what they share on Twitter.",text);
+        String text = twitterDeadlinePage.popupPageText();
+        Assert.assertEquals("Follow Deadline White House to see what they share on Twitter.", text);
 
     }
 
-   @Test
-    public void morningJoeInstagramPageTest(){
-        HomePage homePage= new HomePage(getDriver());
-        MorningJoePage morningJoePage= new MorningJoePage(getDriver());
+    @Test
+    public void morningJoeInstagramPageTest() {
+        HomePage homePage = new HomePage(getDriver());
+        MorningJoePage morningJoePage = new MorningJoePage(getDriver());
         homePage.clickMorningJoe();
 
 //        scrollToView(morningJoePage.clickFullMorningJoeBio());
@@ -75,8 +75,11 @@ public class FollowPageTest extends CommonAPI {
 
         waitFor(1);
         Assert.assertTrue(morningJoePage.followJoeIsClicked());
-        String pageTitle="Joe Scarborough (@joescarborough) • Instagram photos and videos";
-        Assert.assertEquals(pageTitle,getPageTitle());
+        String pageTitle = "Joe Scarborough (@joescarborough) • Instagram photos and videos";
+        Assert.assertEquals(pageTitle, getPageTitle());
+
+    }
+}
 
 
 //        click("//a[text()='Morning Joe']");
