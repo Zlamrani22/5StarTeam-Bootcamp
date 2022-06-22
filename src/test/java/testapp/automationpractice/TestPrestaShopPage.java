@@ -15,7 +15,7 @@ import java.util.Set;
 
 public class TestPrestaShopPage extends CommonAPI {
 
-    @Test(enabled = true)//check1
+    @Test(enabled = false)//check1
     public void testLiveDemo(){
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         PrestaShopPage prestaShopPage = new PrestaShopPage(getDriver());

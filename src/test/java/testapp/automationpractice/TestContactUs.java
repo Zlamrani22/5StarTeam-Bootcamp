@@ -8,7 +8,7 @@ import pages.automationpractice.AutomationHomePage;
 
 public class TestContactUs extends CommonAPI {
 
-    @Test(enabled = true)//check
+    @Test(enabled = false)//check1
     public void testContactUs() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickContactUsButton();
