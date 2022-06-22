@@ -5,8 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PrintedDressPage extends CommonAPI {
+
+    private final Logger LOG = LoggerFactory.getLogger(PrintedDressPage.class);
 
     @FindBy(css = "a[id='send_friend_button']")
     public WebElement sendToAFriendLink;
@@ -38,30 +42,37 @@ public class PrintedDressPage extends CommonAPI {
 
     public void clickSendToAFriendLink(){
         click(sendToAFriendLink);
+        LOG.info("Clicked on send to friend link successfully");
     }
 
     public void clickSendToAFriendCloseButton(){
         click(sendToAFriendCloseButton);
+        LOG.info("Clicked on send to friend close button successfully");
     }
 
     public void clickContinueShopping(){
         click(continueShoppingButton);
+        LOG.info("Clicked on continue shopping button successfully");
     }
 
     public void clickPinkColorCheckBox(){
         click(pinkColorCheckBox);
+        LOG.info("Clicked on pink color checkbox successfully");
     }
 
     public void clickAddToCart(){
         click(addToCartButton);
+        LOG.info("Clicked on add to cart button successfully");
     }
 
     public void clickTrashIcon(){
         click(cartButton);
+        LOG.info("Clicked on cart button successfully");
     }
 
     public ShoppingCartPage clickShoppingCart(){
         click(shoppingCartButton);
+        LOG.info("Clicked on shopping cart button successfully");
         return new ShoppingCartPage(getDriver());
     }
 }

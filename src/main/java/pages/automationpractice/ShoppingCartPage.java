@@ -5,8 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ShoppingCartPage extends CommonAPI {
+
+    private final Logger LOG = LoggerFactory.getLogger(ShoppingCartPage.class);
 
     @FindBy(xpath = "//*[@id='block_top_menu']/ul/li[2]/a")
     public WebElement dressesButton;
@@ -25,7 +29,6 @@ public class ShoppingCartPage extends CommonAPI {
 
     @FindBy(css = "a[id='4_43_0_0']")
     public WebElement trashIcon;
-
 
     @FindBy(css = "a[title='Continue shopping']")
     public WebElement continueShoppingButton;
@@ -48,6 +51,7 @@ public class ShoppingCartPage extends CommonAPI {
 
     public void hoverOverDressesButton(){
         click(dressesButton);
+
     }
 
     public void clickCasualDressesButton(){
