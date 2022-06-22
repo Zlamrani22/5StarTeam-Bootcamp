@@ -12,7 +12,7 @@ import java.util.Set;
 
 public class TestMyStore extends CommonAPI {
 
-    @Test(enabled = true )//check1
+    @Test(enabled = false )//check1
     public void testCloseNewWindowMyStore(){
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         PrestaShopPage prestaShopPage = new PrestaShopPage(getDriver());
@@ -31,7 +31,7 @@ public class TestMyStore extends CommonAPI {
             }
         }
     }
-    @Test(enabled = true )//check2
+    @Test(enabled = false )//check2
     public void testMyStoreStartNow(){
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         PrestaShopPage prestaShopPage = new PrestaShopPage(getDriver());
@@ -51,7 +51,7 @@ public class TestMyStore extends CommonAPI {
         myStorePage.clickStartNow();
         Assert.assertEquals("PrestaShop Live Demo", getPageTitle());
     }
-    @Test(enabled = true )//failed3
+    @Test(enabled = false )//failed3
     public void testMyStoreSignIn(){
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         PrestaShopPage prestaShopPage = new PrestaShopPage(getDriver());

@@ -9,64 +9,74 @@
     <parameter name="browserName" value="chrome"></parameter>
     <parameter name="browserVersion" value="99"></parameter>
     <parameter name="url" value="http://automationpractice.com/index.php"></parameter>
-<!--    <test name="testAutomationHomePage">-->
-<!--            <classes>-->
-<!--                <class name="testapp.automationpractice.TestAutomationHomePage"/>-->
-<!--            </classes>-->
-<!--    </test>-->
-    <test name="testAuthentication">
+    <test name="TestAutomationHomePage">
+            <classes>
+                <class name="testapp.automationpractice.TestAutomationHomePage"/>
+            </classes>
+    </test>
+    <test name="TestAuthentication">
             <classes>
                 <class name="testapp.automationpractice.TestAuthentication"></class>
             </classes>
     </test>
-<!--    <test name="testContactUs">-->
-<!--        <classes>-->
-<!--            <class name="testapp.automationpractice.TestContactUs"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="testLogin">-->
-<!--                <classes>-->
-<!--                    <class name="testapp.automationpractice.TestLogin"></class>-->
-<!--                </classes>-->
-<!--    </test>-->
-<!--    <test name="testSitemap">-->
-<!--        <classes>-->
-<!--            <class name="testapp.automationpractice.TestSitemap"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="testMyAccount">-->
-<!--        <classes>-->
-<!--            <class name="testapp.automationpractice.TestMyAccount"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="testPrestaShopPage">-->
-<!--        <classes>-->
-<!--            <class name="testapp.automationpractice.TestPrestaShopPage"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="testShoppingCart">-->
-<!--        <classes>-->
-<!--            <class name="testapp.automationpractice.TestShoppingCart"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="testWomen">-->
-<!--        <classes>-->
-<!--            <class name="testapp.automationpractice.TestWomen"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="testPrintedDress">-->
-<!--        <classes>-->
-<!--            <class name="testapp.automationpractice.TestPrintedDress"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="testMyStore">-->
-<!--        <classes>-->
-<!--            <class name="testapp.automationpractice.TestMyStore"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="testMyWishlist">-->
-<!--        <classes>-->
-<!--            <class name="testapp.automationpractice.TestMyWishlist"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="TestContactUs">
+        <classes>
+            <class name="testapp.automationpractice.TestContactUs"></class>
+        </classes>
+    </test>
+    <test name="TestLogin">
+                <classes>
+                    <class name="testapp.automationpractice.TestLogin"></class>
+                </classes>
+    </test>
+    <test name="TestSitemap">
+        <classes>
+            <class name="testapp.automationpractice.TestSitemap"></class>
+        </classes>
+    </test>
+    <test name="TestMyAccount">
+        <classes>
+            <class name="testapp.automationpractice.TestMyAccount"></class>
+        </classes>
+    </test>
+    <test name="TestPrestaShopPage">
+        <classes>
+            <class name="testapp.automationpractice.TestPrestaShopPage"></class>
+        </classes>
+    </test>
+    <test name="TestShoppingCart">
+        <classes>
+            <class name="testapp.automationpractice.TestShoppingCart"></class>
+        </classes>
+    </test>
+    <test name="TestWomen">
+        <classes>
+            <class name="testapp.automationpractice.TestWomen"></class>
+        </classes>
+    </test>
+    <test name="TestPrintedDress">
+        <classes>
+            <class name="testapp.automationpractice.TestPrintedDress"></class>
+        </classes>
+    </test>
+    <test name="TestMyStore">
+        <classes>
+            <class name="testapp.automationpractice.TestMyStore"></class>
+        </classes>
+    </test>
+    <test name="TestMyWishlist">
+        <classes>
+            <class name="testapp.automationpractice.TestMyWishlist"></class>
+        </classes>
+    </test>
+    <test name="TestSpecials">
+        <classes>
+            <class name="testapp.automationpractice.TestSpecials"></class>
+        </classes>
+    </test>
+    <test name="TestSuppliers">
+        <classes>
+            <class name="testapp.automationpractice.TestSuppliers"></class>
+        </classes>
+    </test>
 </suite>

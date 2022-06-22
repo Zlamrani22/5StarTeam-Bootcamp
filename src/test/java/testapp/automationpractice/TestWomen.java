@@ -1,6 +1,11 @@
 package testapp.automationpractice;
 
 import base.CommonAPI;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.automationpractice.AutomationHomePage;
@@ -12,7 +17,7 @@ import java.util.Set;
 
 public class TestWomen extends CommonAPI {
 
-    @Test(enabled = true)//check1
+    @Test(enabled = false)//check1
     public void testCloseWindowPopup() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickWomenLink();
@@ -35,7 +40,7 @@ public class TestWomen extends CommonAPI {
         womenPage.clickClose();
         Assert.assertEquals("Faded Short Sleeve T-shirts - My Store", getPageTitle());
     }
-    @Test(enabled = true)//check2
+    @Test(enabled = false)//check2
     public void testVerifyPrintedChiffonDress() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickWomenLink();
@@ -46,7 +51,7 @@ public class TestWomen extends CommonAPI {
         womenPage.clickGreenColorprintedChiffonDress();
         Assert.assertEquals("Printed Chiffon Dress - My Store", getPageTitle());
     }
-    @Test(enabled = true)//check3
+    @Test(enabled = false)//check3
     public void testModifyCompositionToCotton() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickWomenLink();
@@ -60,7 +65,7 @@ public class TestWomen extends CommonAPI {
         String expectedPageTitle = "Blouse - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = true)//check4
+    @Test(enabled = false)//check4
     public void testSummerDresses() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
@@ -73,7 +78,7 @@ public class TestWomen extends CommonAPI {
         String expectedPageTitle = "Summer Dresses - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = true)//check5
+    @Test(enabled = false)//check5
     public void testColorfulDress() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
@@ -84,7 +89,7 @@ public class TestWomen extends CommonAPI {
         String expectedPageTitle = "Women - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = true)//check6
+    @Test(enabled = false)//check6
     public void testAvailabilityInStock() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
@@ -94,7 +99,7 @@ public class TestWomen extends CommonAPI {
         String expectedPageTitle = "Women - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = true)//check7
+    @Test(enabled = false)//check7
     public void testConditionNew() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
@@ -104,7 +109,7 @@ public class TestWomen extends CommonAPI {
         String expectedPageTitle = "Women - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-    @Test(enabled = true)//check8
+    @Test(enabled = false)//check8
     public void testPinterest(){
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
@@ -114,5 +119,25 @@ public class TestWomen extends CommonAPI {
         //womenPage.clickPinterestLink();
         Assert.assertEquals("Tops - My Store", getPageTitle());
     }
+    @Test(enabled = false)//check9, passed with only left slider working, try to set the right side
+    public void testSetPriceSlider() {
+        AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
+        WomenPage womenPage = new WomenPage(getDriver());
+        automationHomePage.clickWomen();
 
+        //womenPage.setPriceSlider(20.00);
+
+        Actions move = new Actions(getDriver());
+        Actions actions = new Actions(getDriver());
+        waitFor(5);
+        //scrollToView("priceSliderHolderRight");
+        Action action = move.dragAndDropBy(womenPage.priceSliderHandleLeft, 38, 0).build();
+        action.perform();
+        waitFor(5);
+        actions.dragAndDropBy(womenPage.priceSliderHandleRight, -20, 0).build();
+        action.perform();
+//        actions.moveByOffset(45, -45);
+//        waitFor(5);
+        Assert.assertEquals("Faded Short Sleeve T-shirts - My Store", getPageTitle());
+    }
 }

@@ -10,7 +10,7 @@ import pages.automationpractice.MyWishlistPage;
 
 public class TestMyWishlist extends CommonAPI {
 
-    @Test(enabled = true)//check1
+    @Test(enabled = false)//check1
     public void testAddNewWishlist() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -26,7 +26,7 @@ public class TestMyWishlist extends CommonAPI {
         myWishlistPage.clickSave();
         Assert.assertEquals("My Store", getPageTitle());
     }
-    @Test(enabled = true)//check2
+    @Test(enabled = false)//check2
     public void testBackToYourAccount() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -38,10 +38,10 @@ public class TestMyWishlist extends CommonAPI {
         authenticationPage.clickLoginSubmitButton();
         Assert.assertEquals("My account - My Store", getPageTitle());
         myAccountPage.clickMyWishlist();
-        myWishlistPage.clickBackToYouAccount();
+        myWishlistPage.clickBackToYourAccount();
         Assert.assertEquals("My account - My Store", getPageTitle());
     }
-    @Test(enabled = true)//check3
+    @Test(enabled = false)//check3
     public void testAddItemsToWishlist() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
@@ -59,7 +59,7 @@ public class TestMyWishlist extends CommonAPI {
         myWishlistPage.clickAddToWishlist();
         Assert.assertEquals("My account - My Store", getPageTitle());
     }
-    @Test(enabled = true)//check4
+    @Test(enabled = false)//check4
     public void testGoBackToHomePage() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());

@@ -1,10 +1,12 @@
 package pages.automationpractice;
 
 import base.CommonAPI;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.Arrays;
 
 public class WomenPage extends CommonAPI {
 
@@ -82,6 +84,12 @@ public class WomenPage extends CommonAPI {
 
     @FindBy(css = "//*[@id='center_column']//div[3]//p[7]//button[4]")
     public WebElement pinterestLink;
+
+    @FindBy(xpath = "//*[@id='layered_price_slider']/a[1]")
+    public WebElement priceSliderHandleLeft;
+
+    @FindBy(css = "a[class='ui-slider-handle ui-state-default ui-corner-all ui-state-active']")
+    public WebElement priceSliderHandleRight;
 
     public WomenPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -188,4 +196,51 @@ public class WomenPage extends CommonAPI {
         click(pinterestLink);
         return new PinterestPage(getDriver());
     }
+
+    //Price Slider Region
+    public void priceSlider(WebDriver driver, int value){
+        Actions actions = new Actions(getDriver());
+        int width = priceSliderHandleLeft.getSize().getWidth();
+        int x = (int)Float.parseFloat(priceSliderHandleRight.getCssValue("right").replace("px", ""));
+        System.out.println(width);
+        float min = 10;
+        float max = 100;
+        float offsetX = width/(max-min)*value;
+        System.out.println(offsetX);
+    }
+    public void setPriceSliderHandleLeft(Double priceSliderHandleLeft){
+        Actions actions = new Actions(getDriver());
+
+        for (Actions actions1 : Arrays.asList(actions.clickAndHold(), actions.moveByOffset(3, 0), actions.release())) {
+            actions1.build().perform();
+        }
+        final Actions actions1;
+        //actions1 = actions.dragAndDropBy(priceSliderHandleLeft, 20, 0);
+        actions.perform();
+    }
+    public void setPriceSliderHandleRight(Double priceSliderHandleRight){
+        Actions actions = new Actions(getDriver());
+        for (Actions actions1 : Arrays.asList(actions.clickAndHold(), actions.moveByOffset(-3, 0), actions.release())) {
+            actions1.build().perform();
+        }
+        //actions.dragAndDropBy(priceSliderHandleRight, -40, 0).perform();
+    }
+    public void setPriceSlider(Double priceRange) {
+        if (priceRange >= 0 && priceRange <= 100) {
+            Actions actions = new Actions(getDriver());
+            actions.clickAndHold(priceSliderHandleRight).build().perform();
+            while(Double.parseDouble(getDriver().findElement(By.id("layered_orice_range")).getText().substring(10)) > priceRange){
+                actions.moveByOffset(-3, 0).build().perform();
+            }
+            actions.release(priceSliderHandleRight).build().perform();
+        }
+    }
+    public void setPriceSlider(){
+        Dimension sliderSize = priceSliderHandleLeft.getSize();
+        int slideWidth = sliderSize.getWidth();
+        int xCoord = priceSliderHandleLeft.getLocation().getX();
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(priceSliderHandleRight).click().dragAndDropBy(priceSliderHandleLeft, xCoord + slideWidth, 0).build().perform();
+    }
+    //End Region
 }

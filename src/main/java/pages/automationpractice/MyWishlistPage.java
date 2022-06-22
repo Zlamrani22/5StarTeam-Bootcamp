@@ -5,8 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MyWishlistPage extends CommonAPI {
+
+    private final Logger LOG = LoggerFactory.getLogger(MyWishlistPage.class);
 
     @FindBy(xpath = "//*[@id='wishlist_47175']//td[6]/a/i")
     public WebElement removeIcon;
@@ -36,30 +40,37 @@ public class MyWishlistPage extends CommonAPI {
 
     public void clickRemoveIcon(){
         click(removeIcon);
+        LOG.info("Clicked on remove icon successfully");
     }
 
     public void typeNewWishlistName(String wishlistName){
         type(newWishlistNameInputField, wishlistName);
+        LOG.info("Entered wishlist name successfully");
     }
 
     public void clickSave(){
         click(saveButton);
+        LOG.info("Clicked on save button successfully");
     }
 
-    public void clickBackToYouAccount(){
+    public void clickBackToYourAccount(){
         click(backToYourAccountButton);
+        LOG.info("Clicked on back to your account successfully");
     }
 
     public void clickPrintedChiffonDress(){
         click(printedChiffonDressLink);
+        LOG.info("Clicked on printed chiffon dress link successfully");
     }
 
     public void clickAddToWishlist(){
         click(addToWishlist);
+        LOG.info("Clicked on add to wishlist successfully");
     }
 
     public void clickHome(){
         click(homeButton);
+        LOG.info("Clicked on home button successfully");
     }
 
 }
