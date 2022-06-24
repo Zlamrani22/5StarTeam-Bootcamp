@@ -34,7 +34,6 @@ public class Retirement extends CommonAPI {
               childWindow = iterator.next();
           }
           getDriver().switchTo().window(childWindow);
-          retirementPage.clickClose();
           Assert.assertEquals("Traditional vs Roth IRA Calculator",getPageTitle());
       }
    }

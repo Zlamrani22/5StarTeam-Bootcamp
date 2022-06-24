@@ -1,6 +1,7 @@
 package reporting.statefarm.investment;
 
 import base.CommonAPI;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.statefarm.EducationSavingPage;
@@ -12,8 +13,8 @@ public class EducationSaving extends CommonAPI {
         EducationSavingPage education = new EducationSavingPage(getDriver());
         education.clickOnInvestment();
         education.clickOnSavingForCollege();
-        waitFor(5);
-        education.clickOnXbox();
+        JavascriptExecutor js = (JavascriptExecutor)getDriver();
+        js.executeScript("window.scrollBy(0,800)", "");
         education.clickOnLearnMore();
         String expectedPageTitle = "State Farm 529 College Plans | State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());

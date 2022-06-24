@@ -1,6 +1,7 @@
 package reporting.statefarm.insurance;
 
 import base.CommonAPI;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.statefarm.SmallBusinessInsurancePage;
@@ -12,8 +13,8 @@ public class SmallBusinessInsurance extends CommonAPI {
         SmallBusinessInsurancePage smallBusiness = new SmallBusinessInsurancePage(getDriver());
         smallBusiness.clickOnInsurance();
         smallBusiness.clickOnWorkerCompensation();
-        waitFor(5);
-        smallBusiness.clickOnXbox();
+        JavascriptExecutor js = (JavascriptExecutor)getDriver();
+        js.executeScript("window.scrollBy(0,500)", "");
         smallBusiness.clickOnHaveAgentContactMe();
         smallBusiness.typeFirstName("james");
         smallBusiness.typeLastName("bond");
