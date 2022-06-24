@@ -6,32 +6,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
-
 public class RealEstatePage extends CommonAPI {
-    public class TestHomePage extends CommonAPI {
-        @FindBy(css = " li[class='hl-cat-nav__active'] span")
-        public WebElement testHomeButton;
-        @FindBy(css = "select [id='gh-cat']")
-        private List<WebElement> menuDropdownOptions;
+        @FindBy(css="input[id='gh-btn']")
+        private WebElement realEasateButton;
 
-        public void selectOptionFromMenuDropdownWithGivenText(String option) {
+        public RealEstatePage(WebDriver driver) {
+            PageFactory.initElements(driver, this);
+        }
 
-            List<WebElement> elements = menuDropdownOptions;
 
-            for (WebElement element : elements) {
-
-                if (element.getText().equalsIgnoreCase(option)) {
-
-                    element.click();
-
-                }
-
-            }
-
+        public void clickrealEstatebutton() {
+            click(realEasateButton);
         }
     }
-}
+
+
+//
+
 
 
 //    @FindBy(xpath= "//select[@id='gh-cat']")

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ShopByCategoryPage extends CommonAPI {
-    @FindBy(xpath = "//button[@id='gh-shop-a']")
+    @FindBy(css = "input[id='gh-btn']")
     public WebElement shopByCatogoryButton;
 
     public void clickShopByCategory() {
@@ -18,4 +18,6 @@ public class ShopByCategoryPage extends CommonAPI {
         PageFactory.initElements(driver, this);
     }
 
+    public void clickShopByCategorybutton() {
+    }
 }

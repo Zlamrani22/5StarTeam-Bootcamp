@@ -18,15 +18,31 @@ public class LifeInsurancePage  extends CommonAPI {
     @FindBy(xpath="//body/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/form[1]/div[1]/div[4]/button[1]")
     WebElement go;
 
+    //universal insurance
+    @FindBy(xpath = "//*[text()='Universal Life']")
+    WebElement universalInsurance;
+    @FindBy(css = "#callout-agent-zip-code-input1")
+    WebElement zipCode;
+    @FindBy(css = "#quote-main-zip-code-button1")
+    WebElement goBtn;
+
+
 
 
     public LifeInsurancePage(WebDriver driver){PageFactory.initElements(driver, this);}
+
+
 
     //get Life insurance
     public void clickOnInsurance(){click(insurance);}
     public void clickOnLife(){click(life);}
     public void selectFromDropDown(String st){selectFromDropdown(state, st);}
     public void clickOnGo(){click(go);}
+
+    //universal insurance
+    public void clickOnUniversalInsurance(){click(universalInsurance);}
+    public void typeZipCode(String zip){type(zipCode, zip);}
+    public void clickOnGoBtn(){click(goBtn);}
 
 
 

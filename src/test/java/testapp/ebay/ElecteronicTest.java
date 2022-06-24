@@ -3,23 +3,51 @@ package testapp.ebay;
 import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.ebay.BookPage;
 import pages.ebay.ElectronicPage;
-import pages.ebay.TestHomePage;
+import pages.ebay.HomePage;
 
-public class ElecteronicTest {
-    public class electronicTest extends CommonAPI {
-        public class TravelTest extends CommonAPI {
-
-            @Test
-            public void ElectronicTest() {
-                TestHomePage testHomePage = new TestHomePage(getDriver());
-                testHomePage.selectOptionFromMenuDropdownWithGivenText("Electronic");
+//import base.CommonAPI;
+//import org.testng.Assert;
+//import org.testng.annotations.Test;
+//import pages.automationpractice.HomePage;
+//
+public class ElecteronicTest extends CommonAPI {
+        @Test
+        public void ElectronicTest() {
+                HomePage homePage = new HomePage(getDriver());
+                homePage.selectOptionFromDropDown("Electeronic");
+                ElectronicPage electronicPage= new ElectronicPage(getDriver());
+                electronicPage.clickelectronicbutton();
                 waitFor(2);
-            }
+                homePage.clickSearch();
+                String expectElectronic = "ebay.com :Electronic";
+                Assert.assertEquals(expectElectronic, (getPageTitle()));
         }
-    }
 }
+
+
+
+
+
+
+//public class ElecteronicTest {
+//    public class electronicTest extends CommonAPI {
+//
+//            @Test
+//            public void ElecteronicTest() {
+//                HomePage homePage = new HomePage(getDriver());
+//                homePage.selectOptionFromDropDown("Electronic");
+//                waitFor(2);
+//                homePage.clickSearchBtn();
+//                String expectElectronic = "ebay.com :Electronic";
+//                Assert.assertEquals(expectElectronic, (getPageTitle()));
+//            }
+//    }
+//
+//
+//
+//}
+
 
 
 
@@ -36,5 +64,5 @@ public class ElecteronicTest {
 //
 //
 //    }
-//
-//}
+////
+////}

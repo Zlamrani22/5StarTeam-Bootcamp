@@ -6,26 +6,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CollectiblesAndArtPage {
-    public CollectiblesAndArtPage(WebDriver driver) {
-    }
 
-    public void clickCollectiblesAndArt() {
-    }
 
-    public class collectiblesAndArtPage extends CommonAPI {
+    public class CollectiblesAndArtPage extends CommonAPI {
 
-        @FindBy(xpath = "//li[@class='hl-cat-nav__js-tab']//a[contains(text(),'Collectibles & Art')]")
+        @FindBy(css = "input[id='gh-btn']")
         public WebElement CollectiblesAndArtButton;
 
-        public collectiblesAndArtPage(WebDriver driver) {
+        public CollectiblesAndArtPage(WebDriver driver) {
             PageFactory.initElements(driver, this);
         }
 
-        public void clickCollectiblesAndArtt() {
+        public void clickCollectiblesAndArt() {
             click(CollectiblesAndArtButton);
         }
 
 
+        public void clickcollectiblesAndArtbutton() {
+        }
     }
-}
