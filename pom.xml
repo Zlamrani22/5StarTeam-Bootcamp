@@ -85,11 +85,11 @@
                 <version>2.22.1</version>
                 <configuration>
                     <suiteXmlFiles>
-<!--                        <suiteXmlFile>/Users/zohralamrani/IdeaProjects/5StarTeam-Bootcamp/src/test/resources/msnbc-TestNGRunner.xml</suiteXmlFile>-->
+<!--                        <suiteXmlFile>\Users\sadaf\eclipse-workspace\5StarTeam-Bootcamp\src\test\resources\msnbc-TestNGRunner.xml</suiteXmlFile>-->
 <!--                        <suiteXmlFile>/Users/zohralamrani/IdeaProjects/5StarTeam-Bootcamp/src/test/resources/ebay-TestNGRunner.xml</suiteXmlFile>-->
-<!--                        <suiteXmlFile>/Users/zohralamrani/IdeaProjects/5StarTeam-Bootcamp/src/test/resources/cargurus-TestNGRunner.xml</suiteXmlFile>-->
+<!--                        <suiteXmlFile>\Users\larim\eclipse-workspace\5StarTeam-Bootcamp\src\test\resources\cargurus-TestNGRunner.xml</suiteXmlFile>-->
                         <suiteXmlFile>/Users/zohralamrani/IdeaProjects/5StarTeam-Bootcamp/src/test/resources/automationpractice-TestNGRunner.xml</suiteXmlFile>
-<!--                        <suiteXmlFile>/Users/zohralamrani/IdeaProjects/5StarTeam-Bootcamp/src/test/resources/statefarm-TestNGRunner.xml</suiteXmlFile>-->
+<!--                        <suiteXmlFile>\Users\sayma\Idea-project\5StarTeam-Bootcamp\src\test\resources\statefarm-TestNGRunner.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
