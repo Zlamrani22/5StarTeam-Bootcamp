@@ -11,16 +11,16 @@
     <parameter name="browserVersion" value="99"></parameter>
     <parameter name="url" value="https://www.statefarm.com/"></parameter>
 
-        <test name="logInTest">
-            <classes>
-                <class name="testapp.statefarm.account.Login"></class>
-            </classes>
-        </test>
-<!--        <test name="PersonalBankingTest">-->
+<!--        <test name="logInTest">-->
 <!--            <classes>-->
-<!--                <class name="testapp.statefarm.banking.PersonalBanking"></class>-->
+<!--                <class name="testapp.statefarm.account.Login"></class>-->
 <!--            </classes>-->
 <!--        </test>-->
+        <test name="PersonalBankingTest">
+            <classes>
+                <class name="testapp.statefarm.banking.PersonalBanking"></class>
+            </classes>
+        </test>
 <!--        <test name="BusinessBankingTest">-->
 <!--            <classes>-->
 <!--               <class name="testapp.statefarm.banking.BusinessBanking"></class>-->
