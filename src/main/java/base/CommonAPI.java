@@ -244,7 +244,7 @@ public class CommonAPI {
         js.executeScript("arguments[0].click();", element);
     }
 
-    public void scrollToView(String element){
+    public void scrollToView(WebElement element){
         JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }

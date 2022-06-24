@@ -12,7 +12,7 @@ public class DeadlinePage extends CommonAPI {
     private WebElement pageHeader;
 
     @FindBy(xpath = "//a[text()='TWITTER']")
-    private WebElement twitterOption;
+    public WebElement twitterOption;
 
     public DeadlinePage (WebDriver driver){
         PageFactory.initElements(driver,this);

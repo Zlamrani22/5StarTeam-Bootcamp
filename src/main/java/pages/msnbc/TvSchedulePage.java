@@ -29,6 +29,9 @@ public class TvSchedulePage extends CommonAPI {
     @FindBy(xpath = "//p[.='Sunday']")
     private WebElement sundaySchedule;
 
+    @FindBy(xpath = "//a[text()='Careers']")
+    public WebElement careersButton;
+
 
     public TvSchedulePage(WebDriver driver){
         PageFactory.initElements(driver, this);
@@ -62,5 +65,9 @@ public class TvSchedulePage extends CommonAPI {
         click(sundaySchedule);
     }
 
+    public void clickCareersButton(){
+        click(careersButton);
+
+    }
 
 }

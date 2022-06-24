@@ -10,22 +10,22 @@ import pages.msnbc.PeacockPage;
 
 public class VideoTest extends CommonAPI {
 
-    @Test(enabled = true)
+    @Test
     public void PeacockHassanMehdiShow(){
         HomePage homePage= new HomePage(getDriver());
         homePage.clickPeackockTab();
-        //switchTabs();
+        switchTabs();
         String pageTitle= "Watch MSNBC Streaming on Peacock | Peacock";
         Assert.assertEquals(pageTitle,getPageTitle());
         PeacockPage peacockPage= new PeacockPage(getDriver());
-        //scrollToView(peacockPage.scrollToOnlyOnPeacockHeader());
+        scrollToView(peacockPage.scrollToOnlyOnPeacockHeader());
         peacockPage.clickHassanMehdiPeacock();
         String title= "Watch The Mehdi Hasan Show Streaming Online | Peacock";
         Assert.assertEquals(title,getPageTitle());
 
     }
 
-    @Test(enabled = false)
+    @Test
     public void liveTvTest1(){
         HomePage homePage= new HomePage(getDriver());
         LiveTvPage liveTvPage= new LiveTvPage(getDriver());
@@ -36,7 +36,7 @@ public class VideoTest extends CommonAPI {
         Assert.assertEquals("Optimum.",title);
     }
 
-    @Test(enabled = false)
+    @Test
     public void videoTests(){
         HomePage homePage= new HomePage(getDriver());
         MaddowPage maddowPage= new MaddowPage(getDriver());

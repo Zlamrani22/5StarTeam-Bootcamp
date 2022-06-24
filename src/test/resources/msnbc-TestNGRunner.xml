@@ -2,9 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="abcnews smoke tests">
-    <parameter name="url" value="https://www.msnbc.com/"></parameter>
-    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="useCloudEnv" value="false"></parameter>
+    <parameter name="envName" value="browserstack"></parameter>
     <parameter name="os" value="windows"></parameter>
+    <parameter name="osVersion" value="10"></parameter>
+    <parameter name="browserName" value="chrome"></parameter>
+    <parameter name="browserVersion" value="103"></parameter>
+    <parameter name="url" value="https://www.msnbc.com/"></parameter>
 <!--    <test name="Search test">-->
 <!--        <classes>-->
 <!--            <class name="testapp.msnbc.SearchTest"></class>-->
@@ -20,21 +24,21 @@
 <!--                <class name="testapp.msnbc.PodcastTests"></class>-->
 <!--            </classes>-->
 <!--        </test>-->
-        <test name="Follow page test">
-            <classes>
-                <class name="testapp.msnbc.FollowPageTest"></class>
-            </classes>
-        </test>
+<!--        <test name="Follow page test">-->
+<!--            <classes>-->
+<!--                <class name="testapp.msnbc.FollowPageTest"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
 <!--        <test name="Video test">-->
 <!--            <classes>-->
 <!--                <class name="testapp.msnbc.VideoTest"></class>-->
 <!--            </classes>-->
 <!--        </test>-->
-<!--        <test name="Cart test">-->
-<!--            <classes>-->
-<!--                <class name="testapp.msnbc.AddToCartTests"></class>-->
-<!--            </classes>-->
-<!--        </test>-->
+        <test name="Cart test">
+            <classes>
+                <class name="testapp.msnbc.AddToCartTests"></class>
+            </classes>
+        </test>
 <!--        <test name="Sign up newsletter test">-->
 <!--            <classes>-->
 <!--                <class name="testapp.msnbc.SignUpTests"></class>-->
