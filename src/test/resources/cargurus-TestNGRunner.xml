@@ -9,16 +9,57 @@
     <parameter name="browserName" value="chrome"></parameter>
     <parameter name="browserVersion" value="99"></parameter>
     <parameter name="url" value="https://www.cargurus.com/"></parameter>
-        <test name="loginTest1()">
-            <classes>
-                <class name="testapp.cargurus.SearchPageTest"></class>
-            </classes>
-        </test>
+<!--    <test name="SearchUsedCar">-->
+<!--        <classes>-->
+<!--            <class name="testapp.cargurus.SearchUsedCarPageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="SearchNewCarByBodyStyle">-->
+<!--        <classes>-->
+<!--            <class name="testapp.cargurus.SearchNewCarByBodyStylePageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="SearchNewCarByBodyStylePrice">-->
+<!--        <classes>-->
+<!--            <class name="testapp.cargurus.SearchNewCarByBodyStyleAndPricePageTest"></class>-->
+<!--        </classes>-->
+<!--&lt;!&ndash;    </test>&ndash;&gt;-->
+<!--    <test name="SearchNewCarByMakeAndModel">-->
+<!--        <classes>-->
+<!--            <class name="testapp.cargurus.SearchNewCarByMakeAndModelPageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="SearchNewCarByPrice">
+        <classes>
+            <class name="testapp.cargurus.SearchNewCarByPricePageTest"></class>
+        </classes>
+    </test>
+<!--    <test name="HoverOverFinance()">-->
+<!--        <classes>-->
+<!--            <class name="testapp.cargurus.HoverOverFinancePageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="HoverOverBuy()">-->
+<!--        <classes>-->
+<!--            <class name="testapp.cargurus.HoverOverBuyPageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-            <test name="loginTest()">
-               <classes>
-                   <class name="testapp.cargurus.AccountLoginTest"></class>
-               </classes>
-            </test>
+<!--            <test name="loginTest()">-->
+<!--               <classes>-->
+<!--                   <class name="testapp.cargurus.AccountLoginTest"></class>-->
+<!--               </classes>-->
+<!--            </test>-->
+<!--    <test name="HoverOverSell()">-->
+<!--        <classes>-->
+<!--            <class name="testapp.cargurus.HoverOverSellPageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="HoverOverResearch()">-->
+<!--        <classes>-->
+<!--            <class name="testapp.cargurus.HoverOverResearchPageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
 
 </suite>
