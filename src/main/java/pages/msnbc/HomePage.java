@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
+
 public class HomePage extends CommonAPI {
 
     private final Logger LOG = LoggerFactory.getLogger(HomePage.class);
@@ -40,10 +42,10 @@ public class HomePage extends CommonAPI {
     public WebElement dropDownTab;
 
     @FindBy(xpath = "//span[text()='TV Schedule']")
-    private WebElement tvSchedule;
+    public WebElement tvSchedule;
 
     @FindBy(xpath = "//span[text()=\"MSNBC Store\"]")
-    private WebElement storeMenuOption;
+    public WebElement storeMenuOption;
 
     @FindBy(xpath = "//span[text()='Podcasts']")
     private WebElement podcastOption;
@@ -60,38 +62,95 @@ public class HomePage extends CommonAPI {
     @FindBy(css = "div[class='search-inner'] input[class='search-input js-search-input']")
     public WebElement dropDownSearchField;
 
+    @FindBy(xpath = "//h2[text()='The Next 25: Celebrating 25 years of MSNBC']")
+    public WebElement celebratingMSNBCTitle;
+
+    @FindBy(xpath = "(//div[@class='styles_baconPagingDots__G_Znw'])[4]//button")
+    private List<WebElement> celebratingMSNBCButtons;
+
+    @FindBy(css = "a[class='animated-ghost-button animated-ghost-button--normal styles_seeAllButton__oNAl4']")
+    private WebElement seeAllDailyNBCNews;
+
+    @FindBy(xpath = "//h2[text()='Know Your Value']")
+    public WebElement knowYourValueHeaderText;
+
+    @FindBy(css = ".msnbcDaily__footer-info-text")
+    public WebElement msnbcDailyFooterHomePage;
+
+    @FindBy(css = ".animated-ghost-button.animated-ghost-button--normal.msnbcDaily__action-button")
+    private WebElement subscribeToMsnbcDailyButton;
+
+    @FindBy(css = ".gcsc-find-more-on-google")
+    private WebElement searchResultFooter;
+
+    @FindBy(css = "h2[class='smorgasbord__headline']")
+    public WebElement homepageHeadline;
+
+    @FindBy(css = "h1[class='article-hero-headline__htag styles_headlineHTag__RM_0V lh-none-print black-print']")
+    public WebElement homepageHeaderDirectedNewPage;
+
+    @FindBy(css = "div[class='brand-svg']")
+    public WebElement homepageMSNBCLogo;
 
     public HomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
-    public void clickPeackockTab(){click(mainpagePeacockTab);}
+
+    public String getHeadlineTextNewPage(){
+        String text= getElementText(homepageHeaderDirectedNewPage);
+        return text;
+    }
+
+    public void clickMsnbcLogoHomePage(){
+        click(homepageMSNBCLogo);
+    }
+
+    public String getLogoText(){
+        String text=getElementText(homepageMSNBCLogo);
+        return text;
+    }
+
+
+    public void clickPeackockTab(){
+        click(mainpagePeacockTab);
+        LOG.info("Peacock tab on main page clicks and opens success");
+    }
 
     public void clickColumnist() {
         click(mainPageColumnistTab);
+        LOG.info("Columnist tab on Main page clicks and opens success");
     }
 
     public void clickMaddow() {
         click(mainPageMaddowTab);
+        LOG.info("Maddow tab clicks and opens success");
     }
 
     public void clickMorningJoe() {
         click(mainPageMornJoeTab);
+        LOG.info("Morning Joe tab clicked and opens success");
     }
 
     public void clickDeadLine() {
         click(mainPageDeadlineTab);
+        LOG.info("Deadline tab clicked and opens success");
     }
 
     public void clickBeat() {
         click(mainPageBeatTab);
+        LOG.info("Beat page clicked and opens success");
     }
 
     public void clickReidout() {
         click(mainPageReidTab);
+        LOG.info("Reidout tab clicked and opens success");
     }
 
-    public void clickLiveTvTab(){click(mainPageLiveTVTab);}
+    public void clickLiveTvTab(){
+        click(mainPageLiveTVTab);
+        LOG.info("LiveTv tab clicked and opens success");
+    }
 
     public void clickDropdownTab() {
         click(dropDownTab);
@@ -100,11 +159,12 @@ public class HomePage extends CommonAPI {
 
     public void selectTvSchedule() {
         click(tvSchedule);
+        LOG.info("Tv Schedule clicked and opens success");
     }
 
     public void viewHomePageDropdownOptions() {
         String elements = getElementText(menuDropdownOptionsText);
-        LOG.info("");
+        LOG.info("Menu dropdown options displayed success");
         // System.out.println(elements);
     }
 
@@ -116,81 +176,52 @@ public class HomePage extends CommonAPI {
 
     public void selectPodcastOption(){
         click(podcastOption);
+        LOG.info("Podcast option selected success");
     }
 
     public void selectNewsletterOption(){
         click(newsletterOption);
+        LOG.info("Newsletter button clicked and page opens success");
     }
 
     public void selectMSNBSDailyNews(){
         click(msnbcDaily);
+        LOG.info("MSNBC Daily clicked and opens success");
     }
 
     public void typeAndEnterInDropdownSearchField(String input){
         typeAndEnter(dropDownSearchField,input);
+        LOG.info("Dropdown menu opens and option selected success");
     }
 
-    public void typeInDropdownSearchField(String input){type(dropDownSearchField,input);}
+    public void typeInDropdownSearchField(String input){
+        type(dropDownSearchField,input);
+        LOG.info("Item entered in Dropdown search field success");
+    }
+
+    public void clickAllButtonsCelebratingMSNBC() {
+        List<WebElement> elements = celebratingMSNBCButtons;
+        for (WebElement element : elements) {
+
+            element.click();
+        }
+        LOG.info("All buttons clicked success");
+
+    }
+
+    public void clickSeeAllLatestNBCNews(){
+        click(seeAllDailyNBCNews);
+    }
+
+    public void clickSubscribeToMsnbcDaily(){
+        click(subscribeToMsnbcDailyButton);
+    }
+
+
 
 }
 
 
-//    public List<String> getHomePageDropdownOptions(){
-//        List<String> options = new ArrayList<>();
-//        List<WebElement> elements = getDropDownOptions(menuDropdownOptions);
-//        for (WebElement element:elements) {
-//            options.add(element.getText());
-//        }
-//        return options;
-//    }
-
-
-        //reusable steps
-//    public void searchElement(String item){
-//        type(searchField, item);
-//    }
-//    public void clickSearchBtn(){
-//        click(searchBtn);
-//    }
-//    public void clearSearchField(){
-//        clear(searchField);
-//    }
-//    public void searchElementAndEnter(String item){
-//        typeAndEnter(searchField, item);
-//    }
-//    public void selectOptionFromMenuDropdown(String option){
-//        selectFromDropdown(menuDropdown, option);
-//    }
-//    public List<String> getHomePageDropdownOptions(){
-//        List<String> options = new ArrayList<>();
-//        List<WebElement> elements = getDropDownOptions(menuDropdown);
-//        for (WebElement element:elements) {
-//            options.add(element.getText());
-//        }
-//        return options;
-//    }
-//    public void selectOptionFromMenuDropdownWithSelectOptions(String option){
-//        List<WebElement> elements = getDropDownOptions(menuDropdown);
-//        for (WebElement element:elements) {
-//            if (element.getText().equalsIgnoreCase(option)){
-//                element.click();
-//            }
-//        }
-//    }
-//    public void selectOptionFromMenuDropdownWithGivenText(String option){
-//        List<WebElement> elements = menuDropdownOptions;
-//        for (WebElement element :elements) {
-//            if (element.getText().equalsIgnoreCase(option)){
-//                element.click();
-//            }
-//        }
-//    }
-//    public void hoverOverFloatingMenu(WebDriver driver){
-//        hoverOver(driver, floatingMenu);
-//    }
-//    public void clickOnLoginBtn(){
-//        click(signInBtn);
-//    }
 
 
 

@@ -12,7 +12,7 @@ public class AddToCartTests extends CommonAPI {
 
     private final Logger LOG = LoggerFactory.getLogger(AddToCartTests.class);
 
-    //@Test
+    @Test
     public void addItemsToCart(){
         HomePage homePage= new HomePage(getDriver());
         AddToCartStorePage addToCartStorePage = new AddToCartStorePage(getDriver());
