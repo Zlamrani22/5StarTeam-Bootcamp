@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,12 +21,16 @@ public class OthersPage extends CommonAPI {
     WebElement dateOfBirth;       ;
     @FindBy( css = "#auth-primary-button")
     WebElement continueButton;
-    @FindBy(xpath = "//body/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]/span[1]")
-    WebElement xBox;
 
     //auto pay
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[text()='No login required']/following-sibling::ul/li[2]")
     WebElement autoPay;
+    @FindBy(css = "#liteAuthCustomerPhoneNumber")
+    WebElement phoneNum;
+    @FindBy(css = "#liteAuthCustomerDateOfBirth")
+    WebElement birthday;
+    @FindBy(xpath = "//*[@id='continueBtn']")
+    WebElement continueBtn;
 
 
     //Change language
@@ -45,34 +51,49 @@ public class OthersPage extends CommonAPI {
     @FindBy(css = "#getaquote-select-product")
     WebElement quoteDrop;
 
+
     //check if logo is present.
     @FindBy(css = "#oneX-sf-logo")
     WebElement stateFarmLogo;
 
 
     public OthersPage(WebDriver driver){PageFactory.initElements(driver, this);}
+    private final Logger LOG = LoggerFactory.getLogger(OthersPage.class);
 
 
     //goPaperLess
-    public void clickOnPaperLess(){click(goPaperLessBtn);}
-    public void typePhoneNum(String Num){type(phoneNumber, Num);}
-    public void typeDateOfBirth(String Dob) {
-        type(dateOfBirth, Dob);
+    public void clickOnPaperLess(){click(goPaperLessBtn);
+        LOG.info("click on paper less success");}
+    public void typePhoneNum(String Num){type(phoneNumber, Num);
+        LOG.info("type phone number success");}
+    public void typeDateOfBirth(String Dob) {type(dateOfBirth, Dob);
+        LOG.info("type date of birth success");
     }
-    public void clickOnContinue(){
-        click(continueButton);
-    }
-    public void clickOnXbox(){click(xBox);}
+    public void clickOnContinue(){click(continueButton);
+        LOG.info("click on continue button success");}
+
 
     //auto pay
-    public void clickOnAutoPay(){click(autoPay);}
+    public void clickOnAutoPay(){click(autoPay);
+        LOG.info("click on auto pay success");}
+    public void typePhoneNum2(String number){type(phoneNum, number);
+        LOG.info("type phone number success");}
+    public void typeBirthday(String DOB){type(birthday, DOB);
+        LOG.info("type birthday success");}
+    public void clickOnContinueBtn(){click(continueBtn);
+        LOG.info("click on continue button success");}
+
 
     //change language
-    public void clickOnLanguage(){click (language);}
+    public void clickOnLanguage(){click (language);
+        LOG.info("click on language success");}
+
 
     //get list of option from bill pay.
-    public void clickOnPayBill(){click(payBill);}
-    public void selectOptionBillPayDropdown(String option){selectFromDropdown(billDropdown, option);}
+    public void clickOnPayBill(){click(payBill);
+        LOG.info("click on pay bill success");}
+    public void selectOptionBillPayDropdown(String option){selectFromDropdown(billDropdown, option);
+        LOG.info("select from bill pay drop down success");}
     public List<String> getOthersPageDropdownOptions(){
         List<String> options = new ArrayList<>();
         List<WebElement> elements = getDropDownOptions(billDropdown);
@@ -82,8 +103,11 @@ public class OthersPage extends CommonAPI {
         return options;
     }
 
-    public void clickOnGetQuote(){click(getQuote);}
-    public void selectOtherPageQuoteDropDown(String option){selectFromDropdown(quoteDrop,option);}
+    public void clickOnGetQuote(){click(getQuote);
+        LOG.info("click on get quote success");}
+
+    public void selectOtherPageQuoteDropDown(String option){selectFromDropdown(quoteDrop,option);
+        LOG.info("select from drop down success");}
 
     public List<String> getOthersPageQuoteDropdownOptions(){
         List<String> options = new ArrayList<>();
@@ -95,10 +119,8 @@ public class OthersPage extends CommonAPI {
     }
 
     //check if logo is present
-
-    public void clickOnLogo(){click(stateFarmLogo);}
-    public boolean checkLogoIsPresent(){
-        return isPresent(stateFarmLogo);
-    }
+    public void clickOnLogo(){click(stateFarmLogo);
+        LOG.info("click on stat farm logo success");}
+    public boolean checkLogoIsPresent(){return isPresent(stateFarmLogo);}
 
    }

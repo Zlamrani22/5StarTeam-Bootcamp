@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class EducationSavingPage extends CommonAPI {
     //saving for college
@@ -14,8 +16,6 @@ public class EducationSavingPage extends CommonAPI {
     WebElement savingForCollege;
     @FindBy(xpath = "//*[text()='Learn more about the State Farm']")
     WebElement learnMore;
-    @FindBy(xpath = "//body/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]/span[1]")
-    WebElement xBox;
 
     //state farm saving plan
     @FindBy(xpath = "//a[contains(text(),'State Farm® 529 Savings Plan')]")
@@ -23,19 +23,25 @@ public class EducationSavingPage extends CommonAPI {
     @FindBy(xpath = "//*[text()='Program Disclosure Statement']")
     WebElement ProgramAndDisclosure;
 
+
     public EducationSavingPage(WebDriver driver){PageFactory.initElements(driver, this);}
+    private final Logger LOG = LoggerFactory.getLogger(EducationSavingPage.class);
+
 
      //saving for college
-    public void clickOnInvestment(){click(investments);}
-    public void clickOnSavingForCollege(){click(savingForCollege);}
-    public void clickOnLearnMore(){click(learnMore);}
-    public void clickOnXbox(){click(xBox);}
+    public void clickOnInvestment(){click(investments);
+    LOG.info("click on investment success ");}
+    public void clickOnSavingForCollege(){click(savingForCollege);
+        LOG.info("click on saving for college success");}
+    public void clickOnLearnMore(){click(learnMore);
+        LOG.info("click on learn more success");}
+
 
     //state farm saving plan
-    public void clickOnSavingPlan(){click(savingPlan);}
-    public void clickOnProgramAndDisclosure(){click(ProgramAndDisclosure);}
-
-
+    public void clickOnSavingPlan(){click(savingPlan);
+        LOG.info("click on saving plan success");}
+    public void clickOnProgramAndDisclosure(){click(ProgramAndDisclosure);
+        LOG.info("click on program and disclosure success");}
 
 
 }

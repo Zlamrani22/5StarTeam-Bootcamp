@@ -53,4 +53,9 @@ public class MSNBCSearchPage extends CommonAPI {
     public void typeInSearchPageSearchField(String input){
         typeAndEnter(searchPageSearchField,input);
     }
+
+    public String searchFieldTextDisplayed(){
+        String text=getElementText(searchPageSearchField);
+        return text;
+    }
 }

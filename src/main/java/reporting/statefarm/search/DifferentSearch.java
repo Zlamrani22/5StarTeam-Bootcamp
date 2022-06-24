@@ -4,9 +4,12 @@ import base.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.statefarm.SearchPage;
+import utility.ExcelReader;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static utility.Utility.currentDir;
 
 public class DifferentSearch extends CommonAPI {
 
@@ -55,12 +58,50 @@ public class DifferentSearch extends CommonAPI {
         differentSearchPage.clickOnSearchBtn();
         differentSearchPage.typeOnSearchBox("state farm agency");
         differentSearchPage.clickOnSearchBtn1();
+        differentSearchPage.clearSearchField();
         waitFor(3);
        for (String item : items()) {
           differentSearchPage.searchElementAndEnter(item);
            differentSearchPage.clearSearchField();
            waitFor(5);
           }
+       }
+
+    @Test
+    public void dataDrivenTest1(){
+        SearchPage differentSearchPage = new SearchPage(getDriver());
+        differentSearchPage.clickOnSearchBtn();
+        differentSearchPage.typeOnSearchBox("state farm");
+        differentSearchPage.clickOnSearchBtn1();
+        differentSearchPage.clearSearchField();
+        ExcelReader excelReader = new ExcelReader(currentDir+"/data/TestData.xlsx");
+        List <String> locations = excelReader.getEntireColumnForGivenHeader("Feuil1", "location");
+        for (String location : locations) {
+            differentSearchPage.searchElementAndEnter(location);
+            waitFor(3);
+            differentSearchPage.clearSearchField();
+            waitFor(3);
+            }
+
+       }
+
+       @Test
+    public void dataDrivenTest2(){
+           SearchPage differentSearchPage = new SearchPage(getDriver());
+           differentSearchPage.clickOnSearchBtn();
+           differentSearchPage.typeOnSearchBox("agent steven");
+           differentSearchPage.clickOnSearchBtn1();
+           differentSearchPage.clearSearchField();
+           ExcelReader excelReader = new ExcelReader(currentDir+"/data/TestData.xlsx");
+           List <String> employees = excelReader.getEntireColumnForGivenHeader("Feuil2", "employee");
+           for (String employee : employees) {
+               differentSearchPage.searchElementAndEnter(employee);
+               waitFor(3);
+               differentSearchPage.clearSearchField();
+               waitFor(3);
+
+           }
+
        }
 
     }
