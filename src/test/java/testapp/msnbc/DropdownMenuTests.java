@@ -9,7 +9,7 @@ import pages.msnbc.TvSchedulePage;
 
 public class DropdownMenuTests extends CommonAPI {
 
-   //@Test
+   @Test
     public void dropdownMoreOptions(){
        HomePage homePage= new HomePage(getDriver());
        homePage.clickDropdownTab();
@@ -42,7 +42,7 @@ public class DropdownMenuTests extends CommonAPI {
        homePage.typeAndEnterInDropdownSearchField("todays news");
    }
 
-   //@Test
+   @Test
    public void enterTextInDropdownSearchAndPressEnter(){
        HomePage homePage= new HomePage(getDriver());
        homePage.clickDropdownTab();
@@ -52,7 +52,7 @@ public class DropdownMenuTests extends CommonAPI {
        Assert.assertEquals(pageTitle,getPageTitle());
    }
 
-   //@Test
+   @Test
    public void enterTextInDropdownSearchAndFilterByDate(){
        HomePage homePage= new HomePage(getDriver());
        MSNBCSearchPage msnbcSearchPage= new MSNBCSearchPage(getDriver());
@@ -68,7 +68,7 @@ public class DropdownMenuTests extends CommonAPI {
 
    }
 
-   //@Test
+   @Test
    public void enterTextInDropdownSearchAndFilterByDateThenRelevance(){
        HomePage homePage= new HomePage(getDriver());
        MSNBCSearchPage msnbcSearchPage= new MSNBCSearchPage(getDriver());
@@ -88,7 +88,7 @@ public class DropdownMenuTests extends CommonAPI {
        Assert.assertEquals(resultText,msnbcSearchPage.displaySortByOptionSelected());
    }
 
-   //@Test
+   @Test
    public void inputTextDropdownSearchApplyDateFilterAndEraseText(){
        HomePage homePage= new HomePage(getDriver());
        MSNBCSearchPage msnbcSearchPage= new MSNBCSearchPage(getDriver());
@@ -103,7 +103,7 @@ public class DropdownMenuTests extends CommonAPI {
        msnbcSearchPage.clearSearchField();
    }
 
-   //@Test
+   @Test
    public void typeInSearchFilterEraseTypeAgain(){
        HomePage homePage= new HomePage(getDriver());
        MSNBCSearchPage msnbcSearchPage= new MSNBCSearchPage(getDriver());
@@ -119,7 +119,7 @@ public class DropdownMenuTests extends CommonAPI {
        msnbcSearchPage.typeInSearchPageSearchField("Covid");
    }
 
-    //@Test
+    @Test
     public void tvScheduleTest(){
         HomePage homepage = new HomePage(getDriver());
         TvSchedulePage tvSchedulePage= new TvSchedulePage(getDriver());
@@ -136,7 +136,7 @@ public class DropdownMenuTests extends CommonAPI {
         Assert.assertEquals("MSNBC Schedule | See the MSNBC TV Schedule Today",getPageTitle());
     }
 
-    //@Test
+    @Test
     public void tvScheduleMondayTest(){
         HomePage homepage = new HomePage(getDriver());
         TvSchedulePage tvSchedulePage= new TvSchedulePage(getDriver());
@@ -146,7 +146,7 @@ public class DropdownMenuTests extends CommonAPI {
         Assert.assertEquals("MSNBC Schedule | See the MSNBC TV Schedule Today",getPageTitle());
     }
 
-    //@Test
+    @Test
     public void tvScheduleTuesdayTest(){
         HomePage homepage = new HomePage(getDriver());
         TvSchedulePage tvSchedulePage= new TvSchedulePage(getDriver());
@@ -156,7 +156,7 @@ public class DropdownMenuTests extends CommonAPI {
         Assert.assertEquals("MSNBC Schedule | See the MSNBC TV Schedule Today",getPageTitle());
     }
 
-    //@Test
+    @Test
     public void tvScheduleWednesdayTest(){
         HomePage homepage = new HomePage(getDriver());
         TvSchedulePage tvSchedulePage= new TvSchedulePage(getDriver());
@@ -166,7 +166,7 @@ public class DropdownMenuTests extends CommonAPI {
         Assert.assertEquals("MSNBC Schedule | See the MSNBC TV Schedule Today",getPageTitle());
     }
 
-    //@Test
+    @Test
     public void tvScheduleThursdayTest(){
         HomePage homepage = new HomePage(getDriver());
         TvSchedulePage tvSchedulePage= new TvSchedulePage(getDriver());
@@ -176,7 +176,7 @@ public class DropdownMenuTests extends CommonAPI {
         Assert.assertEquals("MSNBC Schedule | See the MSNBC TV Schedule Today",getPageTitle());
     }
 
-    //@Test
+    @Test
     public void tvScheduleFridayTest(){
         HomePage homepage = new HomePage(getDriver());
         waitFor(1);
@@ -187,7 +187,7 @@ public class DropdownMenuTests extends CommonAPI {
         Assert.assertEquals("MSNBC Schedule | See the MSNBC TV Schedule Today",getPageTitle());
     }
 
-    //@Test
+    @Test
     public void tvScheduleSatrudayTest(){
         HomePage homepage = new HomePage(getDriver());
         TvSchedulePage tvSchedulePage= new TvSchedulePage(getDriver());
@@ -197,7 +197,7 @@ public class DropdownMenuTests extends CommonAPI {
         Assert.assertEquals("MSNBC Schedule | See the MSNBC TV Schedule Today",getPageTitle());
     }
 
-   // @Test
+    @Test
     public void tvScheduleSundayTest(){
         HomePage homepage = new HomePage(getDriver());
         TvSchedulePage tvSchedulePage= new TvSchedulePage(getDriver());
@@ -206,5 +206,7 @@ public class DropdownMenuTests extends CommonAPI {
         tvSchedulePage.clickSunSchedule();
         Assert.assertEquals("MSNBC Schedule | See the MSNBC TV Schedule Today",getPageTitle());
     }
+
+
 
 }
