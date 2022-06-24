@@ -1,6 +1,8 @@
 package testapp.automationpractice;
 
 import base.CommonAPI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.automationpractice.AuthenticationPage;
@@ -10,6 +12,8 @@ import pages.automationpractice.MyWishlistPage;
 
 public class TestMyWishlist extends CommonAPI {
 
+    private final Logger LOG = LoggerFactory.getLogger(TestMyWishlist.class);
+
     @Test(enabled = false)//check1
     public void testAddNewWishlist() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
@@ -17,6 +21,7 @@ public class TestMyWishlist extends CommonAPI {
         MyAccountPage myAccountPage = new MyAccountPage(getDriver());
         MyWishlistPage myWishlistPage = new MyWishlistPage(getDriver());
         automationHomePage.clickSignIn();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
@@ -33,6 +38,7 @@ public class TestMyWishlist extends CommonAPI {
         MyAccountPage myAccountPage = new MyAccountPage(getDriver());
         MyWishlistPage myWishlistPage = new MyWishlistPage(getDriver());
         automationHomePage.clickSignIn();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
@@ -48,16 +54,19 @@ public class TestMyWishlist extends CommonAPI {
         MyAccountPage myAccountPage = new MyAccountPage(getDriver());
         MyWishlistPage myWishlistPage = new MyWishlistPage(getDriver());
         automationHomePage.clickSignIn();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
         Assert.assertEquals("My account - My Store", getPageTitle());
         myAccountPage.searchElementAndEnter("green dress");
         myAccountPage.clickSearchButton();
+        Assert.assertEquals("Search - My Store", getPageTitle());
         myAccountPage.clickListButton();
         myWishlistPage.clickPrintedChiffonDress();
+        Assert.assertEquals("Printed Chiffon Dress - My Store", getPageTitle());
         myWishlistPage.clickAddToWishlist();
-        Assert.assertEquals("My account - My Store", getPageTitle());
+        Assert.assertEquals("Printed Chiffon Dress - My Store", getPageTitle());
     }
     @Test(enabled = false)//check4
     public void testGoBackToHomePage() {
@@ -66,11 +75,13 @@ public class TestMyWishlist extends CommonAPI {
         MyAccountPage myAccountPage = new MyAccountPage(getDriver());
         MyWishlistPage myWishlistPage = new MyWishlistPage(getDriver());
         automationHomePage.clickSignIn();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
         Assert.assertEquals("My account - My Store", getPageTitle());
         myAccountPage.clickMyWishlist();
+        Assert.assertEquals("My Store", getPageTitle());
         myWishlistPage.clickRemoveIcon();
         getDriver().switchTo().alert().dismiss();
         myWishlistPage.clickHome();

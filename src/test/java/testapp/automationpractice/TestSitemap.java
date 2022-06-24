@@ -23,12 +23,14 @@ public class TestSitemap extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
+        Assert.assertEquals("Sitemap - My Store", getPageTitle());
         sitemapPage.clickManufacturers();
-
         String expectedPageTitle = "Manufacturers - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -38,12 +40,14 @@ public class TestSitemap extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
+        Assert.assertEquals("Sitemap - My Store", getPageTitle());
         sitemapPage.clickPriceDrop();
-
         String expectedPageTitle = "Prices drop - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -53,12 +57,14 @@ public class TestSitemap extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
+        Assert.assertEquals("Sitemap - My Store", getPageTitle());
         sitemapPage.clickMyAddressesLink();
-
         String expectedPageTitle = "Addresses - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -68,12 +74,14 @@ public class TestSitemap extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
+        Assert.assertEquals("Sitemap - My Store", getPageTitle());
         sitemapPage.clickNewProducts();
-
         String expectedPageTitle = "New products - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -83,12 +91,14 @@ public class TestSitemap extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
+        Assert.assertEquals("Sitemap - My Store", getPageTitle());
         sitemapPage.clickAllSpecials();
-
         String expectedPageTitle = "Prices drop - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -98,12 +108,14 @@ public class TestSitemap extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
+        Assert.assertEquals("Sitemap - My Store", getPageTitle());
         sitemapPage.clickLegalNotice();
-
         String expectedPageTitle = "Legal Notice - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -113,12 +125,14 @@ public class TestSitemap extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
+        Assert.assertEquals("Sitemap - My Store", getPageTitle());
         sitemapPage.clickPersonalInformation();
-
         String expectedPageTitle = "Identity - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -128,15 +142,18 @@ public class TestSitemap extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
+        Assert.assertEquals("Sitemap - My Store", getPageTitle());
         sitemapPage.clickPersonalInformation();
+        Assert.assertEquals("Identity - My Store", getPageTitle());
         sitemapPage.clickSocialTitleRadioButton();
         sitemapPage.typeCurrentPassword("tadefi2022");
         sitemapPage.clickSaveSubmitIdentity();
-
         String expectedPageTitle = "Identity - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -146,12 +163,14 @@ public class TestSitemap extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
+        Assert.assertEquals("Sitemap - My Store", getPageTitle());
         sitemapPage.clickSecurePaymentLink();
-
         String expectedPageTitle = "Secure payment - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -161,12 +180,14 @@ public class TestSitemap extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
+        Assert.assertEquals("Sitemap - My Store", getPageTitle());
         sitemapPage.clickFacebookButton();
-
         String expectedPageTitle = "Sitemap - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }

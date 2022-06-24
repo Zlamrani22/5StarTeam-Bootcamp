@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.activation.CommandMap;
 import java.util.LinkedList;
 
 public class SuppliersPage extends CommonAPI {
@@ -30,16 +29,20 @@ public class SuppliersPage extends CommonAPI {
 
     public void clickViewProducts(){
         click(viewProducts);
+        LOG.info("Clicked on view products successfully");
     }
 
     public void selectFromDropDown(String option){
         selectFromDropdown(sortByComboBox, option);
+        LOG.info("Select from dropdown success");
     }
 
     public void clickListView(){
         click(listView);
+        LOG.info("clicked on list view successfully");
     }
 
+    //this method is used to sort the linked list string items in an alphabetic order
     public boolean checkAlphabeticalOrder(LinkedList<String> productName){
         String previous = "";
         for (final String current: productName){
