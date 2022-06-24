@@ -25,14 +25,14 @@ public class Utility {
         return new String(decodedBytes);
     }
 
-//    public static void main(String[] args) {
-//        String originalInput = "pK4miZ8sp15afqsvGckE";
-//        String encodedString = Base64.getEncoder().encodeToString(originalInput.getBytes());
-//        System.out.println(encodedString);
-//
-//        byte[] decodedBytes = Base64.getDecoder().decode("bmFjZXJoYWRqc2FpZDE=");
-//        String decodedString = new String(decodedBytes);
-//        System.out.println(decodedString);
-//    }
+    public static void main(String[] args) {
+        String originalInput = "jzu94RXLvPso92FNaYsn";
+        String encodedString = Base64.getEncoder().encodeToString(originalInput.getBytes());
+        System.out.println(encodedString);
+
+        byte[] decodedBytes = Base64.getDecoder().decode("");
+        String decodedString = new String(decodedBytes);
+        System.out.println(decodedString);
+    }
 
 }

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SearchNewCarByBodyStyleAndPricePage extends CommonAPI {
 
@@ -25,12 +27,20 @@ public class SearchNewCarByBodyStyleAndPricePage extends CommonAPI {
 
 
     public SearchNewCarByBodyStyleAndPricePage(WebDriver driver) {PageFactory.initElements(driver, this);}
+    private final Logger LOG = LoggerFactory.getLogger(SearchNewCarByBodyStyleAndPricePage.class);
 
-    public void clickNewCarPrice(){click(newCarPrice);}
-    public void clickNewCarByBodyStylePrice(){click(newCarByBodyStylePrice);}
-    public void clickNewCarSUVPrice(){click(newCarSUVPrice);}
-    public void selectOptionFromNewCarMinimumPrice(String option){selectFromDropdown(newCarMinimumPrice, option);}
-    public void selectOptionFromNewCarMaximumPrice(String option){selectFromDropdown(newCarMaximumPrice, option);}
-    public void typeZipCodeNewCarByBodyStylePrice(String zip){type(zipCodeNewCarByBodyStylePrice, zip);}
-    public void clickSearchNewCarByBodyStylePrice(){click(searchNewCarByBodyStylePrice);}
+    public void clickNewCarPrice(){click(newCarPrice);
+        LOG.info("click new car price success");}
+    public void clickNewCarByBodyStylePrice(){click(newCarByBodyStylePrice);
+        LOG.info("click new car by body style price success");}
+    public void clickNewCarSUVPrice(){click(newCarSUVPrice);
+        LOG.info("click new car SUV success");}
+    public void selectOptionFromNewCarMinimumPrice(String option){selectFromDropdown(newCarMinimumPrice, option);
+        LOG.info("select from drop down new car minimum price success");}
+    public void selectOptionFromNewCarMaximumPrice(String option){selectFromDropdown(newCarMaximumPrice, option);
+        LOG.info("select from drop down new car maximum price success");}
+    public void typeZipCodeNewCarByBodyStylePrice(String zip){type(zipCodeNewCarByBodyStylePrice, zip);
+        LOG.info("type zip code new car by body style and price success");}
+    public void clickSearchNewCarByBodyStylePrice(){click(searchNewCarByBodyStylePrice);
+        LOG.info("click search new car by body style and by price success");}
 }

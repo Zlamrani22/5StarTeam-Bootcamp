@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HoverOverSellPage extends CommonAPI {
 
@@ -20,12 +22,18 @@ public class HoverOverSellPage extends CommonAPI {
     WebElement dealerSignup;
 
     public HoverOverSellPage(WebDriver driver) {PageFactory.initElements(driver, this);}
+    private final Logger LOG = LoggerFactory.getLogger(HoverOverSellPage.class);
 
-    public void hoverOverFloatingMenu(WebDriver driver){hoverOver(driver, floatingSellMenu);}
-    public void clickSellMyCar(){click(sellMyCar);}
-    public void clickCarValues(){click(carValues);}
-    public void clickSellMyCarFAQ(){click(sellMyCarFAQ);}
-    public void clickDealerSignup(){click(dealerSignup);}
+    public void hoverOverFloatingMenu(WebDriver driver){hoverOver(driver, floatingSellMenu);
+    LOG.info("hover over driver");}
+    public void clickSellMyCar(){click(sellMyCar);
+        LOG.info("click sell my car");}
+    public void clickCarValues(){click(carValues);
+        LOG.info("click car values");}
+    public void clickSellMyCarFAQ(){click(sellMyCarFAQ);
+        LOG.info("click sell my car FAQ");}
+    public void clickDealerSignup(){click(dealerSignup);
+        LOG.info("click dealer sign up");}
 
 
 }

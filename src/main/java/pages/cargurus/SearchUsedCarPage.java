@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SearchUsedCarPage extends CommonAPI {
 
@@ -55,29 +57,53 @@ public class SearchUsedCarPage extends CommonAPI {
     WebElement searchByMakeAndModel;
 
     public SearchUsedCarPage(WebDriver driver) {PageFactory.initElements(driver, this);}
+    private final Logger LOG = LoggerFactory.getLogger(SearchUsedCarPage.class);
 
-    public void clickUsedCar(){click(usedCar);}
-    public void clickByPrice(){click(byPrice);}
-    public void selectOptionFromMinimumPrice(String option){selectFromDropdown(minimumPrice, option);}
-    public void selectOptionFromMaximumPrice(String option){selectFromDropdown(maximumPrice, option);}
-    public void typeZipCodeByPrice(String zip){type(zipCodeByPrice, zip);}
-    public void clickSearchByPrice(){click(searchByPrice);}
-    public void clickByMakeModel(){click(byMakeModel);}
-    public void clickByBodyStyle(){click(byBodyStyle);}
-    public void clickSUV(){click(SUV);}
-    public void clickSedan(){click(sedan);}
-    public void clickMinivan(){click(minivan);}
-    public void clickPickUpTruck(){click(PickUpTruck);}
-    public void clickHatchback(){click(hatchback);}
-    public void clickConvertible(){click(convertible);}
-    public void clickWagon(){click(wagon);}
-    public void clickCoupe(){click(coupe);}
-    public void selectOptionFromAllMakes(String option){selectFromDropdown(allMakes, option);}
-    public void selectOptionFromAllModels(String option){selectFromDropdown(allModels, option);}
-    public void typeZipCodeByMakeAndModel(String zip){type(zipCodeByMakeAndModel, zip);}
-    public void typeZipCodeBodyStyle(String zip){type(zipCodeByBodyStyle, zip);}
-    public void clickSearchByMakeAndModel(){click(searchByMakeAndModel);}
-    public void clickSearchByBodyStyle(){click(searchByBodyStyle);}
+    public void clickUsedCar(){click(usedCar);
+        LOG.info("click used car success");}
+    public void clickByPrice(){click(byPrice);
+        LOG.info("click by price success");}
+    public void selectOptionFromMinimumPrice(String option){selectFromDropdown(minimumPrice, option);
+        LOG.info("select from drop down minimum price success");}
+    public void selectOptionFromMaximumPrice(String option){selectFromDropdown(maximumPrice, option);
+        LOG.info("select from drop down maximum price success");}
+    public void typeZipCodeByPrice(String zip){type(zipCodeByPrice, zip);
+        LOG.info("type zip code by price success");}
+    public void clickSearchByPrice(){click(searchByPrice);
+        LOG.info("click search by price success");}
+    public void clickByMakeModel(){click(byMakeModel);
+        LOG.info("click by make and model success");}
+    public void clickByBodyStyle(){click(byBodyStyle);
+        LOG.info("click by body style success");}
+    public void clickSUV(){click(SUV);
+        LOG.info("click SUV success");}
+    public void clickSedan(){click(sedan);
+        LOG.info("click sedan success");}
+    public void clickMinivan(){click(minivan);
+        LOG.info("click minivan success");}
+    public void clickPickUpTruck(){click(PickUpTruck);
+        LOG.info("click pickup trucks success");}
+    public void clickHatchback(){click(hatchback);
+        LOG.info("click hatchback success");}
+    public void clickConvertible(){click(convertible);
+        LOG.info("click convertible success");}
+    public void clickWagon(){click(wagon);
+        LOG.info("click wagon success");}
+    public void clickCoupe(){click(coupe);
+        LOG.info("click coupe success");}
+    public void selectOptionFromAllMakes(String option){selectFromDropdown(allMakes, option);
+        LOG.info("select from drop down all makes success");}
+    public void selectOptionFromAllModels(String option){selectFromDropdown(allModels, option);
+        LOG.info("select from drop down all models success");}
+
+    public void typeZipCodeBodyStyle(String zip){type(zipCodeByBodyStyle, zip);
+        LOG.info("type zip code by body style success");}
+    public void clickSearchByMakeAndModel(){click(searchByMakeAndModel);
+        LOG.info("click search by make and model success");}
+    public void clickSearchByBodyStyle(){click(searchByBodyStyle);
+        LOG.info("click search by body style success");}
 
 
+    public void typeZipCodeByMakeAndModel(String zip) {type(zipCodeByMakeAndModel, zip);
+        LOG.info("type zip code by make and model success");}
 }

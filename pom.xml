@@ -88,7 +88,7 @@
             <forkCount>0</forkCount>
             <suiteXmlFile>C:/Users/zohralamrani/IdeaProjects/5StarTeam-Bootcamp/src/test/resources/msnbc-TestNGRunner.xml</suiteXmlFile>
             <suiteXmlFile>/Users/zohralamrani/IdeaProjects/5StarTeam-Bootcamp/src/test/resources/msnbc-TestNGRunner.xml</suiteXmlFile>
-            <suiteXmlFile>/Users/zohralamrani/IdeaProjects/5StarTeam-Bootcamp/src/test/resources/cargurus-TestNGRunner.xml</suiteXmlFile>
+            <suiteXmlFile>\Users\larim\eclipse-workspace\5StarTeam-Bootcamp\src\test\resources\cargurus-TestNGRunner.xml</suiteXmlFile>
             <suiteXmlFile>/Users/zohralamrani/IdeaProjects/5StarTeam-Bootcamp/src/test/resources/automationpractice-TestNGRunner.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>

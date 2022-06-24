@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SearchNewCarByPricePage extends CommonAPI {
 
@@ -25,15 +27,24 @@ public class SearchNewCarByPricePage extends CommonAPI {
 
     public SearchNewCarByPricePage(WebDriver driver) {PageFactory.initElements(driver, this);}
 
-    public void clickNewCar(){click(newCar);}
 
-    public void clickNewCarByPrice(){click(newCarByPrice);}
-    public void selectOptionFromNewCarMinPrice(String option){selectFromDropdown(newCarMinPrice, option);}
-    public void selectOptionFromNewCarMaxPrice(String option){selectFromDropdown(newCarMaxPrice, option);}
+    private final Logger LOG = LoggerFactory.getLogger(SearchNewCarByPricePage.class);
 
-    public void typeNewCarByPriceZipCode(String zip){type(newCarByPriceZipCode, zip);}
+    public void clickNewCar(){click(newCar);
+    LOG.info("click new cars success");}
 
-    public void clickNewCarByPriceSearchBtn(){click(newCarByPriceSearchBtn);}
+    public void clickNewCarByPrice(){click(newCarByPrice);
+        LOG.info("click new car by price success");}
+    public void selectOptionFromNewCarMinPrice(String option){selectFromDropdown(newCarMinPrice, option);
+        LOG.info("select from drop down new car minimum price success");}
+    public void selectOptionFromNewCarMaxPrice(String option){selectFromDropdown(newCarMaxPrice, option);
+        LOG.info("select from drop down new car maximum price success");}
+
+    public void typeNewCarByPriceZipCode(String zip){type(newCarByPriceZipCode, zip);
+        LOG.info("type New Car By Price Zip Code success");}
+
+    public void clickNewCarByPriceSearchBtn(){click(newCarByPriceSearchBtn);
+        LOG.info("click New Car By Price Search Btn success");}
 
 
 
