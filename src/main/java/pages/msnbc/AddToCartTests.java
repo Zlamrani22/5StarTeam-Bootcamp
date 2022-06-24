@@ -1,12 +1,10 @@
-package testapp.msnbc;
+package pages.msnbc;
 
 import base.CommonAPI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.msnbc.AddToCartStorePage;
-import pages.msnbc.HomePage;
 import utility.ExcelReader;
 
 import static utility.Utility.currentDir;

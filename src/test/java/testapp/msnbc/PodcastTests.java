@@ -39,7 +39,7 @@ public class PodcastTests extends CommonAPI {
         homePage.selectPodcastOption();
         podcastPage.clickAmericanRadical();
         podcastPage.spotifyPodcastButton();
-        String pageText= "| Podcast on Spotify";
+        String pageText= "American Radical | Podcast on Spotify";
         Assert.assertEquals(pageText,getPageTitle());
     }
 
