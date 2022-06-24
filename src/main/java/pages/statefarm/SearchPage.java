@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,21 +30,26 @@ public class SearchPage extends CommonAPI {
 
 
     public SearchPage(WebDriver driver){PageFactory.initElements(driver, this);}
+    private final Logger LOG = LoggerFactory.getLogger(SearchPage.class);
 
 
     //search agent
-    public void clickOnSearchBtn(){click(searchBtn);}
-    public void typeOnSearchBox(String location){type(searchBox, location);}
-    public void clickOnSearchBtn1(){
-        click(searchBtn1);
-    }
+    public void clickOnSearchBtn(){click(searchBtn);
+        LOG.info("click on search button success");}
+    public void typeOnSearchBox(String location){type(searchBox, location);
+        LOG.info("type search box success");}
+    public void clickOnSearchBtn1(){click(searchBtn1);
+        LOG.info("click on search button success");}
 
     //search Us Bank
-    public void clickOnBusinessBank(){click(BusinessBanking);}
+    public void clickOnBusinessBank(){click(BusinessBanking);
+        LOG.info("click on business bank success");}
 
     //multiple search
-    public void clearSearchField(){clear(searchField);}
-    public void searchElementAndEnter(String item){typeAndEnter(searchField, item);}
+    public void clearSearchField(){clear(searchField);
+        LOG.info("clear search field success");}
+    public void searchElementAndEnter(String item){typeAndEnter(searchField, item);
+        LOG.info("search element success");}
 
 
 }
