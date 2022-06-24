@@ -1,6 +1,8 @@
 package testapp.automationpractice;
 
 import base.CommonAPI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.automationpractice.AuthenticationPage;
@@ -9,134 +11,138 @@ import pages.automationpractice.SitemapPage;
 
 public class TestLogin extends CommonAPI {
 
+    private final Logger LOG = LoggerFactory.getLogger(TestLogin.class);
+
     @Test(enabled = false)//check1
     public void testCreateWishList() {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickMyWishlistLink();
-        loginPage.typeMyWishlistName("Zebra2");
+        Assert.assertEquals("My Store", getPageTitle());
+        loginPage.typeMyWishlistName("Wish2");
         loginPage.clickSaveButton();
-
-        String expectedAccountPageTitle = "My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-
     @Test(enabled = false)//check2
     public void testOrderHistory() {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickOrderHistoryDetails();
-
-        String expectedAccountPageTitle = "Order history - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Order history - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-
     @Test(enabled = false)//check3
-    public void testWriteAReview() {
+    public void testVerifyMoreForPrintedSummerDrees() {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickWomen();
         loginPage.clickPrintedSummerDressMore();
-        //loginPage.clickWriteAReview();
-
-        String expectedAccountPageTitle = "Women - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Women - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
-
     @Test(enabled = false)//check4
     public void testRegisterForNewsletter() {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.typeNewsletterEmailInputField("tadefi_01@yahoo.fr");
         loginPage.clickNewsletterButton();
-
-        String expectedAccountPageTitle = "My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
-
-//        String actualText = driver.findElement(By.xpath("//*[@id='columns']/p")).getText();
-//        String expectedText = "Newsletter : You have successfully subscribed to this newsletter.";
-//        Assert.assertEquals(actualText, expectedText);
+        String expectedPageTitle = "My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check5
     public void testCheckSignOutFunctionality() {
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSignOut();
-
-        String expectedAccountPageTitle = "Login - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Login - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check6
     public void testVerifyAboutUsPage(){
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickAboutUsButton();
-
-        String expectedAccountPageTitle = "About us - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "About us - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check7
-    public void testOUrStores(){
+    public void testCheckOurStores(){
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickOurStores();
-
-        String expectedAccountPageTitle = "Stores - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Stores - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check8
     public void testCheckTermsAndConditions(){
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickTermsAndConditions();
-
-        String expectedAccountPageTitle = "Terms and conditions of use - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Terms and conditions of use - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check9
     public void testCheckSitemap(){
         LoginPage loginPage = new LoginPage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
-
-        String expectedAccountPageTitle = "Sitemap - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Sitemap - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test(enabled = false)//check10
     public void testCheckSuppliers(){
@@ -144,13 +150,14 @@ public class TestLogin extends CommonAPI {
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         SitemapPage sitemapPage = new SitemapPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
+        Assert.assertEquals("My account - My Store", getPageTitle());
         loginPage.clickSitemap();
         sitemapPage.clickSuppliers();
-
-        String expectedAccountPageTitle = "Suppliers - My Store";
-        Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
+        String expectedPageTitle = "Suppliers - My Store";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 }

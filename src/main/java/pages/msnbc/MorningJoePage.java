@@ -1,3 +1,48 @@
+
+//package pages.msnbc;
+//
+//import base.CommonAPI;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.FindBy;
+//import org.openqa.selenium.support.PageFactory;
+//
+//public class MorningJoePage extends CommonAPI {
+//
+//    @FindBy(css = "img[class='titleLogo']")
+//    private WebElement pageHeader;
+//
+//    @FindBy(css = "div[id='hfs-footer']")
+//    private WebElement joePageFooter;
+//
+//    @FindBy(xpath = "//a[text()='Careers']")
+//    private WebElement careersButton;
+//
+//    @FindBy(css = "input[class='input-search']")
+//    private WebElement careerSearchButton;
+////    @FindBy(css = "form[action='/find-a-job#']")
+////    private WebElement searchCareers;
+//
+//    @FindBy(xpath = "//a[@class=\"animated-ghost-button animated-ghost-button--small styles_promo3PanelButton__X0MV7\"][text()='FULL BIO'][1]")
+//    private WebElement morningJoeBioButton;
+//
+//    @FindBy(css = "div[class='job-location-filter selected-filters']")
+//    private WebElement careerListHeader;
+//
+//    @FindBy(xpath = "//a[text()='@JoeScarborough']")
+//    private WebElement followJoeText;
+//
+//    public MorningJoePage(WebDriver driver){
+//        PageFactory.initElements(driver,this);
+//    }
+//
+//    public String joePageHeader() {
+//
+//        String header = getElementText(pageHeader);
+//        return header;
+//    }
+//
+
 package pages.msnbc;
 
 import base.CommonAPI;
@@ -11,16 +56,20 @@ public class MorningJoePage extends CommonAPI {
     @FindBy(css = "img[class='titleLogo']")
     private WebElement pageHeader;
 
+    @FindBy(css = "h2[class='styles_promo3CardHeadline__aknwc']")
+    private WebElement joePageTextAboveFullBio;
+
     @FindBy(css = "div[id='hfs-footer']")
     private WebElement joePageFooter;
+
 
     @FindBy(xpath = "//a[text()='Careers']")
     private WebElement careersButton;
 
     @FindBy(css = "input[class='input-search']")
     private WebElement careerSearchButton;
-//    @FindBy(css = "form[action='/find-a-job#']")
-//    private WebElement searchCareers;
+    @FindBy(css = "form[action='/find-a-job#']")
+   private WebElement searchCareers;
 
     @FindBy(xpath = "//a[@class=\"animated-ghost-button animated-ghost-button--small styles_promo3PanelButton__X0MV7\"][text()='FULL BIO'][1]")
     private WebElement morningJoeBioButton;
@@ -29,6 +78,9 @@ public class MorningJoePage extends CommonAPI {
     private WebElement careerListHeader;
 
     @FindBy(xpath = "//a[text()='@JoeScarborough']")
+    private WebElement followJoeInstaButton ;
+
+    @FindBy(xpath = "//p[text()='Like Joe on Facebook: ']")
     private WebElement followJoeText;
 
     public MorningJoePage(WebDriver driver){
@@ -41,42 +93,86 @@ public class MorningJoePage extends CommonAPI {
         return header;
     }
 
+
+
 //    public void scrollToBottomOfPage(){
 //        scrollToView(careersButton);
 //
 //    }
 
-    public WebElement clickCareersButton(){
-        click(careersButton);
-        return careersButton;
-    }
-
-    public void scrollToFullBio(){
-        click(morningJoeBioButton);
-    }
-
-    public WebElement clickFullMorningJoeBio(){
-        click(morningJoeBioButton);
-        return morningJoeBioButton;
-    }
-//    public WebElement clickCareers() {
+//
+//    public WebElement clickCareersButton(){
 //        click(careersButton);
 //        return careersButton;
 //    }
+//
+//    public void scrollToFullBio(){
+//        click(morningJoeBioButton);
+//    }
+//
+//    public WebElement clickFullMorningJoeBio(){
+//        click(morningJoeBioButton);
+//        return morningJoeBioButton;
+//    }
+////    public WebElement clickCareers() {
+////        click(careersButton);
+////        return careersButton;
+////    }
+//
+//    public WebElement clickFollowJoeOnInsta(){
+//        followJoeText.click();
+//        return clickFollowJoeOnInsta();
+//    }
+//
+//    public boolean followJoeIsClicked(){
+//        isInteractable(followJoeText);
+//        return true;
+//    }
+//
+//
+//    public String viewResultsHeader(){
+//        String text=getElementText(careerListHeader);
+//        return text;
+//    }
+//}
 
-    public WebElement clickFollowJoeOnInsta(){
-        followJoeText.click();
-        return clickFollowJoeOnInsta();
+
+
+    public WebElement viewCareersButton(){
+        isPresent(careersButton);
+
+
+        return careersButton;
+    }
+
+
+    public WebElement fullMorningJoeBioButton(){
+        isPresent(joePageTextAboveFullBio);
+        return joePageTextAboveFullBio;
+    }
+
+    public void clickMorningJoeBioButton(){
+        click(morningJoeBioButton);
+    }
+
+    public void clickCareersButton() {
+        click(careersButton);
+    }
+
+    public WebElement viewFollowJoeOnInsta(){
+        isPresent(followJoeText);
+        return followJoeText;
+    }
+
+    public void clickFollowJoeOnInsta(){
+        click(followJoeInstaButton);
     }
 
     public boolean followJoeIsClicked(){
-        isInteractable(followJoeText);
+        isInteractable(followJoeInstaButton);
         return true;
     }
 
 
-    public String viewResultsHeader(){
-        String text=getElementText(careerListHeader);
-        return text;
-    }
+
 }

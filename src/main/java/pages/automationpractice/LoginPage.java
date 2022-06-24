@@ -5,8 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LoginPage extends CommonAPI {
+
+    private final Logger LOG = LoggerFactory.getLogger(LoginPage.class);
 
     @FindBy(xpath = "//a[@href='http://automationpractice.com/index.php?fc=module&module=blockwishlist&controller=mywishlist']")
     public WebElement myWishlistLink;
@@ -53,69 +57,83 @@ public class LoginPage extends CommonAPI {
     @FindBy(css = "a[title='Sitemap']")
     public WebElement sitemapButton;
 
-
     public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
     public void clickMyWishlistLink() {
         click(myWishlistLink);
+        LOG.info("Clicked on my wishlist link successfully");
     }
 
     public void typeMyWishlistName(String myWishlistName) {
         type(myWishlistNameInputField, myWishlistName);
+        LOG.info("Entered my wishlist name successfully");
     }
 
     public void clickMyWishlist(){
         click(myWishlistButton);
+        LOG.info("Clicked on my wishlist button successfully");
     }
 
     public void clickSaveButton() {
         click(saveButton);
+        LOG.info("Clicked on save button successfully");
     }
 
     public void clickOrderHistoryDetails() {
         click(orderHistoryDetailsButton);
+        LOG.info("Clicked on order history details button successfully");
     }
 
     public void typeNewsletterEmailInputField(String userEmail){
         type(newsletterEmailInputField, userEmail );
+        LOG.info("Entered email successfully");
     }
 
     public void clickNewsletterButton(){
         click(newsletterButton);
+        LOG.info("Clicked on newsletter button successfully");
     }
 
     public void clickWomen() {
         click(womenButton);
+        LOG.info("Clicked on women button successfully");
     }
 
     public void clickPrintedSummerDressMore() {
         click(printedSummerDressMoreButton);
+        LOG.info("Clicked on more successfully");
     }
 
     public void clickWriteAReview() {
         click(writeAReviewLink);
+        LOG.info("Clicked on write a review link successfully");
     }
 
-    public HomePage clickSignOut(){
+    public AutomationHomePage clickSignOut(){
         click(signOutButton);
-        return new HomePage(getDriver());
+        LOG.info("Clicked on signout button successfully");
+        return new AutomationHomePage(getDriver());
     }
 
     public void clickAboutUsButton(){
         click(aboutUsButton);
+        LOG.info("Clicked on about us button successfully");
     }
 
     public void clickOurStores(){
         click(ourStoresButton);
+        LOG.info("Clicked on our store button successfully");
     }
 
     public void clickTermsAndConditions(){
         click(termsAndConditionsButton);
+        LOG.info("Clicked on terms and conditions successfully");
     }
     public SitemapPage clickSitemap(){
         click(sitemapButton);
+        LOG.info("Clicked on sitemap successfully");
         return new SitemapPage(getDriver());
     }
 }

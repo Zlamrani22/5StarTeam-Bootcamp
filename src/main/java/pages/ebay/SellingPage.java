@@ -7,7 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SellingPage extends CommonAPI {
-    @FindBy(css = ".gh-p[href='https://www.ebay.com/sl/sell']")
+
+    @FindBy(css = "input[id='gh-btn']")
     public WebElement sellingButton;
 
     public void clickSelling() {
