@@ -27,7 +27,7 @@ public class MyWishlistPage extends CommonAPI {
     @FindBy(xpath = "//*[@id='center_column']//div[2]/h5/a")
     public WebElement printedChiffonDressLink;
 
-    @FindBy(css = "a[class='addToWishlist wishlistProd_7 checked']")
+    @FindBy(css = "a[id='wishlist_button']")
     public WebElement addToWishlist;
 
     @FindBy(xpath = "//*[@id='mywishlist']//li[2]/a")

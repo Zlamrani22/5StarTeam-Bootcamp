@@ -1,21 +1,21 @@
 package testapp.automationpractice;
 
 import base.CommonAPI;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.automationpractice.AutomationHomePage;
-import pages.automationpractice.PrintedDressPage;
 import pages.automationpractice.WomenPage;
 
 import java.util.Iterator;
 import java.util.Set;
 
 public class TestWomen extends CommonAPI {
+
+    private final Logger LOG = LoggerFactory.getLogger(TestWomen.class);
 
     @Test(enabled = false)//check1
     public void testCloseWindowPopup() {
@@ -45,6 +45,7 @@ public class TestWomen extends CommonAPI {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         automationHomePage.clickWomenLink();
         WomenPage womenPage = new WomenPage(getDriver());
+        Assert.assertEquals("Women - My Store", getPageTitle());
         womenPage.clickList();
         womenPage.selectSmallCheckBox();
         womenPage.selectBlueColorLink();
@@ -61,7 +62,6 @@ public class TestWomen extends CommonAPI {
         womenPage.selectBlueColorLink();
         womenPage.clickCottonCompositionCheckBox();
         womenPage.clickWhiteColorBlouse();
-
         String expectedPageTitle = "Blouse - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -70,11 +70,12 @@ public class TestWomen extends CommonAPI {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
         automationHomePage.clickWomenLink();
+        Assert.assertEquals("Women - My Store", getPageTitle());
         womenPage.clickDresses();
         womenPage.clickSummerDresses();
+        Assert.assertEquals("Summer Dresses - My Store", getPageTitle());
         womenPage.clickMaxiDressCheckBox();
         womenPage.clickOrangeColorPrintedSummerDress();
-
         String expectedPageTitle = "Summer Dresses - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -82,10 +83,9 @@ public class TestWomen extends CommonAPI {
     public void testColorfulDress() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
-        PrintedDressPage printedDressPage = new PrintedDressPage(getDriver());
         automationHomePage.clickWomenLink();
+        Assert.assertEquals("Women - My Store", getPageTitle());
         womenPage.clickColorfulDressCheckBox();
-
         String expectedPageTitle = "Women - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -94,8 +94,8 @@ public class TestWomen extends CommonAPI {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
         automationHomePage.clickWomenLink();
+        Assert.assertEquals("Women - My Store", getPageTitle());
         womenPage.clickInStockCheckBox();
-
         String expectedPageTitle = "Women - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -104,8 +104,8 @@ public class TestWomen extends CommonAPI {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
         automationHomePage.clickWomenLink();
+        Assert.assertEquals("Women - My Store", getPageTitle());
         womenPage.clickNewLink();
-
         String expectedPageTitle = "Women - My Store";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
@@ -114,30 +114,27 @@ public class TestWomen extends CommonAPI {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
         automationHomePage.clickWomen();
+        Assert.assertEquals("Women - My Store", getPageTitle());
         womenPage.clickTopsCheckBox();
         womenPage.clickBlouseImage();
         //womenPage.clickPinterestLink();
         Assert.assertEquals("Tops - My Store", getPageTitle());
     }
-    @Test(enabled = false)//check9, passed with only left slider working, try to set the right side
+    //this test case passed with only left slider working, try to set the right side
+    @Test(enabled = false)//check9
     public void testSetPriceSlider() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
         automationHomePage.clickWomen();
-
         //womenPage.setPriceSlider(20.00);
-
         Actions move = new Actions(getDriver());
         Actions actions = new Actions(getDriver());
         waitFor(5);
-        //scrollToView("priceSliderHolderRight");
         Action action = move.dragAndDropBy(womenPage.priceSliderHandleLeft, 38, 0).build();
         action.perform();
         waitFor(5);
         actions.dragAndDropBy(womenPage.priceSliderHandleRight, -20, 0).build();
         action.perform();
-//        actions.moveByOffset(45, -45);
-//        waitFor(5);
-        Assert.assertEquals("Faded Short Sleeve T-shirts - My Store", getPageTitle());
+        Assert.assertEquals("Women - My Store", getPageTitle());
     }
 }

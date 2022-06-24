@@ -30,7 +30,7 @@ public class MyStorePage extends CommonAPI {
     @FindBy(css = "a[class='btn btn-explore btn-visible-small btn-explore-bo']")
     public WebElement startNowButton;
 
-    @FindBy(css = "#_desktop_user_info > div > a > span")
+    @FindBy(xpath = "//*[@id='_desktop_user_info']/div/a/span")
     public WebElement myStoreSignInButton;
 
     @FindBy(xpath = "span[class='hide-header']")
