@@ -11,7 +11,6 @@ public class HoverOverSellPageTest extends CommonAPI {
     public void HoverOverSellMyCar() {
         HoverOverSellPage hoverOverSellPage = new HoverOverSellPage(getDriver());
         hoverOverSellPage.hoverOverFloatingMenu(getDriver());
-        waitFor(3);
         hoverOverSellPage.clickSellMyCar();
         String expectedPageTitle = "Sell your car | It’s free & 100% online | CarGurus - CarGurus";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
@@ -20,7 +19,6 @@ public class HoverOverSellPageTest extends CommonAPI {
     public void HoverOverCarValues() {
         HoverOverSellPage hoverOverSellPage = new HoverOverSellPage(getDriver());
         hoverOverSellPage.hoverOverFloatingMenu(getDriver());
-        waitFor(3);
         hoverOverSellPage.clickCarValues();
         String expectedPageTitle = "Car Values - What’s My Car Worth? - CarGurus";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
@@ -29,7 +27,6 @@ public class HoverOverSellPageTest extends CommonAPI {
     public void HoverOverSellMyCarFAQ() {
         HoverOverSellPage hoverOverSellPage = new HoverOverSellPage(getDriver());
         hoverOverSellPage.hoverOverFloatingMenu(getDriver());
-        waitFor(3);
         hoverOverSellPage.clickSellMyCarFAQ();
         String expectedPageTitle = "Sell your car | It’s free & 100% online | CarGurus - CarGurus";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
@@ -38,7 +35,6 @@ public class HoverOverSellPageTest extends CommonAPI {
     public void HoverOverDealerSignup() {
         HoverOverSellPage hoverOverSellPage = new HoverOverSellPage(getDriver());
         hoverOverSellPage.hoverOverFloatingMenu(getDriver());
-        waitFor(3);
         hoverOverSellPage.clickDealerSignup();
         String expectedPageTitle = "Request Dealer Account - CarGurus";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
