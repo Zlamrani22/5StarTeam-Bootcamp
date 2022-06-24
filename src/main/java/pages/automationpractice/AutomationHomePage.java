@@ -48,7 +48,7 @@ public class AutomationHomePage extends CommonAPI {
     @FindBy(xpath = "//*[@id='footer']//section[2]//div//div/ul/li/a")
     public WebElement womenLink;
 
-    @FindBy(xpath = "//*[@id='homefeatured']//li[4]//div[2]/h5/a")
+    @FindBy(xpath = "//*[@id='homefeatured']/li[4]/div/div[1]/div/a[1]")
     public WebElement printedDressButton;
 
     @FindBy(xpath = "//*[@id='htmlcontent_top']//li[1]/a/img")
@@ -98,6 +98,9 @@ public class AutomationHomePage extends CommonAPI {
 
     @FindBy(css = "a[title='Sitemap']")
     public WebElement sitemapLink;
+
+    @FindBy(css = "a[title='My credit slips']")
+    public WebElement myCreditSlipsLink;
 
     public AutomationHomePage(WebDriver driver){
         PageFactory.initElements(driver, this);
@@ -260,5 +263,10 @@ public class AutomationHomePage extends CommonAPI {
         click(sitemapLink);
         LOG.info("Clicked on sitemap link successfully");
         return new SitemapPage(getDriver());
+    }
+
+    public void clickMyCreditSlips(){
+        click(myCreditSlipsLink);
+        LOG.info("Clicked on my credit slips link successfully");
     }
 }

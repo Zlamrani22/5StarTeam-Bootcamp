@@ -2,6 +2,8 @@ package testapp.automationpractice;
 
 import base.CommonAPI;
 import org.openqa.selenium.By;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.automationpractice.AuthenticationPage;
@@ -10,14 +12,16 @@ import pages.automationpractice.ForgotPasswordPage;
 
 public class TestAuthentication extends CommonAPI {
 
+    private final Logger LOG = LoggerFactory.getLogger(TestAuthentication.class);
+
     @Test(enabled = false)//check1
     public void testAuthenticateWithValidCredentials() {
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         authenticationPage.clickLoginButton();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailInputField("tadefi_01@yahoo.fr");
         authenticationPage.typePasswordInputField("tadefi2022");
         authenticationPage.clickLoginSubmitButton();
-
         String expectedAccountPageTitle = "My account - My Store";
         Assert.assertEquals(expectedAccountPageTitle, getPageTitle());
     }
@@ -55,6 +59,7 @@ public class TestAuthentication extends CommonAPI {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         automationHomePage.clickSignIn();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailToCreateAnAccount("tadefi_01@yahoo.fr");
         authenticationPage.clickCreateAnAccount();
         String expectedText = "";
@@ -66,6 +71,7 @@ public class TestAuthentication extends CommonAPI {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         AuthenticationPage authenticationPage = new AuthenticationPage(getDriver());
         automationHomePage.clickSignIn();
+        Assert.assertEquals("Login - My Store", getPageTitle());
         authenticationPage.typeEmailToCreateAnAccount("tadefi_01@yahoo.fr");
         authenticationPage.clickCreateAnAccount();
         authenticationPage.clickMrsRadioButton();
@@ -82,8 +88,6 @@ public class TestAuthentication extends CommonAPI {
         authenticationPage.typeZipCode("94523");
         authenticationPage.typeMobilePhoneNumber("9252788415");
         authenticationPage.clickRegisterButton();
-        waitFor(5);
         Assert.assertEquals("My account - My Store", getPageTitle());
     }
-
 }

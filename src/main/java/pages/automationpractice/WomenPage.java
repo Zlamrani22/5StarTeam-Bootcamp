@@ -5,10 +5,14 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 
 public class WomenPage extends CommonAPI {
+
+    private final Logger LOG = LoggerFactory.getLogger(WomenPage.class);
 
     @FindBy(css = "i[class='icon-th-list']")
     public WebElement listButton;
@@ -97,103 +101,128 @@ public class WomenPage extends CommonAPI {
 
     public void clickList() {
         click(listButton);
+        LOG.info("Clicked on list button successfully");
     }
 
     public void clickFadedShortSleeveTShirt() {
         click(fadedShortSleeveTShirtButton);
+        LOG.info("Clicked on faded short sleeve tshirt button successfully");
     }
 
     public void clickFadedShortSleeveTShirtRightArrow() {
         click(fadedShortSleeveTShirtRightArrow);
+        LOG.info("Clicked on faded short sleeve tshirt right arrow successfully");
     }
 
     public void clickBlueColoredFadedShortSleeveTShirt() {
         click(blueColoredFadedShortSleeveTShirtButton);
+        LOG.info("Clicked on blue colored faded short sleeve tshirt button successfully");
     }
 
     public void clickClose() {
         click(closeButton);
+        LOG.info("Clicked on close button successfully");
     }
 
     public void selectSmallCheckBox() {
         click(smallCheckBox);
+        LOG.info("Clicked on small checkbox successfully");
     }
 
     public void selectBlueColorLink() {
         click(blueColorLink);
+        LOG.info("Clicked on blue color link successfully");
     }
 
     public void clickGreenColorprintedChiffonDress() {
         click(greenColorPrintedChiffonDress);
+        LOG.info("Clicked on green color printed chiffon dress successfully");
     }
 
     public void clickCottonCompositionCheckBox() {
         click(cottonCompositionCheckBox);
+        LOG.info("Clicked on cotton composition checkbox successfully");
     }
 
     public void clickWhiteColorBlouse() {
         click(whiteColorBlouse);
+        LOG.info("Clicked on white color blouse successfully");
     }
 
     public void clickDresses() {
         click(dressesButton);
+        LOG.info("Clicked on dresses button successfully");
     }
 
     public void clickSummerDresses() {
         click(summerDressesButton);
+        LOG.info("Clicked on summer dresses button successfully");
     }
 
     public void clickMaxiDressCheckBox() {
         click(maxiDressCheckBox);
+        LOG.info("Clicked on maxi dress checkbox successfully");
     }
 
     public void clickOrangeColorPrintedSummerDress() {
         click(orangeColorPrintedSummerDress);
+        LOG.info("Clicked on orange color printed summer dress successfully");
     }
 
     public void clickColorfulDressCheckBox() {
         click(colorfulDressCheckBox);
+        LOG.info("Clicked on colorful dress checkbox successfully");
     }
 
     public PrintedDressPage clickMoreButton() {
         click(moreButton);
+        LOG.info("Clicked on more button successfully");
         return new PrintedDressPage(getDriver());
     }
 
     public void clickInStockCheckBox() {
         click(inStockCheckBox);
+        LOG.info("Clicked on in stock checkbox successfully");
     }
 
     public void clickNewLink() {
         click(newLink);
+        LOG.info("Clicked on new link successfully");
     }
 
     public void clickFashionManufacturerCheckBox(){
         click(fashionManufacturerCheckBox);
+        LOG.info("Clicked on fashion manufacturer checkbox successfully");
     }
 
     public void clickAddToCartButton(){
         click(addToCartButton);
+        LOG.info("Clicked on add to cart button successfully");
     }
 
     public void clickTopsCheckBox(){
         click(topsCheckBox);
+        LOG.info("Clicked on tops checkbox successfully");
     }
 
     public void clickAddToWishlist(){
         click(addToWishlistButton);
+        LOG.info("Clicked on add to wishlist button successfully");
     }
 
     public void clickAddToCompare(){
         click(addTotoCompareLink);
+        LOG.info("Clicked on add to compare button successfully");
     }
 
     public void clickBlouseImage(){
         click(blouseImage);
+        LOG.info("Clicked on blouse image successfully");
     }
 
     public PinterestPage clickPinterestLink(){
         click(pinterestLink);
+        LOG.info("Clicked on pinterest link successfully");
         return new PinterestPage(getDriver());
     }
 

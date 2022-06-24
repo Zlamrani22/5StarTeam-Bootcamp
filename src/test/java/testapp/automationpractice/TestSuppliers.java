@@ -3,7 +3,6 @@ package testapp.automationpractice;
 import base.CommonAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -20,6 +19,7 @@ import java.util.List;
 public class TestSuppliers extends CommonAPI {
 
     private final Logger LOG = LoggerFactory.getLogger(TestSuppliers.class);
+
     @Test(enabled = false)//check1
     public void testViewSuppliersProducts(){
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());

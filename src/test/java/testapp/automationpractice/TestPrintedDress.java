@@ -1,6 +1,8 @@
 package testapp.automationpractice;
 
 import base.CommonAPI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.automationpractice.AutomationHomePage;
@@ -13,16 +15,20 @@ import java.util.Set;
 
 public class TestPrintedDress extends CommonAPI {
 
+    private final Logger LOG = LoggerFactory.getLogger(TestPrintedDress.class);
+
     @Test(enabled = false)//check1
     public void testAddToCartBackToContinueShopping() {
         AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         WomenPage womenPage = new WomenPage(getDriver());
         PrintedDressPage printedDressPage = new PrintedDressPage(getDriver());
         automationHomePage.clickWomenLink();
+        Assert.assertEquals("Women - My Store", getPageTitle());
         womenPage.clickList();
         womenPage.selectSmallCheckBox();
         womenPage.selectBlueColorLink();
         womenPage.clickFashionManufacturerCheckBox();
+        Assert.assertEquals("Women - My Store", getPageTitle());
         womenPage.clickAddToCartButton();
         Set<String> windows = getDriver().getWindowHandles();
         Iterator<String> iterator = windows.iterator();
@@ -37,14 +43,13 @@ public class TestPrintedDress extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
         printedDressPage.clickContinueShopping();
     }
-    @Test(enabled = false)//check2
-    public void testAddThenDeleteAnItemFromShoppingCart() {
-        AutomationHomePage homepage = new AutomationHomePage(getDriver());
+    //Was not able to run again, reached limit :(
+    @Test(enabled = false)//failed2
+    public void testIncreaseItemQuantity(){
+        AutomationHomePage automationHomePage = new AutomationHomePage(getDriver());
         PrintedDressPage printedDressPage = new PrintedDressPage(getDriver());
-        ShoppingCartPage shoppingCartPage = new ShoppingCartPage(getDriver());
-        homepage.clickPrintedDress();
-        printedDressPage.clickPinkColorCheckBox();
-        printedDressPage.clickAddToCart();
+        automationHomePage.clickPrintedDress();
+        Assert.assertEquals("My Store", getPageTitle());
         Set<String> windows = getDriver().getWindowHandles();
         Iterator<String> iterator = windows.iterator();
         String childWindow = null;
@@ -52,14 +57,9 @@ public class TestPrintedDress extends CommonAPI {
             childWindow = iterator.next();
         }
         getDriver().switchTo().window(childWindow);
-        printedDressPage.clickContinueShopping();
-        printedDressPage.clickContinueShopping();
-        Assert.assertEquals("Printed Dress - My Store", getPageTitle());
-        printedDressPage.clickShoppingCart();
-        shoppingCartPage.clickTrashIcon();
-
-        String expectedPageTitle = "Order - My Store";
-        Assert.assertEquals(expectedPageTitle, getPageTitle());
+        //printedDressPage.clickIncreaseQuantity();
+        printedDressPage.clickAddToCart();
+        Assert.assertEquals("Printed Summer Dress", getPageTitle());
     }
 
 }

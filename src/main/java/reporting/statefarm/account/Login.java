@@ -12,15 +12,14 @@ public class Login extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.clickOnLogInButton();
         loginPage.typeUserName("Aksel1506");
-        loginPage.typePassword("TestCase@java0");
+        loginPage.typePassword("TestCase@java10");
         loginPage.clickLoginButtonSecond();
-        waitFor(3);
         String expectedPageTitle = "Log In";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
-        waitFor(3);
-
 
     }
+
+
     @Test
     public void loginInvalidCredentials(){
         LoginPage loginPage = new LoginPage(getDriver());
@@ -28,7 +27,6 @@ public class Login extends CommonAPI {
         loginPage.typeUserName("Aksel1506");
         loginPage.typePassword("Test@java");
         loginPage.clickLoginButtonSecond();
-        waitFor(3);
         String expectedPageTitle = "Log In";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
 

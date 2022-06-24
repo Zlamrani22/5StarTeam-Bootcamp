@@ -11,7 +11,6 @@ public class SearchNewCarByBodyStyleAndPricePageTest extends CommonAPI {
 
         SearchNewCarByBodyStyleAndPricePage searchNewCarByBodyStyleAndPricePage = new SearchNewCarByBodyStyleAndPricePage(getDriver());
         searchNewCarByBodyStyleAndPricePage.clickNewCarPrice();
-        waitFor(2);
         searchNewCarByBodyStyleAndPricePage.clickNewCarByBodyStylePrice();
         searchNewCarByBodyStyleAndPricePage.clickNewCarSUVPrice();
         searchNewCarByBodyStyleAndPricePage.selectOptionFromNewCarMinimumPrice("8000");
@@ -22,25 +21,23 @@ public class SearchNewCarByBodyStyleAndPricePageTest extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test
-    public void searchNewSUVl() {
+    public void searchNewSUVMin() {
 
         SearchNewCarByBodyStyleAndPricePage searchNewCarByBodyStyleAndPricePage = new SearchNewCarByBodyStyleAndPricePage(getDriver());
         searchNewCarByBodyStyleAndPricePage.clickNewCarPrice();
-        waitFor(2);
         searchNewCarByBodyStyleAndPricePage.clickNewCarByBodyStylePrice();
         searchNewCarByBodyStyleAndPricePage.clickNewCarSUVPrice();
-        searchNewCarByBodyStyleAndPricePage.selectOptionFromNewCarMinimumPrice("40000");
+        searchNewCarByBodyStyleAndPricePage.selectOptionFromNewCarMinimumPrice("10000");
         searchNewCarByBodyStyleAndPricePage.typeZipCodeNewCarByBodyStylePrice("66223");
         searchNewCarByBodyStyleAndPricePage.clickSearchNewCarByBodyStylePrice();
         String expectedPageTitle = "New SUV / Crossover for Sale in Overland Park, KS - CarGurus";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test
-    public void searchNewSUVh() {
+    public void searchNewSUVMax() {
 
         SearchNewCarByBodyStyleAndPricePage searchNewCarByBodyStyleAndPricePage = new SearchNewCarByBodyStyleAndPricePage(getDriver());
         searchNewCarByBodyStyleAndPricePage.clickNewCarPrice();
-        waitFor(2);
         searchNewCarByBodyStyleAndPricePage.clickNewCarByBodyStylePrice();
         searchNewCarByBodyStyleAndPricePage.clickNewCarSUVPrice();
         searchNewCarByBodyStyleAndPricePage.selectOptionFromNewCarMaximumPrice("160000");

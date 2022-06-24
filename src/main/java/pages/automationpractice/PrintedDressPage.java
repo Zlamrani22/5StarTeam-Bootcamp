@@ -24,7 +24,7 @@ public class PrintedDressPage extends CommonAPI {
     @FindBy(css = "a[class='color_pick']")
     public WebElement pinkColorCheckBox;
 
-    @FindBy(xpath = "//*[@id='add_to_cart']/button/span")
+    @FindBy(css = "button[name='Submit']")
     public WebElement addToCartButton;
 
     @FindBy(xpath = "//*[@id='header']//div[3]//div[3]/div/a/b")
@@ -35,6 +35,9 @@ public class PrintedDressPage extends CommonAPI {
 
     @FindBy(css = "span[class='ajax_cart_product_txt unvisible']")
     public WebElement shoppingCartButton;
+
+    @FindBy(xpath = "//*[@id='quantity_wanted_p']/a[2]/span/i")
+    public WebElement increaseQuantityButton;
 
     public PrintedDressPage(WebDriver driver){
         PageFactory.initElements(driver, this);
@@ -74,5 +77,10 @@ public class PrintedDressPage extends CommonAPI {
         click(shoppingCartButton);
         LOG.info("Clicked on shopping cart button successfully");
         return new ShoppingCartPage(getDriver());
+    }
+
+    public void clickIncreaseQuantity(){
+        click(increaseQuantityButton);
+        LOG.info("Clicked on increase quantity button successfully");
     }
 }

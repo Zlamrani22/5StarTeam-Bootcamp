@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HelpAndFixPage extends CommonAPI {
     //fix user Id
@@ -18,10 +20,10 @@ public class HelpAndFixPage extends CommonAPI {
     WebElement dateOfBirth;
     @FindBy(xpath = "//*[@id='forgotEmailInput']")
     WebElement Email;
-    @FindBy(xpath = "//div[@class='-oneX']")
+    @FindBy(xpath = "//label[contains(text(),'Text')]")
     WebElement checkBox1;
 
-    @FindBy(xpath = "//*[@id='optclosebtn']")
+    @FindBy(xpath = "//*[@id='optclosebtn']/span")
     WebElement xMark;
 
     //fix user password
@@ -29,7 +31,7 @@ public class HelpAndFixPage extends CommonAPI {
     WebElement forgetPassword;
 
     //protect account
-    @FindBy(xpath = "//a[text()='Security and Fraud']")
+    @FindBy(xpath = "//a[contains(text(),'Security and Fraud')]")
     WebElement securityAndFraud;
     @FindBy(xpath = "//a[text()='How to protect yourself']")
     WebElement protectYourself;
@@ -37,8 +39,7 @@ public class HelpAndFixPage extends CommonAPI {
     //download state farm app
     @FindBy(css = "#cc-link4")
     WebElement mobilApp;
-    @FindBy(xpath ="//body/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/p[4]/a[2]/img[1]")
-    WebElement playStore;
+
 
     //general question
     @FindBy(xpath = "//*[@name='cc-link9']")
@@ -46,34 +47,62 @@ public class HelpAndFixPage extends CommonAPI {
     @FindBy(xpath = "//*[text()='Billing & Payments FAQs']")
     WebElement generalQuestions;
 
+    //learn about drive safe program
+    @FindBy(css = "#cc-link5")
+    WebElement driveSafe;
+
+    //read privacy policy
+    @FindBy(xpath = "//*[@title='State Farm Privacy and Security']")
+    WebElement privacy;
+
     public HelpAndFixPage(WebDriver driver){PageFactory.initElements(driver, this);}
+    private final Logger LOG = LoggerFactory.getLogger(HelpAndFixPage.class);
 
 
     //fix user Id
-    public void clickOnHelp(){click(help);}
-    public void clickOnForgetUserId(){click(forgetUserId);}
-    public void typePhoneNum(String num){type(phoneNum, num);}
-    public void typeDateOfBirth(String dob){type(dateOfBirth,dob);}
-    public void typeEmail(String email){type(Email,email);}
-    public void checkBox(){checkBox1.click();}
-    public void clickOnXbox(){click(xMark);}
+    public void clickOnHelp(){click(help);
+        LOG.info("click on help success");}
+    public void clickOnForgetUserId(){click(forgetUserId);
+        LOG.info("click on forget user id success");}
+    public void typePhoneNum(String num){type(phoneNum, num);
+        LOG.info("type in phone number success");}
+    public void typeDateOfBirth(String dob){type(dateOfBirth,dob);
+        LOG.info("type date of birth success");}
+    public void typeEmail(String email){type(Email,email);
+        LOG.info("type in email success");}
+    public void checkBox(){checkBox1.click();
+        LOG.info("check box success");}
+    public void clickOnXbox(){click(xMark);
+        LOG.info("click on x mark success");}
+
 
     //fix user password
-    public void clickOnForgetPassword(){click(forgetPassword);}
+    public void clickOnForgetPassword(){click(forgetPassword);
+        LOG.info("click on forget password success");}
 
     //protect account
-    public void clickOnSecurityAndFraud(){click(securityAndFraud);}
-    public void clickOnProtectYourself(){click(protectYourself);}
+    public void clickOnSecurityAndFraud(){click(securityAndFraud);
+        LOG.info("click on security and fraud success");}
+    public void clickOnProtectYourself(){click(protectYourself);
+        LOG.info("click on protect yourself success");}
 
     //download state farm app
-    public void  clickOnMobileApp(){click(mobilApp);}
-    public void clickOnPlayStore(){click(playStore);}
+    public void  clickOnMobileApp(){click(mobilApp);
+        LOG.info("click mobile app success");}
 
     //general question
-    public void clickOnViewInsurance(){click(viewInsurance);}
-    public void clickOnGeneralQuestions(){click(generalQuestions);}
+    public void clickOnViewInsurance(){click(viewInsurance);
+        LOG.info("click view insurance success");}
+    public void clickOnGeneralQuestions(){click(generalQuestions);
+        LOG.info("click general question success");}
 
+    //learn about drive safe program
+    public void clickOnDriveSafe(){click(driveSafe);
+        LOG.info("click on drive safe success");}
 
+    //read privacy policy
+    public void clickOnPrivacyPolicy(){click(privacy);
+        LOG.info("click on privacy success");}
 
 
   }

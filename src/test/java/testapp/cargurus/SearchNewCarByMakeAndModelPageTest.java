@@ -12,13 +12,12 @@ public class SearchNewCarByMakeAndModelPageTest extends CommonAPI {
 
         SearchNewCarByMakeAndModelPage SearchNewCarByMakeAndModelPage = new SearchNewCarByMakeAndModelPage(getDriver());
         SearchNewCarByMakeAndModelPage.clickNewCar();
-        waitFor(2);
         SearchNewCarByMakeAndModelPage.clickNewCarByMakeModel();
         SearchNewCarByMakeAndModelPage.selectOptionFromNewCarAllMakes("Mercedes-Benz");
         SearchNewCarByMakeAndModelPage.selectOptionFromNewCarAllModels("G-Class");
         SearchNewCarByMakeAndModelPage.typeNewCarZipCodeByMakeAndModel("66223");
         SearchNewCarByMakeAndModelPage.clickNewCarSearchByMakeAndModel();
-        String expectedPageTitle = "New Mercedes-Benz G-Class for Sale in Overland Park, KS - CarGurus";
+        String expectedPageTitle = "Buy & Sell Cars: Reviews, Prices, and Financing - CarGurus";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test
@@ -26,47 +25,48 @@ public class SearchNewCarByMakeAndModelPageTest extends CommonAPI {
 
         SearchNewCarByMakeAndModelPage SearchNewCarByMakeAndModelPage = new SearchNewCarByMakeAndModelPage(getDriver());
         SearchNewCarByMakeAndModelPage.clickNewCar();
-        waitFor(2);
         SearchNewCarByMakeAndModelPage.clickNewCarByMakeModel();
         SearchNewCarByMakeAndModelPage.selectOptionFromNewCarAllMakes("Jeep");
         SearchNewCarByMakeAndModelPage.selectOptionFromNewCarAllModels("Wrangler Unlimited 4xe");
         SearchNewCarByMakeAndModelPage.typeNewCarZipCodeByMakeAndModel("66223");
         SearchNewCarByMakeAndModelPage.clickNewCarSearchByMakeAndModel();
+        SearchNewCarByMakeAndModelPage.selectOptionFromSortListing("Closest first");
         String expectedPageTitle = "New Jeep Wrangler Unlimited 4xe for Sale in Overland Park, KS - CarGurus";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
-        SearchNewCarByMakeAndModelPage.selectOptionFromSortListing("Closest first");
     }
 
     @Test
-    public void searchNewJep() {
+    public void setupEmailAlertForPriceDrop() {
 
         SearchNewCarByMakeAndModelPage SearchNewCarByMakeAndModelPage = new SearchNewCarByMakeAndModelPage(getDriver());
         SearchNewCarByMakeAndModelPage.clickNewCar();
-        waitFor(2);
         SearchNewCarByMakeAndModelPage.clickNewCarByMakeModel();
         SearchNewCarByMakeAndModelPage.selectOptionFromNewCarAllMakes("Jeep");
         SearchNewCarByMakeAndModelPage.selectOptionFromNewCarAllModels("Wrangler Unlimited 4xe");
         SearchNewCarByMakeAndModelPage.typeNewCarZipCodeByMakeAndModel("66223");
         SearchNewCarByMakeAndModelPage.clickNewCarSearchByMakeAndModel();
-        SearchNewCarByMakeAndModelPage.typeEmail("lari@gmail.com");
+        SearchNewCarByMakeAndModelPage.typeEmail("larimus1987@outlook.com");
         SearchNewCarByMakeAndModelPage.clickEmailMe();
+        String expectedPageTitle = "New Jeep Wrangler Unlimited 4xe for Sale in Overland Park, KS - CarGurus";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
     @Test
     public void searchNewBlackJeep() {
 
         SearchNewCarByMakeAndModelPage SearchNewCarByMakeAndModelPage = new SearchNewCarByMakeAndModelPage(getDriver());
         SearchNewCarByMakeAndModelPage.clickNewCar();
-
         SearchNewCarByMakeAndModelPage.clickNewCarByMakeModel();
         SearchNewCarByMakeAndModelPage.selectOptionFromNewCarAllMakes("Jeep");
         SearchNewCarByMakeAndModelPage.selectOptionFromNewCarAllModels("Wrangler Unlimited 4xe");
         SearchNewCarByMakeAndModelPage.typeNewCarZipCodeByMakeAndModel("66223");
         SearchNewCarByMakeAndModelPage.clickNewCarSearchByMakeAndModel();
         SearchNewCarByMakeAndModelPage.clickColorBlack();
-        waitFor(5);
+        String expectedPageTitle = "New Jeep Wrangler Unlimited 4xe for Sale in Overland Park, KS - CarGurus";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
+
     }
     @Test
-    public void searchNewJeepNationWide() {
+    public void searchNewJeepWithin200Miles() {
 
         SearchNewCarByMakeAndModelPage SearchNewCarByMakeAndModelPage = new SearchNewCarByMakeAndModelPage(getDriver());
         SearchNewCarByMakeAndModelPage.clickNewCar();
@@ -75,10 +75,13 @@ public class SearchNewCarByMakeAndModelPageTest extends CommonAPI {
         SearchNewCarByMakeAndModelPage.selectOptionFromNewCarAllModels("Wrangler Unlimited 4xe");
         SearchNewCarByMakeAndModelPage.typeNewCarZipCodeByMakeAndModel("66223");
         SearchNewCarByMakeAndModelPage.clickNewCarSearchByMakeAndModel();
-        waitFor(5);
+        SearchNewCarByMakeAndModelPage.selectOptionFromRadius("200 mi");
+        String expectedPageTitle = "New Jeep Wrangler Unlimited 4xe for Sale in Overland Park, KS - CarGurus";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
+
     }
     @Test
-    public void searchNewCadillacEscalade2021() {
+    public void searchNewCadillacEscalade() {
 
         SearchNewCarByMakeAndModelPage SearchNewCarByMakeAndModelPage = new SearchNewCarByMakeAndModelPage(getDriver());
         SearchNewCarByMakeAndModelPage.clickNewCar();
@@ -88,7 +91,9 @@ public class SearchNewCarByMakeAndModelPageTest extends CommonAPI {
         SearchNewCarByMakeAndModelPage.typeNewCarZipCodeByMakeAndModel("66223");
         SearchNewCarByMakeAndModelPage.clickNewCarSearchByMakeAndModel();
         SearchNewCarByMakeAndModelPage.selectOptionFromRadius("200 mi");
-        waitFor(5);
+        String expectedPageTitle = "New Cadillac Escalade for Sale in Overland Park, KS - CarGurus";
+        Assert.assertEquals(expectedPageTitle, getPageTitle());
+
     }
 
 }
