@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class RetirementPage  extends CommonAPI {
 
@@ -27,19 +29,24 @@ public class RetirementPage  extends CommonAPI {
     WebElement calculate;
 
     public RetirementPage(WebDriver driver){PageFactory.initElements(driver, this);}
+    private final Logger LOG = LoggerFactory.getLogger(RetirementPage.class);
 
     //Retirement plan
-    public void clickOnInvestment(){click(investments);}
-    public void clickOnRetirementPlaning(){click(retirementPlaning);}
-    public void clickOnXbox(){click(xBox);}
+    public void clickOnInvestment(){click(investments);
+        LOG.info("click on investment success ");}
+    public void clickOnRetirementPlaning(){click(retirementPlaning);
+        LOG.info("click on retirement planing success");}
+    public void clickOnXbox(){click(xBox);
+        LOG.info("click on xbox success");}
+
     public String getHeaderText(){return getElementText(headerText);}
 
     //calculate retirement
-    public void clickOnTraditionalIra(){click(traditionalIra);}
-    public void clickOnCalculate(){click(calculate);}
-    public void clickClose(){click();}
-    private void click() {
-    }
+    public void clickOnTraditionalIra(){click(traditionalIra);
+        LOG.info("click on traditional ira success");}
+    public void clickOnCalculate(){click(calculate);
+        LOG.info("click on calculate success");}
+
 
 
 }

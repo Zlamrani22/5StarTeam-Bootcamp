@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LoginPage  extends CommonAPI {
 
@@ -19,23 +21,17 @@ public class LoginPage  extends CommonAPI {
 
 
 
-//    @FindBy(xpath = "button[class='-oneX-header-util-menu-btn  -oneX-util-menu-icon-container']")
-//    WebElement search1;
     public LoginPage(WebDriver driver){PageFactory.initElements(driver, this);}
+    private final Logger LOG = LoggerFactory.getLogger(LoginPage.class);
 
-    public void clickOnLogInButton(){click(loginButton);}
-    public void typeUserName(String user){
-        type(userName, user);
-    }
-    public void typePassword(String pass) {
-        type(password, pass);
-    }
-    public void clickLoginButtonSecond(){
-        click(loginButtonSecond);
-    }
-
-
-
+    public void clickOnLogInButton(){click(loginButton);
+        LOG.info("click on login button success");}
+    public void typeUserName(String user){type(userName, user);
+        LOG.info("type username success");}
+    public void typePassword(String pass) {type(password, pass);
+        LOG.info("type password success");}
+    public void clickLoginButtonSecond(){click(loginButtonSecond);
+        LOG.info("click login button success");}
 
 
 

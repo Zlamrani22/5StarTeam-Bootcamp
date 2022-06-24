@@ -16,89 +16,104 @@
                 <class name="testapp.statefarm.account.Login"></class>
             </classes>
         </test>
-        <test name="PersonalBankingTest">
-            <classes>
-                <class name="testapp.statefarm.banking.PersonalBanking"></class>
-            </classes>
-        </test>
-        <test name="BusinessBankingTest">
-            <classes>
-               <class name="testapp.statefarm.banking.BusinessBanking"></class>
-            </classes>
-        </test>
-        <test name="ClaimsTest">
-            <classes>
-                <class name="testapp.statefarm.claims.TypesOfClaims"></class>
-            </classes>
-        </test>
-        <test name="AccessTest">
-            <classes>
-                <class name="testapp.statefarm.DocumentsAndMessages.Access"></class>
-            </classes>
-        </test>
-        <test name="HelpTest">
-            <classes>
-                <class name="testapp.statefarm.help.HelpAndFix"></class>
-            </classes>
-        </test>
-        <test name="AutoInsuranceTest">
-            <classes>
-               <class name="testapp.statefarm.insurance.AutoInsurance"></class>
-            </classes>
-        </test>
-        <test name="SmallBusinessInsuranceTest">
-            <classes>
-               <class name="testapp.statefarm.insurance.SmallBusinessInsurance"></class>
-            </classes>
-        </test>
-        <test name="HomeInsuranceTest">
-            <classes>
-                <class name="testapp.statefarm.insurance.HomeInsurance"></class>
-            </classes>
-        </test>
-        <test name="LifeInsuranceTest">
-            <classes>
-                <class name="testapp.statefarm.insurance.LifeInsurance"></class>
-            </classes>
-        </test>
-        <test name="RetirementInvestmentTest">
-            <classes>
-                <class name="testapp.statefarm.investment.Retirement"></class>
-            </classes>
-        </test>
-        <test name="SavingForCollegeTest">
-            <classes>
-                  <class name="testapp.statefarm.investment.EducationSaving"></class>
-            </classes>
-        </test>
-        <test name="MutualFunds">
-            <classes>
-                 <class name="testapp.statefarm.investment.MutualFund"></class>
-            </classes>
-        </test>
-        <test name="LearnMoreTest">
-            <classes>
-                  <class name="testapp.statefarm.investment.RealEstatePlaning"></class>
-            </classes>
-        </test>
-        <test name="BillingTest">
-            <classes>
-                  <class name="testapp.statefarm.payement.Billing"></class>
-            </classes>
-        </test>
-        <test name="QuoteTest">
-            <classes>
-                 <class name="testapp.statefarm.quotes.DifferentQuotes"></class>
-            </classes>
-        </test>
-        <test name="SearchTest">
-            <classes>
-                 <class name="testapp.statefarm.search.DifferentSearch"></class>
-           </classes>
-        </test>
-        <test name="OtherFunctions">
-            <classes>
-                 <class name="testapp.statefarm.otherFunctions.Others"></class>
-            </classes>
-        </test>
+<!--        <test name="PersonalBankingTest">-->
+<!--            <classes>-->
+<!--                <class name="testapp.statefarm.banking.PersonalBanking"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="BusinessBankingTest">-->
+<!--            <classes>-->
+<!--               <class name="testapp.statefarm.banking.BusinessBanking"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="ClaimsTest">-->
+<!--            <classes>-->
+<!--                <class name="testapp.statefarm.claims.TypesOfClaims"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="AccessTest">-->
+<!--            <classes>-->
+<!--                <class name="testapp.statefarm.documentsAndMessages.Access"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--           <test name="HelpTest">-->
+<!--               <classes>-->
+<!--                    <class name="testapp.statefarm.help.HelpAndFix"></class>-->
+<!--               </classes>-->
+<!--           </test>-->
+<!--        <test name="AutoInsuranceTest">-->
+<!--            <classes>-->
+<!--               <class name="testapp.statefarm.insurance.AutoInsurance"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--           <test name="HealthInsuranceTest">-->
+<!--               <classes>-->
+<!--                   <class name="testapp.statefarm.insurance.HealthInsurance"></class>-->
+<!--              </classes>-->
+<!--            </test>-->
+<!--        <test name="SmallBusinessInsuranceTest">-->
+<!--            <classes>-->
+<!--               <class name="testapp.statefarm.insurance.SmallBusinessInsurance"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="HomeInsuranceTest">-->
+<!--            <classes>-->
+<!--                <class name="testapp.statefarm.insurance.HomeInsurance"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="LifeInsuranceTest">-->
+<!--            <classes>-->
+<!--                <class name="testapp.statefarm.insurance.LifeInsurance"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="RetirementTest">-->
+<!--            <classes>-->
+<!--                <class name="testapp.statefarm.investment.Retirement"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="SavingForCollegeTest">-->
+<!--            <classes>-->
+<!--                  <class name="testapp.statefarm.investment.EducationSaving"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="MutualFunds">-->
+<!--            <classes>-->
+<!--                 <class name="testapp.statefarm.investment.MutualFund"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="LearnMoreAboutRealEstateTest">-->
+<!--            <classes>-->
+<!--                  <class name="testapp.statefarm.investment.RealEstatePlaning"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="BillingTest">-->
+<!--            <classes>-->
+<!--                  <class name="testapp.statefarm.payement.Billing"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="QuoteTest">-->
+<!--            <classes>-->
+<!--                 <class name="testapp.statefarm.quotes.DifferentQuotes"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--        <test name="SearchTest">-->
+<!--            <classes>-->
+<!--                 <class name="testapp.statefarm.search.DifferentSearch"></class>-->
+<!--           </classes>-->
+<!--        </test>-->
+<!--        <test name="OtherFunctions">-->
+<!--            <classes>-->
+<!--                 <class name="testapp.statefarm.otherFunctions.Others"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--            <test name="explore">-->
+<!--                <classes>-->
+<!--                    <class name="testapp.statefarm.explorestatefarm.ExploreStateFarm"></class>-->
+<!--                </classes>-->
+<!--            </test>-->
+<!--        <test name="ContactUs">-->
+<!--             <classes>-->
+<!--                <class name="testapp.statefarm.socialMedia.contactStateFarm"></class>-->
+<!--             </classes>-->
+<!--        </test>-->
     </suite>

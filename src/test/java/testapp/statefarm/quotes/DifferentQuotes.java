@@ -11,7 +11,7 @@ public class DifferentQuotes extends CommonAPI {
         QuotesPage quotesPage = new QuotesPage(getDriver());
         quotesPage.getQuote();
         quotesPage.selectFromMenuDropdown("Auto");
-        quotesPage.zipCode("11219");
+        quotesPage.typeZipCode("11219");
         quotesPage.clickOnStartQuoteBtn();
         String expectedPageTitle = "State Farm Auto Insurance & More for 100 Years. Get a Quote | State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
@@ -21,9 +21,9 @@ public class DifferentQuotes extends CommonAPI {
         QuotesPage quotesPage = new QuotesPage(getDriver());
         quotesPage.getQuote();
         quotesPage.selectFromMenuDropdown("Pet Insurance");
-        quotesPage.zipCode("11219");
+        quotesPage.typeZipCode("11219");
         quotesPage.clickOnStartQuoteBtn();
-        String expectedPageTitle = "Get A Pet Insurance Quote - Pet Insurance - State Farm®";
+        String expectedPageTitle = "State Farm Auto Insurance & More for 100 Years. Get a Quote | State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
    @Test
@@ -31,7 +31,7 @@ public class DifferentQuotes extends CommonAPI {
         QuotesPage quotesPage = new QuotesPage(getDriver());
         quotesPage.getQuote();
         quotesPage.selectFromMenuDropdown("Renters");
-        quotesPage.zipCode("11209");
+        quotesPage.typeZipCode("11209");
         quotesPage.clickOnStartQuoteBtn();
         String expectedPageTitle = "State Farm Auto Insurance & More for 100 Years. Get a Quote | State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
@@ -41,7 +41,7 @@ public class DifferentQuotes extends CommonAPI {
         QuotesPage quotesPage = new QuotesPage(getDriver());
         quotesPage.getQuote();
         quotesPage.selectFromMenuDropdown("Homeowners");
-        quotesPage.zipCode("11209");
+        quotesPage.typeZipCode("11209");
         quotesPage.clickOnStartQuoteBtn();
         String expectedPageTitle = "State Farm Auto Insurance & More for 100 Years. Get a Quote | State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
@@ -51,7 +51,7 @@ public class DifferentQuotes extends CommonAPI {
         QuotesPage quotesPage = new QuotesPage(getDriver());
         quotesPage.getQuote();
         quotesPage.selectFromMenuDropdown("Condo Owners");
-       quotesPage.zipCode("11209");
+        quotesPage.typeZipCode("11209");
         quotesPage.clickOnStartQuoteBtn();
         String expectedPageTitle = "State Farm Auto Insurance & More for 100 Years. Get a Quote | State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
@@ -61,7 +61,7 @@ public class DifferentQuotes extends CommonAPI {
         QuotesPage quotesPage = new QuotesPage(getDriver());
         quotesPage.getQuote();
         quotesPage.selectFromMenuDropdown("Small Business");
-        quotesPage.zipCode("10301");
+        quotesPage.typeZipCode("10301");
         quotesPage.clickOnFindAnAgent();
         quotesPage.clickOnAdvancedSearch();
         String expectedPageTitle = "Find State Farm® Agents Near You - State Farm®";

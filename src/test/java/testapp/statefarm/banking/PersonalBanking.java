@@ -1,6 +1,7 @@
 package testapp.statefarm.banking;
 
 import base.CommonAPI;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.statefarm.PersonalBankingPage;
@@ -11,7 +12,9 @@ public class PersonalBanking extends CommonAPI {
         PersonalBankingPage personalBankingPage = new PersonalBankingPage(getDriver());
         personalBankingPage.clickOnBanking();
         personalBankingPage.clickOnChecking();
-        waitFor(5);
+        JavascriptExecutor js = (JavascriptExecutor)getDriver();
+        js.executeScript("window.scrollBy(0,600)", "");
+        personalBankingPage.clickOnCompareAccounts();
         String expectedPageTitle = "Open an Online Checking Account that Fits Your Needs | State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
 
@@ -27,7 +30,7 @@ public class PersonalBanking extends CommonAPI {
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
    @Test
-    public void getCreditCard(){
+    public void getPersonalCreditCard(){
         PersonalBankingPage personalBankingPage = new PersonalBankingPage(getDriver());
         personalBankingPage.clickOnBanking();
         personalBankingPage.clickOnCreditCard();
@@ -43,6 +46,9 @@ public class PersonalBanking extends CommonAPI {
         PersonalBankingPage personalBankingPage = new PersonalBankingPage(getDriver());
         personalBankingPage.clickOnBanking();
         personalBankingPage.clickOnSaving();
+        JavascriptExecutor js = (JavascriptExecutor)getDriver();
+        js.executeScript("window.scrollBy(0,600)", "");
+        personalBankingPage.clickOnCompareSaving();
         String expectedPageTitle = "Types of Savings Accounts | State Farm®";
         Assert.assertEquals(expectedPageTitle,getPageTitle());
     }

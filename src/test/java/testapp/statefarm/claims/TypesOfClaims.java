@@ -1,6 +1,7 @@
 package testapp.statefarm.claims;
 
 import base.CommonAPI;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.statefarm.ClaimsPage;
@@ -15,13 +16,12 @@ public class TypesOfClaims extends CommonAPI {
         String expectedPageTitle = "Get Roadside Assistance - State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
         claimsPage.clickOnGetRoadSideAssistanceBtn();
-        waitFor(3);
         String expectedPageTitle1 = "Emergency Roadside Service";
         Assert.assertEquals(expectedPageTitle1, getPageTitle());
 
     }
 
-    @Test
+   @Test
     public void chatWithAgent(){
         ClaimsPage claimsPage = new ClaimsPage(getDriver());
         claimsPage.clickOnClaim();
@@ -32,4 +32,18 @@ public class TypesOfClaims extends CommonAPI {
         String expectedPageTitle1 = "Claims Help | State Farm®";
         Assert.assertEquals(expectedPageTitle1, getPageTitle());
     }
+
+    @Test
+    public void claimSteps(){
+        ClaimsPage claimsPage = new ClaimsPage(getDriver());
+        claimsPage.clickOnClaim();
+        claimsPage.clickOnClaimHelp();
+        JavascriptExecutor js = (JavascriptExecutor)getDriver();
+        js.executeScript("window.scrollBy(0,500)", "");
+        claimsPage.clickOnSteps();
+        String expectedPageTitle1 = "Claims Help | State Farm®";
+        Assert.assertEquals(expectedPageTitle1, getPageTitle());
+    }
+
+
 }

@@ -1,6 +1,7 @@
 package testapp.statefarm.otherFunctions;
 
 import base.CommonAPI;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.statefarm.OthersPage;
@@ -10,10 +11,13 @@ public class Others extends CommonAPI {
     @Test
     public void testPaperLess() {
         OthersPage othersPage = new OthersPage(getDriver());
-        othersPage.clickOnXbox();
+        JavascriptExecutor js = (JavascriptExecutor)getDriver();
+        js.executeScript("window.scrollBy(0,500)", "");
         othersPage.clickOnPaperLess();
         othersPage.typePhoneNum("3475495665");
         othersPage.typeDateOfBirth("04061987");
+        JavascriptExecutor jsc = (JavascriptExecutor)getDriver();
+        jsc.executeScript("window.scrollBy(0,500)", "");
         othersPage.clickOnContinue();
         waitFor(5);
         String expectedPageTitle = "Go Paperless - We'll need your email.";
@@ -23,13 +27,16 @@ public class Others extends CommonAPI {
     @Test
     public void testAutoPay() {
         OthersPage othersPage = new OthersPage(getDriver());
-        othersPage.clickOnXbox();
+        JavascriptExecutor js = (JavascriptExecutor)getDriver();
+        js.executeScript("window.scrollBy(0,500)", "");
         othersPage.clickOnAutoPay();
-        othersPage.typePhoneNum("2016672134");
-        othersPage.typeDateOfBirth("07181980");
-        othersPage.clickOnContinue();
+        othersPage.typePhoneNum2("2016672134");
+        othersPage.typeBirthday("07181980");
+        JavascriptExecutor jsc = (JavascriptExecutor)getDriver();
+        jsc.executeScript("window.scrollBy(0,500)", "");
+        othersPage.clickOnContinueBtn();
         waitFor(5);
-        String expectedPageTitle = "Go Paperless - We'll need your email.";
+        String expectedPageTitle = "Let's check your eligibility";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 

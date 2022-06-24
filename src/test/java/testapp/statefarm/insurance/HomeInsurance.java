@@ -1,6 +1,7 @@
 package testapp.statefarm.insurance;
 
 import base.CommonAPI;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.statefarm.HomeInsurancePage;
@@ -12,9 +13,11 @@ public class HomeInsurance extends CommonAPI {
         HomeInsurancePage homeInsurancePage = new HomeInsurancePage(getDriver());
         homeInsurancePage.clickOnInsurance();
         homeInsurancePage.clickOnHome();
+        JavascriptExecutor js = (JavascriptExecutor)getDriver();
+        js.executeScript("window.scrollBy(0,800)", "");
         homeInsurancePage.typeInZipCode("11218");
         homeInsurancePage.clickOnStartQuote();
-        String expectedPageTitle = "Home Insurance | State Farm®";
+        String expectedPageTitle = "Home and Property Insurance | State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
         waitFor(5);
     }
@@ -26,19 +29,21 @@ public class HomeInsurance extends CommonAPI {
         homeInsurancePage.clickOnPersonalArticles();
         homeInsurancePage.typeZip("23456");
         homeInsurancePage.clickOnFindAgent();
+        //homeInsurancePage.clickOnFindAgent();
         String expectedPageTitle = "Find State Farm® Agents Near You - State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
     }
 
-   @Test
+    @Test
     public void farmAndRanchInsurance(){
         HomeInsurancePage homeInsurancePage = new HomeInsurancePage(getDriver());
         homeInsurancePage.clickOnInsurance();
         homeInsurancePage.clickOnFarmAndRanch();
-        waitFor(5);
-        homeInsurancePage.typeInZipCode("11002");
+        JavascriptExecutor js = (JavascriptExecutor)getDriver();
+        js.executeScript("window.scrollBy(0,200)", "");
+        homeInsurancePage.typeZip("11002");
         homeInsurancePage.clickOnFindAgent();
-        String expectedPageTitle = "Home Insurance | State Farm®";
+        String expectedPageTitle = "Find State Farm® Agents Near You - State Farm®";
         Assert.assertEquals(expectedPageTitle, getPageTitle());
 
 

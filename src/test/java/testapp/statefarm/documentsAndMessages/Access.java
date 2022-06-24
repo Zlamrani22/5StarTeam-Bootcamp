@@ -1,4 +1,4 @@
-package testapp.statefarm.DocumentsAndMessages;
+package testapp.statefarm.documentsAndMessages;
 
 import base.CommonAPI;
 import org.testng.Assert;
@@ -14,7 +14,7 @@ public class Access extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.clickOnLogInButton();
         loginPage.typeUserName("Aksel1506");
-        loginPage.typePassword("TestCase@java0");
+        loginPage.typePassword("TestCase@java10");
         loginPage.clickLoginButtonSecond();
         waitFor(3);
         String expectedPageTitle = "Log In";
@@ -30,7 +30,7 @@ public class Access extends CommonAPI {
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.clickOnLogInButton();
         loginPage.typeUserName("Aksel1506");
-        loginPage.typePassword("TestCase@java0");
+        loginPage.typePassword("TestCase@java10");
         loginPage.clickLoginButtonSecond();
         waitFor(3);
         String expectedPageTitle = "Log In";
